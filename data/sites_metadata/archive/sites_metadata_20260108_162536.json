@@ -1,0 +1,445 @@
+[
+  {
+    "id": "site_20260108_162536_5431",
+    "nombre": "7x24MéxicoChronicle",
+    "tagline": "Noticias 24 Horas al Día",
+    "estilo": "aleatorio",
+    "dominio": "7x24méxicochronicle.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#34495E",
+      "secundario": "#2980B9",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "7x24MéxicoChronicle",
+      "iniciales": "7",
+      "estilo": "tech",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#34495E",
+        "secundario": "#2980B9",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Sociedad",
+      "Cultura",
+      "Mundo",
+      "Ciencia"
+    ],
+    "contacto": {
+      "email_general": "contacto@7x24méxicochronicle.news",
+      "email_redaccion": "redaccion@7x24méxicochronicle.news",
+      "email_publicidad": "publicidad@7x24méxicochronicle.news",
+      "telefono": "+52 55 8367 3759",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/7x24méxicochronicle",
+      "twitter": "https://twitter.com/7x24méxicochronicle",
+      "instagram": "https://instagram.com/7x24méxicochronicle",
+      "youtube": "https://youtube.com/@7x24méxicochronicle",
+      "linkedin": "https://linkedin.com/company/7x24méxicochronicle",
+      "telegram": "https://t.me/7x24méxicochronicle"
+    },
+    "seo": {
+      "titulo": "7x24MéxicoChronicle - Noticias 24 Horas al Día",
+      "descripcion": "7x24MéxicoChronicle es tu fuente confiable de noticias e información actualizada. Noticias 24 Horas al Día. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "7x24méxicochronicle",
+        "7x24méxicochronicle"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:25:36.588097",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162536_8246",
+    "nombre": "Noticias de Sur",
+    "tagline": "Periodismo de Calidad",
+    "estilo": "aleatorio",
+    "dominio": "noticiassur.info",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "Noticias de Sur",
+      "iniciales": "NDS",
+      "estilo": "modern",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Roboto",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Deportes",
+      "Economía",
+      "Cultura",
+      "Tecnología",
+      "Entretenimiento"
+    ],
+    "contacto": {
+      "email_general": "contacto@noticiassur.info",
+      "email_redaccion": "redaccion@noticiassur.info",
+      "email_publicidad": "publicidad@noticiassur.info",
+      "telefono": "+52 55 8178 8871",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/noticiassur",
+      "twitter": "https://twitter.com/noticiassur",
+      "instagram": "https://instagram.com/noticiassur",
+      "youtube": "https://youtube.com/@noticiassur",
+      "linkedin": "https://linkedin.com/company/noticiassur",
+      "telegram": "https://t.me/noticiassur"
+    },
+    "seo": {
+      "titulo": "Noticias de Sur - Periodismo de Calidad",
+      "descripcion": "Noticias de Sur es tu fuente confiable de noticias e información actualizada. Periodismo de Calidad. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "noticias de sur",
+        "noticiassur"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:25:36.588184",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162536_7334",
+    "nombre": "MediaUniversal24",
+    "tagline": "La Nueva Era del Periodismo",
+    "estilo": "aleatorio",
+    "dominio": "mediauniversal24.press",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "MediaUniversal24",
+      "iniciales": "M",
+      "estilo": "elegant",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Economía",
+      "Deportes",
+      "Entretenimiento",
+      "Tecnología"
+    ],
+    "contacto": {
+      "email_general": "contacto@mediauniversal24.press",
+      "email_redaccion": "redaccion@mediauniversal24.press",
+      "email_publicidad": "publicidad@mediauniversal24.press",
+      "telefono": "+52 55 8875 6434",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/mediauniversal24",
+      "twitter": "https://twitter.com/mediauniversal24",
+      "instagram": "https://instagram.com/mediauniversal24",
+      "youtube": "https://youtube.com/@mediauniversal24",
+      "linkedin": "https://linkedin.com/company/mediauniversal24",
+      "telegram": "https://t.me/mediauniversal24"
+    },
+    "seo": {
+      "titulo": "MediaUniversal24 - La Nueva Era del Periodismo",
+      "descripcion": "MediaUniversal24 es tu fuente confiable de noticias e información actualizada. La Nueva Era del Periodismo. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "mediauniversal24",
+        "mediauniversal24"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:25:36.588301",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162536_5814",
+    "nombre": "Noticias CDMX Ahora",
+    "tagline": "La Voz de México",
+    "estilo": "aleatorio",
+    "dominio": "noticiascdmxahora.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "Noticias CDMX Ahora",
+      "iniciales": "NCA",
+      "estilo": "elegant",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Source Sans Pro",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Negocios",
+      "Cultura",
+      "Opinión",
+      "Tecnología",
+      "Salud"
+    ],
+    "contacto": {
+      "email_general": "contacto@noticiascdmxahora.mx",
+      "email_redaccion": "redaccion@noticiascdmxahora.mx",
+      "email_publicidad": "publicidad@noticiascdmxahora.mx",
+      "telefono": "+52 55 9332 6744",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/noticiascdmxahora",
+      "twitter": "https://twitter.com/noticiascdmxahora",
+      "instagram": "https://instagram.com/noticiascdmxahora",
+      "youtube": "https://youtube.com/@noticiascdmxahora",
+      "linkedin": "https://linkedin.com/company/noticiascdmxahora",
+      "telegram": "https://t.me/noticiascdmxahora"
+    },
+    "seo": {
+      "titulo": "Noticias CDMX Ahora - La Voz de México",
+      "descripcion": "Noticias CDMX Ahora es tu fuente confiable de noticias e información actualizada. La Voz de México. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "noticias cdmx ahora",
+        "noticiascdmxahora"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:25:36.588362",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162536_3006",
+    "nombre": "La Norte Hoy",
+    "tagline": "Noticias que Importan",
+    "estilo": "aleatorio",
+    "dominio": "nortehoy.com",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "La Norte Hoy",
+      "iniciales": "LNH",
+      "estilo": "minimal",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Montserrat",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Deportes",
+      "Tecnología",
+      "Salud",
+      "Opinión",
+      "Cultura"
+    ],
+    "contacto": {
+      "email_general": "contacto@nortehoy.com",
+      "email_redaccion": "redaccion@nortehoy.com",
+      "email_publicidad": "publicidad@nortehoy.com",
+      "telefono": "+52 55 5383 2095",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/nortehoy",
+      "twitter": "https://twitter.com/nortehoy",
+      "instagram": "https://instagram.com/nortehoy",
+      "youtube": "https://youtube.com/@nortehoy",
+      "linkedin": "https://linkedin.com/company/nortehoy",
+      "telegram": "https://t.me/nortehoy"
+    },
+    "seo": {
+      "titulo": "La Norte Hoy - Noticias que Importan",
+      "descripcion": "La Norte Hoy es tu fuente confiable de noticias e información actualizada. Noticias que Importan. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "la norte hoy",
+        "nortehoy"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:25:36.588414",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

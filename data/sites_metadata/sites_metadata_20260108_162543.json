@@ -1,0 +1,179 @@
+[
+  {
+    "id": "site_20260108_162543_1061",
+    "nombre": "LTM Info",
+    "tagline": "Tu Conexión con el Mundo",
+    "estilo": "aleatorio",
+    "dominio": "ltminfo.press",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#34495E",
+      "secundario": "#2980B9",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "LTM Info",
+      "iniciales": "LI",
+      "estilo": "modern",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#34495E",
+        "secundario": "#2980B9",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Open Sans",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Entretenimiento",
+      "Salud",
+      "Educación",
+      "Sociedad"
+    ],
+    "contacto": {
+      "email_general": "contacto@ltminfo.press",
+      "email_redaccion": "redaccion@ltminfo.press",
+      "email_publicidad": "publicidad@ltminfo.press",
+      "telefono": "+52 55 9284 1817",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/ltminfo",
+      "twitter": "https://twitter.com/ltminfo",
+      "instagram": "https://instagram.com/ltminfo",
+      "youtube": "https://youtube.com/@ltminfo",
+      "linkedin": "https://linkedin.com/company/ltminfo",
+      "telegram": "https://t.me/ltminfo"
+    },
+    "seo": {
+      "titulo": "LTM Info - Tu Conexión con el Mundo",
+      "descripcion": "LTM Info es tu fuente confiable de noticias e información actualizada. Tu Conexión con el Mundo. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "ltm info",
+        "ltminfo"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:25:43.867489",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162543_8670",
+    "nombre": "IVM Post",
+    "tagline": "Rápido, Preciso, Confiable",
+    "estilo": "aleatorio",
+    "dominio": "ivmpost.org",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "IVM Post",
+      "iniciales": "IP",
+      "estilo": "classic",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Cultura",
+      "Ciencia",
+      "Mundo",
+      "Deportes",
+      "Sociedad"
+    ],
+    "contacto": {
+      "email_general": "contacto@ivmpost.org",
+      "email_redaccion": "redaccion@ivmpost.org",
+      "email_publicidad": "publicidad@ivmpost.org",
+      "telefono": "+52 55 7476 2127",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/ivmpost",
+      "twitter": "https://twitter.com/ivmpost",
+      "instagram": "https://instagram.com/ivmpost",
+      "youtube": "https://youtube.com/@ivmpost",
+      "linkedin": "https://linkedin.com/company/ivmpost",
+      "telegram": "https://t.me/ivmpost"
+    },
+    "seo": {
+      "titulo": "IVM Post - Rápido, Preciso, Confiable",
+      "descripcion": "IVM Post es tu fuente confiable de noticias e información actualizada. Rápido, Preciso, Confiable. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "ivm post",
+        "ivmpost"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:25:43.867589",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

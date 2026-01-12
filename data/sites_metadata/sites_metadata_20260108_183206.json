@@ -1,0 +1,882 @@
+[
+  {
+    "id": "site_20260108_183206_4274",
+    "nombre": "CHM Press",
+    "tagline": "Donde las Noticias Cobran Vida",
+    "estilo": "aleatorio",
+    "dominio": "chmpress.org",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "CHM Press",
+      "iniciales": "CP",
+      "estilo": "minimal",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Cultura",
+      "Salud",
+      "Deportes"
+    ],
+    "contacto": {
+      "email_general": "contacto@chmpress.org",
+      "email_redaccion": "redaccion@chmpress.org",
+      "email_publicidad": "publicidad@chmpress.org",
+      "telefono": "+52 55 4229 7811",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/chmpress",
+      "twitter": "https://twitter.com/chmpress",
+      "instagram": "https://instagram.com/chmpress",
+      "youtube": "https://youtube.com/@chmpress",
+      "linkedin": "https://linkedin.com/company/chmpress",
+      "telegram": "https://t.me/chmpress"
+    },
+    "seo": {
+      "titulo": "CHM Press - Donde las Noticias Cobran Vida",
+      "descripcion": "CHM Press es tu fuente confiable de noticias e información actualizada. Donde las Noticias Cobran Vida. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "chm press",
+        "chmpress"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.257583",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_7577",
+    "nombre": "LGA Noticias",
+    "tagline": "Noticias que Importan",
+    "estilo": "aleatorio",
+    "dominio": "lganoticias.com",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "LGA Noticias",
+      "iniciales": "LN",
+      "estilo": "tech",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Tecnología",
+      "Negocios",
+      "Economía"
+    ],
+    "contacto": {
+      "email_general": "contacto@lganoticias.com",
+      "email_redaccion": "redaccion@lganoticias.com",
+      "email_publicidad": "publicidad@lganoticias.com",
+      "telefono": "+52 55 6277 7712",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/lganoticias",
+      "twitter": "https://twitter.com/lganoticias",
+      "instagram": "https://instagram.com/lganoticias",
+      "youtube": "https://youtube.com/@lganoticias",
+      "linkedin": "https://linkedin.com/company/lganoticias",
+      "telegram": "https://t.me/lganoticias"
+    },
+    "seo": {
+      "titulo": "LGA Noticias - Noticias que Importan",
+      "descripcion": "LGA Noticias es tu fuente confiable de noticias e información actualizada. Noticias que Importan. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "lga noticias",
+        "lganoticias"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.257668",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_5970",
+    "nombre": "InfoRegional24",
+    "tagline": "Siempre Online, Siempre Actualizado",
+    "estilo": "aleatorio",
+    "dominio": "inforegional24.com",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#34495E",
+      "secundario": "#2980B9",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "InfoRegional24",
+      "iniciales": "I",
+      "estilo": "modern",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#34495E",
+        "secundario": "#2980B9",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Montserrat",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Tecnología",
+      "Opinión",
+      "Negocios",
+      "Ciencia"
+    ],
+    "contacto": {
+      "email_general": "contacto@inforegional24.com",
+      "email_redaccion": "redaccion@inforegional24.com",
+      "email_publicidad": "publicidad@inforegional24.com",
+      "telefono": "+52 55 1851 1374",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/inforegional24",
+      "twitter": "https://twitter.com/inforegional24",
+      "instagram": "https://instagram.com/inforegional24",
+      "youtube": "https://youtube.com/@inforegional24",
+      "linkedin": "https://linkedin.com/company/inforegional24",
+      "telegram": "https://t.me/inforegional24"
+    },
+    "seo": {
+      "titulo": "InfoRegional24 - Siempre Online, Siempre Actualizado",
+      "descripcion": "InfoRegional24 es tu fuente confiable de noticias e información actualizada. Siempre Online, Siempre Actualizado. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "inforegional24",
+        "inforegional24"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.257728",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_7648",
+    "nombre": "LaTiempoAzteca",
+    "tagline": "Tu Fuente de Información Confiable",
+    "estilo": "aleatorio",
+    "dominio": "latiempoazteca.today",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "LaTiempoAzteca",
+      "iniciales": "L",
+      "estilo": "tech",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Cultura",
+      "Salud",
+      "Entretenimiento",
+      "Sociedad"
+    ],
+    "contacto": {
+      "email_general": "contacto@latiempoazteca.today",
+      "email_redaccion": "redaccion@latiempoazteca.today",
+      "email_publicidad": "publicidad@latiempoazteca.today",
+      "telefono": "+52 55 4315 5090",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/latiempoazteca",
+      "twitter": "https://twitter.com/latiempoazteca",
+      "instagram": "https://instagram.com/latiempoazteca",
+      "youtube": "https://youtube.com/@latiempoazteca",
+      "linkedin": "https://linkedin.com/company/latiempoazteca",
+      "telegram": "https://t.me/latiempoazteca"
+    },
+    "seo": {
+      "titulo": "LaTiempoAzteca - Tu Fuente de Información Confiable",
+      "descripcion": "LaTiempoAzteca es tu fuente confiable de noticias e información actualizada. Tu Fuente de Información Confiable. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "latiempoazteca",
+        "latiempoazteca"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.257793",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_6318",
+    "nombre": "365MéxicoDaily",
+    "tagline": "Rápido, Preciso, Confiable",
+    "estilo": "aleatorio",
+    "dominio": "365méxicodaily.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "365MéxicoDaily",
+      "iniciales": "3",
+      "estilo": "bold",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Opinión",
+      "Sociedad",
+      "Deportes",
+      "Salud",
+      "Entretenimiento"
+    ],
+    "contacto": {
+      "email_general": "contacto@365méxicodaily.mx",
+      "email_redaccion": "redaccion@365méxicodaily.mx",
+      "email_publicidad": "publicidad@365méxicodaily.mx",
+      "telefono": "+52 55 2104 8416",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/365méxicodaily",
+      "twitter": "https://twitter.com/365méxicodaily",
+      "instagram": "https://instagram.com/365méxicodaily",
+      "youtube": "https://youtube.com/@365méxicodaily",
+      "linkedin": "https://linkedin.com/company/365méxicodaily",
+      "telegram": "https://t.me/365méxicodaily"
+    },
+    "seo": {
+      "titulo": "365MéxicoDaily - Rápido, Preciso, Confiable",
+      "descripcion": "365MéxicoDaily es tu fuente confiable de noticias e información actualizada. Rápido, Preciso, Confiable. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "365méxicodaily",
+        "365méxicodaily"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.257857",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_8845",
+    "nombre": "Los Vocero",
+    "tagline": "Mantente Informado",
+    "estilo": "aleatorio",
+    "dominio": "vocero.digital",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "Los Vocero",
+      "iniciales": "LV",
+      "estilo": "classic",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Montserrat",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Economía",
+      "Negocios"
+    ],
+    "contacto": {
+      "email_general": "contacto@vocero.digital",
+      "email_redaccion": "redaccion@vocero.digital",
+      "email_publicidad": "publicidad@vocero.digital",
+      "telefono": "+52 55 7154 6713",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/vocero",
+      "twitter": "https://twitter.com/vocero",
+      "instagram": "https://instagram.com/vocero",
+      "youtube": "https://youtube.com/@vocero",
+      "linkedin": "https://linkedin.com/company/vocero",
+      "telegram": "https://t.me/vocero"
+    },
+    "seo": {
+      "titulo": "Los Vocero - Mantente Informado",
+      "descripcion": "Los Vocero es tu fuente confiable de noticias e información actualizada. Mantente Informado. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "los vocero",
+        "vocero"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.257911",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_5821",
+    "nombre": "LTM Gazette",
+    "tagline": "El Pulso de la Actualidad",
+    "estilo": "aleatorio",
+    "dominio": "ltmgazette.today",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "LTM Gazette",
+      "iniciales": "LG",
+      "estilo": "classic",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Deportes",
+      "Tecnología",
+      "Sociedad"
+    ],
+    "contacto": {
+      "email_general": "contacto@ltmgazette.today",
+      "email_redaccion": "redaccion@ltmgazette.today",
+      "email_publicidad": "publicidad@ltmgazette.today",
+      "telefono": "+52 55 7819 3013",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/ltmgazette",
+      "twitter": "https://twitter.com/ltmgazette",
+      "instagram": "https://instagram.com/ltmgazette",
+      "youtube": "https://youtube.com/@ltmgazette",
+      "linkedin": "https://linkedin.com/company/ltmgazette",
+      "telegram": "https://t.me/ltmgazette"
+    },
+    "seo": {
+      "titulo": "LTM Gazette - El Pulso de la Actualidad",
+      "descripcion": "LTM Gazette es tu fuente confiable de noticias e información actualizada. El Pulso de la Actualidad. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "ltm gazette",
+        "ltmgazette"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.257963",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_5772",
+    "nombre": "LasObservadorMexicano",
+    "tagline": "Periodismo de Calidad",
+    "estilo": "aleatorio",
+    "dominio": "lasobservadormexican.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "LasObservadorMexicano",
+      "iniciales": "L",
+      "estilo": "minimal",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Entretenimiento",
+      "Salud",
+      "Mundo",
+      "Opinión",
+      "Educación"
+    ],
+    "contacto": {
+      "email_general": "contacto@lasobservadormexican.news",
+      "email_redaccion": "redaccion@lasobservadormexican.news",
+      "email_publicidad": "publicidad@lasobservadormexican.news",
+      "telefono": "+52 55 5597 4444",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/lasobservadormexican",
+      "twitter": "https://twitter.com/lasobservadormexican",
+      "instagram": "https://instagram.com/lasobservadormexican",
+      "youtube": "https://youtube.com/@lasobservadormexican",
+      "linkedin": "https://linkedin.com/company/lasobservadormexican",
+      "telegram": "https://t.me/lasobservadormexican"
+    },
+    "seo": {
+      "titulo": "LasObservadorMexicano - Periodismo de Calidad",
+      "descripcion": "LasObservadorMexicano es tu fuente confiable de noticias e información actualizada. Periodismo de Calidad. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "lasobservadormexicano",
+        "lasobservadormexican"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.258022",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_6894",
+    "nombre": "Periódico Hoy",
+    "tagline": "Noticias que Importan",
+    "estilo": "aleatorio",
+    "dominio": "periódicohoy.online",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "Periódico Hoy",
+      "iniciales": "PH",
+      "estilo": "bold",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Sociedad",
+      "Opinión",
+      "Ciencia",
+      "Salud"
+    ],
+    "contacto": {
+      "email_general": "contacto@periódicohoy.online",
+      "email_redaccion": "redaccion@periódicohoy.online",
+      "email_publicidad": "publicidad@periódicohoy.online",
+      "telefono": "+52 55 8264 7429",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/periódicohoy",
+      "twitter": "https://twitter.com/periódicohoy",
+      "instagram": "https://instagram.com/periódicohoy",
+      "youtube": "https://youtube.com/@periódicohoy",
+      "linkedin": "https://linkedin.com/company/periódicohoy",
+      "telegram": "https://t.me/periódicohoy"
+    },
+    "seo": {
+      "titulo": "Periódico Hoy - Noticias que Importan",
+      "descripcion": "Periódico Hoy es tu fuente confiable de noticias e información actualizada. Noticias que Importan. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "periódico hoy",
+        "periódicohoy"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.258081",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_183206_9222",
+    "nombre": "MX360Journal",
+    "tagline": "Periodismo de Calidad",
+    "estilo": "aleatorio",
+    "dominio": "mx360journal.com.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "MX360Journal",
+      "iniciales": "M",
+      "estilo": "elegant",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Tecnología",
+      "Deportes",
+      "Cultura",
+      "Salud",
+      "Entretenimiento"
+    ],
+    "contacto": {
+      "email_general": "contacto@mx360journal.com.mx",
+      "email_redaccion": "redaccion@mx360journal.com.mx",
+      "email_publicidad": "publicidad@mx360journal.com.mx",
+      "telefono": "+52 55 3644 7936",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/mx360journal",
+      "twitter": "https://twitter.com/mx360journal",
+      "instagram": "https://instagram.com/mx360journal",
+      "youtube": "https://youtube.com/@mx360journal",
+      "linkedin": "https://linkedin.com/company/mx360journal",
+      "telegram": "https://t.me/mx360journal"
+    },
+    "seo": {
+      "titulo": "MX360Journal - Periodismo de Calidad",
+      "descripcion": "MX360Journal es tu fuente confiable de noticias e información actualizada. Periodismo de Calidad. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "mx360journal",
+        "mx360journal"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T18:32:06.258136",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

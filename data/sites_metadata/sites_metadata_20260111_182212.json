@@ -1,0 +1,443 @@
+[
+  {
+    "id": "site_20260111_182142_3488",
+    "nombre": "7x24MXGazette",
+    "tagline": "Información Que Transforma",
+    "estilo": "aleatorio",
+    "dominio": "7x24mxgazette.com.mx",
+    "dominio_verificado": true,
+    "dominio_disponible": false,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "7x24MXGazette",
+      "iniciales": "7",
+      "estilo": "minimal",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Tecnología",
+      "Deportes",
+      "Mundo",
+      "Negocios",
+      "Salud"
+    ],
+    "contacto": {
+      "email_general": "contacto@7x24mxgazette.com.mx",
+      "email_redaccion": "redaccion@7x24mxgazette.com.mx",
+      "email_publicidad": "publicidad@7x24mxgazette.com.mx",
+      "telefono": "+52 55 9989 2403",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/7x24mxgazette",
+      "twitter": "https://twitter.com/7x24mxgazette",
+      "instagram": "https://instagram.com/7x24mxgazette",
+      "youtube": "https://youtube.com/@7x24mxgazette",
+      "linkedin": "https://linkedin.com/company/7x24mxgazette",
+      "telegram": "https://t.me/7x24mxgazette"
+    },
+    "seo": {
+      "titulo": "7x24MXGazette - Información Que Transforma",
+      "descripcion": "7x24MXGazette es tu fuente confiable de noticias e información actualizada. Información Que Transforma. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "7x24mxgazette",
+        "7x24mxgazette"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-11T18:21:42.412612",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260111_182150_8209",
+    "nombre": "LosNacionalMx",
+    "tagline": "Información para Todos los Mexicanos",
+    "estilo": "aleatorio",
+    "dominio": "losnacionalmx.com.mx",
+    "dominio_verificado": true,
+    "dominio_disponible": false,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "LosNacionalMx",
+      "iniciales": "L",
+      "estilo": "modern",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Open Sans",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Mundo",
+      "Deportes",
+      "Tecnología",
+      "Educación",
+      "Salud"
+    ],
+    "contacto": {
+      "email_general": "contacto@losnacionalmx.com.mx",
+      "email_redaccion": "redaccion@losnacionalmx.com.mx",
+      "email_publicidad": "publicidad@losnacionalmx.com.mx",
+      "telefono": "+52 55 8105 2169",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/losnacionalmx",
+      "twitter": "https://twitter.com/losnacionalmx",
+      "instagram": "https://instagram.com/losnacionalmx",
+      "youtube": "https://youtube.com/@losnacionalmx",
+      "linkedin": "https://linkedin.com/company/losnacionalmx",
+      "telegram": "https://t.me/losnacionalmx"
+    },
+    "seo": {
+      "titulo": "LosNacionalMx - Información para Todos los Mexicanos",
+      "descripcion": "LosNacionalMx es tu fuente confiable de noticias e información actualizada. Información para Todos los Mexicanos. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "losnacionalmx",
+        "losnacionalmx"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-11T18:21:50.194682",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260111_182152_4783",
+    "nombre": "NewsGlobalOnline",
+    "tagline": "Información Digital en Tiempo Real",
+    "estilo": "aleatorio",
+    "dominio": "newsglobalonline.online",
+    "dominio_verificado": true,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "NewsGlobalOnline",
+      "iniciales": "N",
+      "estilo": "bold",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Economía",
+      "Educación",
+      "Salud",
+      "Entretenimiento",
+      "Opinión"
+    ],
+    "contacto": {
+      "email_general": "contacto@newsglobalonline.online",
+      "email_redaccion": "redaccion@newsglobalonline.online",
+      "email_publicidad": "publicidad@newsglobalonline.online",
+      "telefono": "+52 55 8028 9546",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/newsglobalonline",
+      "twitter": "https://twitter.com/newsglobalonline",
+      "instagram": "https://instagram.com/newsglobalonline",
+      "youtube": "https://youtube.com/@newsglobalonline",
+      "linkedin": "https://linkedin.com/company/newsglobalonline",
+      "telegram": "https://t.me/newsglobalonline"
+    },
+    "seo": {
+      "titulo": "NewsGlobalOnline - Información Digital en Tiempo Real",
+      "descripcion": "NewsGlobalOnline es tu fuente confiable de noticias e información actualizada. Información Digital en Tiempo Real. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "newsglobalonline",
+        "newsglobalonline"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-11T18:21:52.447500",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260111_182202_2772",
+    "nombre": "PPM Gazette",
+    "tagline": "Noticias 24/7",
+    "estilo": "aleatorio",
+    "dominio": "ppmgazette.net",
+    "dominio_verificado": true,
+    "dominio_disponible": false,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "PPM Gazette",
+      "iniciales": "PG",
+      "estilo": "classic",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Open Sans",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Sociedad",
+      "Salud",
+      "Opinión"
+    ],
+    "contacto": {
+      "email_general": "contacto@ppmgazette.net",
+      "email_redaccion": "redaccion@ppmgazette.net",
+      "email_publicidad": "publicidad@ppmgazette.net",
+      "telefono": "+52 55 4893 4552",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/ppmgazette",
+      "twitter": "https://twitter.com/ppmgazette",
+      "instagram": "https://instagram.com/ppmgazette",
+      "youtube": "https://youtube.com/@ppmgazette",
+      "linkedin": "https://linkedin.com/company/ppmgazette",
+      "telegram": "https://t.me/ppmgazette"
+    },
+    "seo": {
+      "titulo": "PPM Gazette - Noticias 24/7",
+      "descripcion": "PPM Gazette es tu fuente confiable de noticias e información actualizada. Noticias 24/7. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "ppm gazette",
+        "ppmgazette"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-11T18:22:02.483000",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260111_182212_7787",
+    "nombre": "NoticiasUniversalMx",
+    "tagline": "Noticias desde el Corazón de México",
+    "estilo": "aleatorio",
+    "dominio": "noticiasuniversalmx.news",
+    "dominio_verificado": true,
+    "dominio_disponible": false,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "NoticiasUniversalMx",
+      "iniciales": "N",
+      "estilo": "modern",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Roboto",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Deportes",
+      "Educación",
+      "Cultura"
+    ],
+    "contacto": {
+      "email_general": "contacto@noticiasuniversalmx.news",
+      "email_redaccion": "redaccion@noticiasuniversalmx.news",
+      "email_publicidad": "publicidad@noticiasuniversalmx.news",
+      "telefono": "+52 55 6794 6883",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/noticiasuniversalmx",
+      "twitter": "https://twitter.com/noticiasuniversalmx",
+      "instagram": "https://instagram.com/noticiasuniversalmx",
+      "youtube": "https://youtube.com/@noticiasuniversalmx",
+      "linkedin": "https://linkedin.com/company/noticiasuniversalmx",
+      "telegram": "https://t.me/noticiasuniversalmx"
+    },
+    "seo": {
+      "titulo": "NoticiasUniversalMx - Noticias desde el Corazón de México",
+      "descripcion": "NoticiasUniversalMx es tu fuente confiable de noticias e información actualizada. Noticias desde el Corazón de México. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "noticiasuniversalmx",
+        "noticiasuniversalmx"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-11T18:22:12.884086",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

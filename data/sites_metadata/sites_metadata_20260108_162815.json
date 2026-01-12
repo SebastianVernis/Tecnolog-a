@@ -1,0 +1,617 @@
+[
+  {
+    "id": "site_20260108_162815_8773",
+    "nombre": "100MXPost",
+    "tagline": "Tu Fuente de Información Confiable",
+    "estilo": "aleatorio",
+    "dominio": "100mxpost.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "100MXPost",
+      "iniciales": "1",
+      "estilo": "classic",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Entretenimiento",
+      "Educación",
+      "Negocios"
+    ],
+    "contacto": {
+      "email_general": "contacto@100mxpost.news",
+      "email_redaccion": "redaccion@100mxpost.news",
+      "email_publicidad": "publicidad@100mxpost.news",
+      "telefono": "+52 55 7390 6772",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/100mxpost",
+      "twitter": "https://twitter.com/100mxpost",
+      "instagram": "https://instagram.com/100mxpost",
+      "youtube": "https://youtube.com/@100mxpost",
+      "linkedin": "https://linkedin.com/company/100mxpost",
+      "telegram": "https://t.me/100mxpost"
+    },
+    "seo": {
+      "titulo": "100MXPost - Tu Fuente de Información Confiable",
+      "descripcion": "100MXPost es tu fuente confiable de noticias e información actualizada. Tu Fuente de Información Confiable. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "100mxpost",
+        "100mxpost"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:28:15.111119",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162815_3466",
+    "nombre": "LasGlobalMx",
+    "tagline": "Donde las Noticias Cobran Vida",
+    "estilo": "aleatorio",
+    "dominio": "lasglobalmx.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "LasGlobalMx",
+      "iniciales": "L",
+      "estilo": "bold",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Source Sans Pro",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Opinión",
+      "Salud",
+      "Cultura",
+      "Entretenimiento"
+    ],
+    "contacto": {
+      "email_general": "contacto@lasglobalmx.mx",
+      "email_redaccion": "redaccion@lasglobalmx.mx",
+      "email_publicidad": "publicidad@lasglobalmx.mx",
+      "telefono": "+52 55 7905 3641",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/lasglobalmx",
+      "twitter": "https://twitter.com/lasglobalmx",
+      "instagram": "https://instagram.com/lasglobalmx",
+      "youtube": "https://youtube.com/@lasglobalmx",
+      "linkedin": "https://linkedin.com/company/lasglobalmx",
+      "telegram": "https://t.me/lasglobalmx"
+    },
+    "seo": {
+      "titulo": "LasGlobalMx - Donde las Noticias Cobran Vida",
+      "descripcion": "LasGlobalMx es tu fuente confiable de noticias e información actualizada. Donde las Noticias Cobran Vida. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "lasglobalmx",
+        "lasglobalmx"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:28:15.111209",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162815_4803",
+    "nombre": "Noticias CDMX",
+    "tagline": "Información para Todos los Mexicanos",
+    "estilo": "aleatorio",
+    "dominio": "noticiascdmx.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "Noticias CDMX",
+      "iniciales": "NC",
+      "estilo": "classic",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Open Sans",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Economía",
+      "Negocios",
+      "Cultura"
+    ],
+    "contacto": {
+      "email_general": "contacto@noticiascdmx.news",
+      "email_redaccion": "redaccion@noticiascdmx.news",
+      "email_publicidad": "publicidad@noticiascdmx.news",
+      "telefono": "+52 55 8926 2864",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/noticiascdmx",
+      "twitter": "https://twitter.com/noticiascdmx",
+      "instagram": "https://instagram.com/noticiascdmx",
+      "youtube": "https://youtube.com/@noticiascdmx",
+      "linkedin": "https://linkedin.com/company/noticiascdmx",
+      "telegram": "https://t.me/noticiascdmx"
+    },
+    "seo": {
+      "titulo": "Noticias CDMX - Información para Todos los Mexicanos",
+      "descripcion": "Noticias CDMX es tu fuente confiable de noticias e información actualizada. Información para Todos los Mexicanos. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "noticias cdmx",
+        "noticiascdmx"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:28:15.111269",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162815_5275",
+    "nombre": "NewsActualOnline",
+    "tagline": "Rápido, Preciso, Confiable",
+    "estilo": "aleatorio",
+    "dominio": "newsactualonline.press",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "NewsActualOnline",
+      "iniciales": "N",
+      "estilo": "tech",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Open Sans",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Deportes",
+      "Educación",
+      "Cultura",
+      "Tecnología"
+    ],
+    "contacto": {
+      "email_general": "contacto@newsactualonline.press",
+      "email_redaccion": "redaccion@newsactualonline.press",
+      "email_publicidad": "publicidad@newsactualonline.press",
+      "telefono": "+52 55 2436 4382",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/newsactualonline",
+      "twitter": "https://twitter.com/newsactualonline",
+      "instagram": "https://instagram.com/newsactualonline",
+      "youtube": "https://youtube.com/@newsactualonline",
+      "linkedin": "https://linkedin.com/company/newsactualonline",
+      "telegram": "https://t.me/newsactualonline"
+    },
+    "seo": {
+      "titulo": "NewsActualOnline - Rápido, Preciso, Confiable",
+      "descripcion": "NewsActualOnline es tu fuente confiable de noticias e información actualizada. Rápido, Preciso, Confiable. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "newsactualonline",
+        "newsactualonline"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:28:15.111326",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162815_9641",
+    "nombre": "CrónicaMiradaMexicano",
+    "tagline": "Noticias desde el Corazón de México",
+    "estilo": "aleatorio",
+    "dominio": "crónicamiradamexican.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "CrónicaMiradaMexicano",
+      "iniciales": "C",
+      "estilo": "modern",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Negocios",
+      "Entretenimiento",
+      "Economía",
+      "Mundo"
+    ],
+    "contacto": {
+      "email_general": "contacto@crónicamiradamexican.news",
+      "email_redaccion": "redaccion@crónicamiradamexican.news",
+      "email_publicidad": "publicidad@crónicamiradamexican.news",
+      "telefono": "+52 55 2078 6798",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/crónicamiradamexican",
+      "twitter": "https://twitter.com/crónicamiradamexican",
+      "instagram": "https://instagram.com/crónicamiradamexican",
+      "youtube": "https://youtube.com/@crónicamiradamexican",
+      "linkedin": "https://linkedin.com/company/crónicamiradamexican",
+      "telegram": "https://t.me/crónicamiradamexican"
+    },
+    "seo": {
+      "titulo": "CrónicaMiradaMexicano - Noticias desde el Corazón de México",
+      "descripcion": "CrónicaMiradaMexicano es tu fuente confiable de noticias e información actualizada. Noticias desde el Corazón de México. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "crónicamiradamexicano",
+        "crónicamiradamexican"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:28:15.111394",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162815_8835",
+    "nombre": "MediaActualOnline",
+    "tagline": "Noticias 24 Horas al Día",
+    "estilo": "aleatorio",
+    "dominio": "mediaactualonline.info",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "MediaActualOnline",
+      "iniciales": "M",
+      "estilo": "classic",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Source Sans Pro",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Economía",
+      "Mundo",
+      "Ciencia",
+      "Entretenimiento"
+    ],
+    "contacto": {
+      "email_general": "contacto@mediaactualonline.info",
+      "email_redaccion": "redaccion@mediaactualonline.info",
+      "email_publicidad": "publicidad@mediaactualonline.info",
+      "telefono": "+52 55 6469 3034",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/mediaactualonline",
+      "twitter": "https://twitter.com/mediaactualonline",
+      "instagram": "https://instagram.com/mediaactualonline",
+      "youtube": "https://youtube.com/@mediaactualonline",
+      "linkedin": "https://linkedin.com/company/mediaactualonline",
+      "telegram": "https://t.me/mediaactualonline"
+    },
+    "seo": {
+      "titulo": "MediaActualOnline - Noticias 24 Horas al Día",
+      "descripcion": "MediaActualOnline es tu fuente confiable de noticias e información actualizada. Noticias 24 Horas al Día. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "mediaactualonline",
+        "mediaactualonline"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:28:15.111447",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162815_3837",
+    "nombre": "MexicanoObservador Central",
+    "tagline": "Actualidad en Tiempo Real",
+    "estilo": "aleatorio",
+    "dominio": "mexicanoobservadorce.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "MexicanoObservador Central",
+      "iniciales": "MC",
+      "estilo": "modern",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Ciencia",
+      "Opinión",
+      "Cultura",
+      "Economía",
+      "Negocios"
+    ],
+    "contacto": {
+      "email_general": "contacto@mexicanoobservadorce.news",
+      "email_redaccion": "redaccion@mexicanoobservadorce.news",
+      "email_publicidad": "publicidad@mexicanoobservadorce.news",
+      "telefono": "+52 55 7914 8519",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/mexicanoobservadorce",
+      "twitter": "https://twitter.com/mexicanoobservadorce",
+      "instagram": "https://instagram.com/mexicanoobservadorce",
+      "youtube": "https://youtube.com/@mexicanoobservadorce",
+      "linkedin": "https://linkedin.com/company/mexicanoobservadorce",
+      "telegram": "https://t.me/mexicanoobservadorce"
+    },
+    "seo": {
+      "titulo": "MexicanoObservador Central - Actualidad en Tiempo Real",
+      "descripcion": "MexicanoObservador Central es tu fuente confiable de noticias e información actualizada. Actualidad en Tiempo Real. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "mexicanoobservador central",
+        "mexicanoobservadorce"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:28:15.111507",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

@@ -1,0 +1,442 @@
+[
+  {
+    "id": "site_20260108_162426_4681",
+    "nombre": "MéxicoRadar First",
+    "tagline": "Rápido, Preciso, Confiable",
+    "estilo": "aleatorio",
+    "dominio": "méxicoradarfirst.com.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "MéxicoRadar First",
+      "iniciales": "MF",
+      "estilo": "tech",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Ciencia",
+      "Mundo",
+      "Tecnología"
+    ],
+    "contacto": {
+      "email_general": "contacto@méxicoradarfirst.com.mx",
+      "email_redaccion": "redaccion@méxicoradarfirst.com.mx",
+      "email_publicidad": "publicidad@méxicoradarfirst.com.mx",
+      "telefono": "+52 55 6276 7407",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/méxicoradarfirst",
+      "twitter": "https://twitter.com/méxicoradarfirst",
+      "instagram": "https://instagram.com/méxicoradarfirst",
+      "youtube": "https://youtube.com/@méxicoradarfirst",
+      "linkedin": "https://linkedin.com/company/méxicoradarfirst",
+      "telegram": "https://t.me/méxicoradarfirst"
+    },
+    "seo": {
+      "titulo": "MéxicoRadar First - Rápido, Preciso, Confiable",
+      "descripcion": "MéxicoRadar First es tu fuente confiable de noticias e información actualizada. Rápido, Preciso, Confiable. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "méxicoradar first",
+        "méxicoradarfirst"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:24:26.645101",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162426_2400",
+    "nombre": "Noticias de Latino",
+    "tagline": "Información Que Transforma",
+    "estilo": "aleatorio",
+    "dominio": "noticiaslatino.online",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "Noticias de Latino",
+      "iniciales": "NDL",
+      "estilo": "minimal",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Tecnología",
+      "Salud",
+      "Opinión"
+    ],
+    "contacto": {
+      "email_general": "contacto@noticiaslatino.online",
+      "email_redaccion": "redaccion@noticiaslatino.online",
+      "email_publicidad": "publicidad@noticiaslatino.online",
+      "telefono": "+52 55 2799 4178",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/noticiaslatino",
+      "twitter": "https://twitter.com/noticiaslatino",
+      "instagram": "https://instagram.com/noticiaslatino",
+      "youtube": "https://youtube.com/@noticiaslatino",
+      "linkedin": "https://linkedin.com/company/noticiaslatino",
+      "telegram": "https://t.me/noticiaslatino"
+    },
+    "seo": {
+      "titulo": "Noticias de Latino - Información Que Transforma",
+      "descripcion": "Noticias de Latino es tu fuente confiable de noticias e información actualizada. Información Que Transforma. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "noticias de latino",
+        "noticiaslatino"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:24:26.645178",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162426_3206",
+    "nombre": "Información América",
+    "tagline": "Información Que Transforma",
+    "estilo": "aleatorio",
+    "dominio": "informaciónamérica.info",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "Información América",
+      "iniciales": "IA",
+      "estilo": "minimal",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Economía",
+      "Opinión",
+      "Sociedad",
+      "Salud"
+    ],
+    "contacto": {
+      "email_general": "contacto@informaciónamérica.info",
+      "email_redaccion": "redaccion@informaciónamérica.info",
+      "email_publicidad": "publicidad@informaciónamérica.info",
+      "telefono": "+52 55 7259 1728",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/informaciónamérica",
+      "twitter": "https://twitter.com/informaciónamérica",
+      "instagram": "https://instagram.com/informaciónamérica",
+      "youtube": "https://youtube.com/@informaciónamérica",
+      "linkedin": "https://linkedin.com/company/informaciónamérica",
+      "telegram": "https://t.me/informaciónamérica"
+    },
+    "seo": {
+      "titulo": "Información América - Información Que Transforma",
+      "descripcion": "Información América es tu fuente confiable de noticias e información actualizada. Información Que Transforma. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "información américa",
+        "informaciónamérica"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:24:26.645237",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162426_1050",
+    "nombre": "InfoDirecto24/7",
+    "tagline": "La Nueva Era del Periodismo",
+    "estilo": "aleatorio",
+    "dominio": "infodirecto247.com",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#34495E",
+      "secundario": "#2980B9",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "InfoDirecto24/7",
+      "iniciales": "I",
+      "estilo": "modern",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#34495E",
+        "secundario": "#2980B9",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Salud",
+      "Entretenimiento",
+      "Economía",
+      "Ciencia"
+    ],
+    "contacto": {
+      "email_general": "contacto@infodirecto247.com",
+      "email_redaccion": "redaccion@infodirecto247.com",
+      "email_publicidad": "publicidad@infodirecto247.com",
+      "telefono": "+52 55 3138 1997",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/infodirecto247",
+      "twitter": "https://twitter.com/infodirecto247",
+      "instagram": "https://instagram.com/infodirecto247",
+      "youtube": "https://youtube.com/@infodirecto247",
+      "linkedin": "https://linkedin.com/company/infodirecto247",
+      "telegram": "https://t.me/infodirecto247"
+    },
+    "seo": {
+      "titulo": "InfoDirecto24/7 - La Nueva Era del Periodismo",
+      "descripcion": "InfoDirecto24/7 es tu fuente confiable de noticias e información actualizada. La Nueva Era del Periodismo. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "infodirecto24/7",
+        "infodirecto247"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:24:26.645288",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_162426_5689",
+    "nombre": "NotiActual24",
+    "tagline": "La Nueva Era del Periodismo",
+    "estilo": "aleatorio",
+    "dominio": "notiactual24.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "NotiActual24",
+      "iniciales": "N",
+      "estilo": "minimal",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Sociedad",
+      "Negocios",
+      "Mundo",
+      "Opinión",
+      "Economía"
+    ],
+    "contacto": {
+      "email_general": "contacto@notiactual24.news",
+      "email_redaccion": "redaccion@notiactual24.news",
+      "email_publicidad": "publicidad@notiactual24.news",
+      "telefono": "+52 55 9804 8391",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/notiactual24",
+      "twitter": "https://twitter.com/notiactual24",
+      "instagram": "https://instagram.com/notiactual24",
+      "youtube": "https://youtube.com/@notiactual24",
+      "linkedin": "https://linkedin.com/company/notiactual24",
+      "telegram": "https://t.me/notiactual24"
+    },
+    "seo": {
+      "titulo": "NotiActual24 - La Nueva Era del Periodismo",
+      "descripcion": "NotiActual24 es tu fuente confiable de noticias e información actualizada. La Nueva Era del Periodismo. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "notiactual24",
+        "notiactual24"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:24:26.645340",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

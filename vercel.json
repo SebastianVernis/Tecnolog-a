@@ -1,0 +1,67 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "name": "news-generator-admin",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "public": false,
+  
+  "env": {
+    "VITE_API_URL": "https://news-generator-backend.onrender.com",
+    "VITE_APP_NAME": "News Generator Admin",
+    "VITE_APP_VERSION": "2.0.0"
+  },
+  
+  "build": {
+    "env": {
+      "VITE_API_URL": "@api_url"
+    }
+  },
+  
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "X-Requested-With, Content-Type, Authorization"
+        }
+      ]
+    }
+  ],
+  
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://news-generator-backend.onrender.com/api/:path*"
+    }
+  ],
+  
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  
+  "functions": {},
+  
+  "regions": ["iad1"],
+  
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "silent": false
+  }
+}

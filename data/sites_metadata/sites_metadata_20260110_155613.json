@@ -1,0 +1,441 @@
+[
+  {
+    "id": "site_20260110_155613_3169",
+    "nombre": "Crónica Digital",
+    "tagline": "Siempre Online, Siempre Actualizado",
+    "estilo": "aleatorio",
+    "dominio": "crónicadigital.com.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "Crónica Digital",
+      "iniciales": "CD",
+      "estilo": "modern",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Opinión",
+      "Deportes",
+      "Entretenimiento",
+      "Sociedad"
+    ],
+    "contacto": {
+      "email_general": "contacto@crónicadigital.com.mx",
+      "email_redaccion": "redaccion@crónicadigital.com.mx",
+      "email_publicidad": "publicidad@crónicadigital.com.mx",
+      "telefono": "+52 55 2963 4455",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/crónicadigital",
+      "twitter": "https://twitter.com/crónicadigital",
+      "instagram": "https://instagram.com/crónicadigital",
+      "youtube": "https://youtube.com/@crónicadigital",
+      "linkedin": "https://linkedin.com/company/crónicadigital",
+      "telegram": "https://t.me/crónicadigital"
+    },
+    "seo": {
+      "titulo": "Crónica Digital - Siempre Online, Siempre Actualizado",
+      "descripcion": "Crónica Digital es tu fuente confiable de noticias e información actualizada. Siempre Online, Siempre Actualizado. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "crónica digital",
+        "crónicadigital"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-10T15:56:13.542729",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260110_155613_1377",
+    "nombre": "365AztecaJournal",
+    "tagline": "Actualidad en Tiempo Real",
+    "estilo": "aleatorio",
+    "dominio": "365aztecajournal.media",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "365AztecaJournal",
+      "iniciales": "3",
+      "estilo": "minimal",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Source Sans Pro",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Opinión",
+      "Tecnología",
+      "Negocios"
+    ],
+    "contacto": {
+      "email_general": "contacto@365aztecajournal.media",
+      "email_redaccion": "redaccion@365aztecajournal.media",
+      "email_publicidad": "publicidad@365aztecajournal.media",
+      "telefono": "+52 55 7931 3156",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/365aztecajournal",
+      "twitter": "https://twitter.com/365aztecajournal",
+      "instagram": "https://instagram.com/365aztecajournal",
+      "youtube": "https://youtube.com/@365aztecajournal",
+      "linkedin": "https://linkedin.com/company/365aztecajournal",
+      "telegram": "https://t.me/365aztecajournal"
+    },
+    "seo": {
+      "titulo": "365AztecaJournal - Actualidad en Tiempo Real",
+      "descripcion": "365AztecaJournal es tu fuente confiable de noticias e información actualizada. Actualidad en Tiempo Real. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "365aztecajournal",
+        "365aztecajournal"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-10T15:56:13.542828",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260110_155613_8009",
+    "nombre": "NotiGlobal24/7",
+    "tagline": "Siempre Online, Siempre Actualizado",
+    "estilo": "aleatorio",
+    "dominio": "notiglobal247.com",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "NotiGlobal24/7",
+      "iniciales": "N",
+      "estilo": "elegant",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Cultura",
+      "Deportes",
+      "Salud"
+    ],
+    "contacto": {
+      "email_general": "contacto@notiglobal247.com",
+      "email_redaccion": "redaccion@notiglobal247.com",
+      "email_publicidad": "publicidad@notiglobal247.com",
+      "telefono": "+52 55 9663 9011",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/notiglobal247",
+      "twitter": "https://twitter.com/notiglobal247",
+      "instagram": "https://instagram.com/notiglobal247",
+      "youtube": "https://youtube.com/@notiglobal247",
+      "linkedin": "https://linkedin.com/company/notiglobal247",
+      "telegram": "https://t.me/notiglobal247"
+    },
+    "seo": {
+      "titulo": "NotiGlobal24/7 - Siempre Online, Siempre Actualizado",
+      "descripcion": "NotiGlobal24/7 es tu fuente confiable de noticias e información actualizada. Siempre Online, Siempre Actualizado. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "notiglobal24/7",
+        "notiglobal247"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-10T15:56:13.542898",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260110_155613_3701",
+    "nombre": "América Ahora",
+    "tagline": "Actualidad en Tiempo Real",
+    "estilo": "aleatorio",
+    "dominio": "américaahora.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "América Ahora",
+      "iniciales": "AA",
+      "estilo": "minimal",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Sociedad",
+      "Deportes",
+      "Negocios",
+      "Opinión",
+      "Mundo"
+    ],
+    "contacto": {
+      "email_general": "contacto@américaahora.news",
+      "email_redaccion": "redaccion@américaahora.news",
+      "email_publicidad": "publicidad@américaahora.news",
+      "telefono": "+52 55 1857 7044",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/américaahora",
+      "twitter": "https://twitter.com/américaahora",
+      "instagram": "https://instagram.com/américaahora",
+      "youtube": "https://youtube.com/@américaahora",
+      "linkedin": "https://linkedin.com/company/américaahora",
+      "telegram": "https://t.me/américaahora"
+    },
+    "seo": {
+      "titulo": "América Ahora - Actualidad en Tiempo Real",
+      "descripcion": "América Ahora es tu fuente confiable de noticias e información actualizada. Actualidad en Tiempo Real. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "américa ahora",
+        "américaahora"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-10T15:56:13.542966",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260110_155613_3233",
+    "nombre": "Diario Regional News",
+    "tagline": "Información Que Transforma",
+    "estilo": "aleatorio",
+    "dominio": "diarioregionalnews.info",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "Diario Regional News",
+      "iniciales": "DRN",
+      "estilo": "modern",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Negocios",
+      "Cultura",
+      "Economía"
+    ],
+    "contacto": {
+      "email_general": "contacto@diarioregionalnews.info",
+      "email_redaccion": "redaccion@diarioregionalnews.info",
+      "email_publicidad": "publicidad@diarioregionalnews.info",
+      "telefono": "+52 55 6935 5533",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/diarioregionalnews",
+      "twitter": "https://twitter.com/diarioregionalnews",
+      "instagram": "https://instagram.com/diarioregionalnews",
+      "youtube": "https://youtube.com/@diarioregionalnews",
+      "linkedin": "https://linkedin.com/company/diarioregionalnews",
+      "telegram": "https://t.me/diarioregionalnews"
+    },
+    "seo": {
+      "titulo": "Diario Regional News - Información Que Transforma",
+      "descripcion": "Diario Regional News es tu fuente confiable de noticias e información actualizada. Información Que Transforma. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "diario regional news",
+        "diarioregionalnews"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-10T15:56:13.543039",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

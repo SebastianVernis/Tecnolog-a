@@ -1,0 +1,267 @@
+[
+  {
+    "id": "site_20260108_161003_9314",
+    "nombre": "Periódico Vocero",
+    "tagline": "Rápido, Preciso, Confiable",
+    "estilo": "aleatorio",
+    "dominio": "periódicovocero.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "Periódico Vocero",
+      "iniciales": "PV",
+      "estilo": "modern",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Tecnología",
+      "Economía",
+      "Negocios",
+      "Ciencia"
+    ],
+    "contacto": {
+      "email_general": "contacto@periódicovocero.mx",
+      "email_redaccion": "redaccion@periódicovocero.mx",
+      "email_publicidad": "publicidad@periódicovocero.mx",
+      "telefono": "+52 55 9871 5585",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/periódicovocero",
+      "twitter": "https://twitter.com/periódicovocero",
+      "instagram": "https://instagram.com/periódicovocero",
+      "youtube": "https://youtube.com/@periódicovocero",
+      "linkedin": "https://linkedin.com/company/periódicovocero",
+      "telegram": "https://t.me/periódicovocero"
+    },
+    "seo": {
+      "titulo": "Periódico Vocero - Rápido, Preciso, Confiable",
+      "descripcion": "Periódico Vocero es tu fuente confiable de noticias e información actualizada. Rápido, Preciso, Confiable. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "periódico vocero",
+        "periódicovocero"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:10:03.945440",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_161003_6280",
+    "nombre": "PressActualDigital",
+    "tagline": "Siempre Online, Siempre Actualizado",
+    "estilo": "aleatorio",
+    "dominio": "pressactualdigital.online",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "PressActualDigital",
+      "iniciales": "P",
+      "estilo": "modern",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Source Sans Pro",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Salud",
+      "Ciencia",
+      "Entretenimiento"
+    ],
+    "contacto": {
+      "email_general": "contacto@pressactualdigital.online",
+      "email_redaccion": "redaccion@pressactualdigital.online",
+      "email_publicidad": "publicidad@pressactualdigital.online",
+      "telefono": "+52 55 2828 3733",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/pressactualdigital",
+      "twitter": "https://twitter.com/pressactualdigital",
+      "instagram": "https://instagram.com/pressactualdigital",
+      "youtube": "https://youtube.com/@pressactualdigital",
+      "linkedin": "https://linkedin.com/company/pressactualdigital",
+      "telegram": "https://t.me/pressactualdigital"
+    },
+    "seo": {
+      "titulo": "PressActualDigital - Siempre Online, Siempre Actualizado",
+      "descripcion": "PressActualDigital es tu fuente confiable de noticias e información actualizada. Siempre Online, Siempre Actualizado. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "pressactualdigital",
+        "pressactualdigital"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:10:03.945543",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260108_161003_9421",
+    "nombre": "El México Ahora",
+    "tagline": "México en Primera Plana",
+    "estilo": "aleatorio",
+    "dominio": "méxicoahora.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#34495E",
+      "secundario": "#2980B9",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "El México Ahora",
+      "iniciales": "EMA",
+      "estilo": "classic",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#34495E",
+        "secundario": "#2980B9",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Ciencia",
+      "Educación",
+      "Deportes",
+      "Sociedad",
+      "Mundo"
+    ],
+    "contacto": {
+      "email_general": "contacto@méxicoahora.mx",
+      "email_redaccion": "redaccion@méxicoahora.mx",
+      "email_publicidad": "publicidad@méxicoahora.mx",
+      "telefono": "+52 55 6984 3949",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/méxicoahora",
+      "twitter": "https://twitter.com/méxicoahora",
+      "instagram": "https://instagram.com/méxicoahora",
+      "youtube": "https://youtube.com/@méxicoahora",
+      "linkedin": "https://linkedin.com/company/méxicoahora",
+      "telegram": "https://t.me/méxicoahora"
+    },
+    "seo": {
+      "titulo": "El México Ahora - México en Primera Plana",
+      "descripcion": "El México Ahora es tu fuente confiable de noticias e información actualizada. México en Primera Plana. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "el méxico ahora",
+        "méxicoahora"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-08T16:10:03.945617",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

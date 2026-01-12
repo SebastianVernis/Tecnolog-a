@@ -1,0 +1,85 @@
+# Cloudflare Workers Configuration
+# https://developers.cloudflare.com/workers/
+
+name = "news-generator-api"
+main = "workers/src/index.ts"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Account info (obtener de dashboard)
+# account_id = "your_account_id_here"
+
+# Workers AI (para IA nativa de Cloudflare)
+[ai]
+binding = "AI"
+
+# R2 Storage para sitios generados
+[[r2_buckets]]
+binding = "SITES_BUCKET"
+bucket_name = "news-generator-sites"
+preview_bucket_name = "news-generator-sites-dev"
+
+# R2 Storage para imágenes
+[[r2_buckets]]
+binding = "IMAGES_BUCKET"
+bucket_name = "news-generator-images"
+preview_bucket_name = "news-generator-images-dev"
+
+# D1 Database para metadata
+[[d1_databases]]
+binding = "DB"
+database_name = "news-generator-db"
+database_id = "replace_with_your_db_id"
+
+# KV para caché (opcional)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "replace_with_your_kv_id"
+preview_id = "replace_with_your_preview_kv_id"
+
+# Queue para procesamiento asíncrono de sitios
+[[queues.producers]]
+binding = "SITE_GENERATION_QUEUE"
+queue = "site-generation-jobs"
+
+[[queues.consumers]]
+queue = "site-generation-jobs"
+max_batch_size = 5
+max_batch_timeout = 60
+max_retries = 3
+dead_letter_queue = "site-generation-dlq"
+
+# Variables de entorno (no sensibles)
+[vars]
+ENVIRONMENT = "production"
+API_VERSION = "2.0.0"
+MAX_SITES_PER_REQUEST = "10"
+
+# Secrets (configurar con: wrangler secret put SECRET_NAME)
+# BLACKBOX_API_KEY
+# NEWSAPI_KEY
+# CLOUDFLARE_API_TOKEN
+# CLOUDFLARE_ACCOUNT_ID
+
+# Límites y configuración
+[limits]
+cpu_ms = 50000  # Para Paid plan
+
+# Triggers (opcional - cron jobs)
+[triggers]
+crons = ["0 */6 * * *"]  # Cada 6 horas
+
+# Observability
+[observability]
+enabled = true
+head_sampling_rate = 1.0
+
+# Development
+[env.development]
+name = "news-generator-api-dev"
+vars = { ENVIRONMENT = "development" }
+
+# Staging
+[env.staging]
+name = "news-generator-api-staging"
+vars = { ENVIRONMENT = "staging" }
