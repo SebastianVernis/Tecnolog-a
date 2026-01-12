@@ -19,8 +19,8 @@ services:
     startCommand: gunicorn -w 2 -t 300 -b 0.0.0.0:$PORT backend.app:app
     
     # Source
-    repo: https://github.com/YOUR_USERNAME/news-prototype  # Cambiar por tu repo
-    branch: main
+    repo: https://github.com/SebastianVernis/Tecnolog-a  # Cambiar por tu repo
+    branch: master
     
     # Environment
     envVars:
