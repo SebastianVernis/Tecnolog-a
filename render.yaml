@@ -21,7 +21,6 @@ services:
     # Source
     repo: https://github.com/YOUR_USERNAME/news-prototype  # Cambiar por tu repo
     branch: main
-    rootDir: Tecnología
     
     # Environment
     envVars:
@@ -66,10 +65,11 @@ services:
     
     # Persistent Disk (Opcional - $1/GB/mes)
     # Recomendado solo si no usas S3/R2
-    disk:
-      name: generated-sites-disk
-      mountPath: /opt/render/project/src/generated_sites
-      sizeGB: 10  # 10GB = $10/mes
+    # DISABLED for free tier - uncomment if you upgrade to paid plan
+    # disk:
+    #   name: generated-sites-disk
+    #   mountPath: /opt/render/project/src/generated_sites
+    #   sizeGB: 10  # 10GB = $10/mes
     
     # Regiones (elegir la más cercana a usuarios)
     # oregon, frankfurt, singapore
@@ -84,7 +84,6 @@ services:
     startCommand: "python scripts/keep_alive_cron.py"
     repo: https://github.com/YOUR_USERNAME/news-prototype  # Cambiar por tu repo
     branch: main
-    rootDir: Tecnología
     envVars:
       - key: BACKEND_URL
         value: https://news-generator-backend.onrender.com
