@@ -75,18 +75,19 @@ services:
     # oregon, frankfurt, singapore
     region: oregon
 
-  # Cron Job - Keep Alive para Free Tier
-  - type: cron
-    name: news-generator-keep-alive
-    runtime: python
-    schedule: "*/10 * * * *"  # Cada 10 minutos
-    buildCommand: "pip install requests"
-    startCommand: "python scripts/keep_alive_cron.py"
-    repo: https://github.com/YOUR_USERNAME/news-prototype  # Cambiar por tu repo
-    branch: main
-    envVars:
-      - key: BACKEND_URL
-        value: https://news-generator-backend.onrender.com
+  # Cron Job - Keep Alive ($1/mes)
+  # DISABLED - Uncomment if you want to keep the service awake 24/7
+  # - type: cron
+  #   name: news-generator-keep-alive
+  #   runtime: python
+  #   schedule: "*/10 * * * *"  # Cada 10 minutos
+  #   buildCommand: "pip install requests"
+  #   startCommand: "python scripts/keep_alive_cron.py"
+  #   repo: https://github.com/YOUR_USERNAME/news-prototype
+  #   branch: main
+  #   envVars:
+  #     - key: BACKEND_URL
+  #       value: https://news-generator-backend.onrender.com
 
 # Variables de entorno compartidas
 # Puedes definirlas aquí o en Render Dashboard
