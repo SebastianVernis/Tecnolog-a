@@ -82,6 +82,7 @@ function Settings() {
               type="password"
               id="newsApiKey"
               name="newsApiKey"
+              autoComplete="off"
               value={settings.newsApiKey}
               onChange={handleChange}
               placeholder="Ingresa tu clave de NewsAPI"
@@ -100,6 +101,7 @@ function Settings() {
               type="password"
               id="newsdataKey"
               name="newsdataKey"
+              autoComplete="off"
               value={settings.newsdataKey}
               onChange={handleChange}
               placeholder="Ingresa tu clave de NewsData"
@@ -118,6 +120,7 @@ function Settings() {
               type="password"
               id="blackboxApiKey"
               name="blackboxApiKey"
+              autoComplete="off"
               value={settings.blackboxApiKey}
               onChange={handleChange}
               placeholder="Ingresa tu clave de Blackbox AI"

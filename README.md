@@ -1,6 +1,38 @@
-# 🗞️ News Prototype - Generador Automatizado de Sitios de Noticias
+# 🗞️ News Generator - Sistema Completo de Generación de Sitios de Noticias
 
-Sistema completo para **generar automáticamente múltiples sitios de noticias** con contenido único, layouts diversos y metadatos completos.
+Sistema completo para **generar automáticamente múltiples sitios de noticias** con contenido único, layouts diversos y metadatos completos. Incluye panel de administración web y API REST.
+
+**Versión:** 2.0.0  
+**Última actualización:** 13 de enero de 2026
+
+---
+
+## 🏗️ Arquitectura
+
+```
+┌─────────────────────────────────────────────┐
+│  Frontend (React + Vite)                   │
+│  - Panel de administración                  │
+│  - Gestión de sitios                        │
+│  - Deploy: Vercel                           │
+└──────────────┬──────────────────────────────┘
+               │ REST API
+               ↓
+┌─────────────────────────────────────────────┐
+│  Backend (Flask API)                        │
+│  - Endpoints REST                           │
+│  - Orquestación de scripts                  │
+│  - Deploy: Render                           │
+└──────────────┬──────────────────────────────┘
+               │
+               ↓
+┌─────────────────────────────────────────────┐
+│  Scripts Python                             │
+│  - Generación de sitios                     │
+│  - Procesamiento de noticias                │
+│  - Layouts y CSS                            │
+└─────────────────────────────────────────────┘
+```
 
 ---
 
@@ -36,42 +68,52 @@ Configuración → Metadatos → Noticias → Layouts → Sitios HTML
 
 ## 🏃 Inicio Rápido
 
-### 1. Instalación
+### 1. Panel Web (Recomendado)
+
+**Frontend:** https://news-generator-admin.vercel.app  
+**Backend API:** https://news-generator-backend-ae62.onrender.com
+
+1. Accede al panel de administración
+2. Configura tus API keys en **Settings**
+3. Ve a **Create Sites** y genera sitios
+4. Consulta resultados en **Sites List**
+
+### 2. Instalación Local
 
 ```bash
 # Clonar repositorio
 git clone <repo-url>
-cd news-prototype
+cd Tecnología
 
-# Crear entorno virtual
-python3 -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-
-# Instalar dependencias
+# Backend
+cd backend
 pip install -r requirements.txt
+python3 app.py  # Corre en puerto 5000
+
+# Frontend (nueva terminal)
+cd frontend
+npm install
+npm run dev  # Corre en puerto 5173
 ```
 
-### 2. Generar Sitios (Modo Interactivo)
+### 3. Configuración
+
+Crea un archivo `.env` en la raíz:
+
+```env
+NEWSAPI_KEY=tu_clave_aqui
+NEWSDATA_KEY=tu_clave_aqui
+BLACKBOX_API_KEY=tu_clave_aqui
+```
+
+### 4. Generar Sitios (CLI)
 
 ```bash
 cd scripts
-python3 generate-sites.py
+python3 master_orchestrator.py --sitios 5
 ```
 
-El sistema te preguntará:
-- **Cantidad de sitios** (1-100)
-- **Verificar dominios** con whois (s/n)
-- **Usar metadatos existentes** o generar nuevos
-- **Confirmación** de la configuración
-
-### 3. Ver Resultados
-
-```bash
-# Los sitios se generan en sites/
-open ../sites/site1.html  # macOS
-xdg-open ../sites/site1.html  # Linux
-start ../sites/site1.html  # Windows
-```
+Los sitios se generan en `sites/site*.html`
 
 ---
 
@@ -122,50 +164,57 @@ cd scripts
 ## 🏗️ Estructura del Proyecto
 
 ```
-news-prototype/
-├── scripts/
-│   ├── generate-sites.py         # ⭐ Generador principal
-│   ├── layout_generator.py       # Layouts dinámicos
-│   ├── site_name_generator.py    # Generador de nombres
-│   ├── site_pre_creation.py      # Protocolo de pre-creación
-│   ├── domain_verifier.py        # Verificador de dominios
-│   ├── paraphrase.py             # Parafraseo de noticias
-│   ├── generate-images-ai.py     # Generación de imágenes AI
-│   ├── article-expander.py       # Expansión de artículos
-│   ├── run.sh                    # Script de ejecución rápida
-│   ├── api/                      # Scripts de APIs de noticias
+Tecnología/
+├── frontend/                     # 🎨 Panel de administración (React)
+│   ├── src/
+│   │   ├── pages/               # Dashboard, CreateSites, Settings
+│   │   ├── services/            # API client
+│   │   └── components/          # Header, etc.
+│   └── package.json
+│
+├── backend/                      # 🔧 API REST (Flask)
+│   ├── app.py                   # ⭐ API principal
+│   └── requirements.txt
+│
+├── scripts/                      # 🐍 Scripts de generación Python
+│   ├── master_orchestrator.py   # ⭐ Orquestador principal
+│   ├── generate-sites.py        # Generador legacy
+│   ├── paraphrase.py            # Parafraseo de noticias
+│   ├── article-expander.py      # Expansión de artículos
+│   ├── generate-images-ai.py    # Generación de imágenes
+│   ├── site_name_generator.py   # Generador de nombres
+│   ├── layout_generator.py      # Layouts dinámicos
+│   ├── layout_css_generator.py  # Estilos CSS
+│   ├── domain_verifier.py       # Verificador WHOIS
+│   ├── api/                     # APIs de noticias
 │   │   ├── newsapi.py
 │   │   ├── newsdata.py
-│   │   ├── worldnews.py
-│   │   └── apitube.py
-│   ├── test/                     # Scripts de testing
-│   │   ├── test_integration.py
-│   │   ├── test_blackbox.py
-│   │   └── test_paraphrase_quick.py
-│   └── utils/                    # Utilidades
-│       └── utils.py
+│   │   └── worldnews.py
+│   └── utils/                   # Utilidades
 │
-├── data/
-│   ├── noticias_final_*.json     # Noticias parafraseadas activas
-│   ├── sites_metadata/           # Metadatos de sitios (3 más recientes)
-│   └── archive/                  # Datos históricos
+├── data/                         # 📊 Datos y metadatos
+│   ├── noticias_final_*.json
+│   ├── noticias_paraphrased_*.json
+│   └── sites_metadata/
 │
-├── sites/                        # Sitios HTML generados
-│   ├── site1.html
-│   ├── site2.html
-│   └── ...
+├── sites/                        # 🌐 Sitios HTML generados
+│   └── site*.html
 │
-├── templates/
-│   └── css/                      # 40 estilos CSS únicos
+├── templates/                    # 📄 Templates base
+│   ├── base.html
+│   └── css/                     # 40+ estilos CSS
 │
-├── images/
-│   └── news/                     # Imágenes generadas con AI
+├── images/                       # 🖼️ Imágenes generadas
+│   └── news/
 │
-└── docs/                         # Documentación
-    ├── README.md                 # Docs principales
-    ├── SITE-PRE-CREATION.md      # Protocolo técnico completo
-    └── archive/                  # Documentación histórica
+└── docs/                         # 📚 Documentación
+    ├── ERROR-FIX-20260113.md    # ⭐ Correcciones recientes
+    ├── PROJECT-STRUCTURE.md     # ⭐ Estructura detallada
+    ├── DEPLOYMENT-GUIDE-RENDER-VERCEL.md
+    └── QUICKSTART.md
 ```
+
+Ver [docs/PROJECT-STRUCTURE.md](docs/PROJECT-STRUCTURE.md) para detalles completos.
 
 ---
 
@@ -301,43 +350,60 @@ self.nucleos = ["Diario", "Prensa", "Noticias", ...]
 
 ---
 
-## 📚 Documentación Completa
+## 📚 Documentación
 
-- **[docs/README.md](docs/README.md)** - Documentación del sistema de automatización
-- **[docs/SITE-PRE-CREATION.md](docs/SITE-PRE-CREATION.md)** - Protocolo técnico completo
-- **[CHANGELOG.md](CHANGELOG.md)** - Historial de cambios
+### Principales
+- **[docs/QUICKSTART.md](docs/QUICKSTART.md)** - Guía de inicio rápido
+- **[docs/ERROR-FIX-20260113.md](docs/ERROR-FIX-20260113.md)** - ⭐ Correcciones recientes
+- **[docs/PROJECT-STRUCTURE.md](docs/PROJECT-STRUCTURE.md)** - ⭐ Estructura del proyecto
+- **[docs/DEPLOYMENT-GUIDE-RENDER-VERCEL.md](docs/DEPLOYMENT-GUIDE-RENDER-VERCEL.md)** - Deploy en producción
+- **[docs/FLUJO-COMPLETO-INTEGRADO.md](docs/FLUJO-COMPLETO-INTEGRADO.md)** - Flujo de generación
 
-### Documentación Archivada
-- **[docs/archive/GUIA-INTERACTIVA.md](docs/archive/GUIA-INTERACTIVA.md)** - Guía detallada del modo interactivo
-- **[docs/archive/FLUJO-OPTIMIZADO.md](docs/archive/FLUJO-OPTIMIZADO.md)** - Optimizaciones del flujo
-- **[docs/archive/README-SITE-PRE-CREATION.md](docs/archive/README-SITE-PRE-CREATION.md)** - Resumen del protocolo
+### Deployment
+- **[docs/DEPLOYMENT-ARCHITECTURE.md](docs/DEPLOYMENT-ARCHITECTURE.md)** - Arquitectura de deploy
+- **[docs/README_FRONTEND.md](docs/README_FRONTEND.md)** - Documentación del frontend
+- **[docs/KEEP-ALIVE-STRATEGY.md](docs/KEEP-ALIVE-STRATEGY.md)** - Estrategia para Render free tier
 
 ---
 
-## 🚀 Flujo Completo del Sistema
+## 🚀 Flujo del Sistema
 
-### 1. Recopilación de Noticias
+### Modo Web (Panel de Administración)
+
+1. **Configurar** → Settings → Agregar API keys
+2. **Generar** → Create Sites → Seleccionar opciones
+3. **Revisar** → Sites List → Ver sitios generados
+4. **Descargar** → Click en "View Site"
+
+### Modo CLI (Scripts Python)
+
 ```bash
+# Flujo completo automático
+python3 scripts/master_orchestrator.py --sitios 5
+
+# Pasos manuales
 cd scripts/api
-python3 newsapi.py        # Obtener noticias de NewsAPI
-python3 newsdata.py       # Obtener noticias de NewsData
-python3 worldnews.py      # Obtener noticias de WorldNews
+python3 newsapi.py           # 1. Obtener noticias
+cd ..
+python3 paraphrase.py        # 2. Parafrasear
+python3 article-expander.py  # 3. Expandir artículos
+python3 generate-images.py   # 4. Generar imágenes
+python3 generate-sites.py    # 5. Generar sitios
 ```
 
-### 2. Parafraseo con AI
-```bash
-cd scripts
-python3 paraphrase.py     # Parafrasear noticias
-```
+### Vía API REST
 
-### 3. Generación de Imágenes
 ```bash
-python3 generate-images-ai.py  # Generar imágenes con AI
-```
+# Generar 5 sitios
+curl -X POST http://localhost:5000/api/sites/generate \
+  -H "Content-Type: application/json" \
+  -d '{"quantity": 5, "useFullFlow": true}'
 
-### 4. Generación de Sitios
-```bash
-python3 generate-sites.py      # Generar sitios HTML
+# Ver estadísticas
+curl http://localhost:5000/api/sites/stats
+
+# Listar sitios
+curl http://localhost:5000/api/sites
 ```
 
 ---
@@ -436,11 +502,58 @@ MIT License - Ver [LICENSE](LICENSE) para más detalles
 
 ---
 
+## 🔗 Enlaces Rápidos
+
+- **Panel Web:** https://news-generator-admin.vercel.app
+- **API Backend:** https://news-generator-backend-ae62.onrender.com
+- **Documentación:** [docs/](docs/)
+- **Reporte de Errores:** [docs/ERROR-FIX-20260113.md](docs/ERROR-FIX-20260113.md)
+
 ## 🎉 ¡Comienza Ahora!
 
+### Opción 1: Panel Web (Más Fácil)
+1. Visita https://news-generator-admin.vercel.app
+2. Configura tus API keys
+3. Genera sitios con un click
+
+### Opción 2: CLI Local
 ```bash
 cd scripts
-python3 generate-sites.py
+python3 master_orchestrator.py --sitios 5
 ```
 
 **Genera sitios de noticias únicos en minutos** 🚀
+
+---
+
+## 📝 Changelog Reciente
+
+### [2.0.0] - 2026-01-13
+
+**Agregado:**
+- Panel de administración web completo (React + Vite)
+- API REST con Flask
+- Deploy en Vercel (frontend) y Render (backend)
+- Documentación completa del proyecto
+
+**Corregido:**
+- Error 500/502 en endpoint `/api/sites/generate`
+- React Error #31 en manejo de errores de API
+- 404 en rutas SPA (`/create`, etc.)
+- Warnings de autocomplete en inputs de password
+
+**Ver:** [docs/ERROR-FIX-20260113.md](docs/ERROR-FIX-20260113.md) para detalles completos.
+
+---
+
+## 🆘 Soporte
+
+**Problemas conocidos:** Ver [docs/ERROR-FIX-20260113.md](docs/ERROR-FIX-20260113.md)  
+**Issues:** Abre un issue en GitHub  
+**Documentación:** Revisa [docs/](docs/)
+
+---
+
+**Última actualización:** 13 de enero de 2026  
+**Versión:** 2.0.0  
+**Status:** ✅ Producción

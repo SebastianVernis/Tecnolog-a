@@ -1,0 +1,42 @@
+# Vercel Ignore - Frontend
+
+# Python
+*.py
+*.pyc
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+venv/
+env/
+
+# Scripts y backend
+scripts/
+backend/
+
+# Data
+data/
+sites/
+generated_sites/
+images/
+
+# Docs
+docs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Otros
+*.log
+.DS_Store
+node_modules/.cache/

@@ -114,19 +114,49 @@ def get_stats():
 def generate_sites():
     """Genera nuevos sitios de noticias usando el flujo completo"""
     try:
-        data = request.json
+        data = request.json or {}
         
-        # Parámetros
+        # Validar parámetros
         quantity = data.get('quantity', 5)
+        
+        try:
+            quantity = int(quantity)
+            if quantity < 1 or quantity > 100:
+                return jsonify({
+                    'success': False,
+                    'error': 'La cantidad debe estar entre 1 y 100'
+                }), 400
+        except (ValueError, TypeError):
+            return jsonify({
+                'success': False,
+                'error': 'La cantidad debe ser un número válido'
+            }), 400
+        
         verify_domains = data.get('verifyDomains', False)
         use_full_flow = data.get('useFullFlow', True)  # Usar flujo completo por defecto
+        
+        # Verificar que los scripts existen
+        orchestrator_script = SCRIPTS_DIR / 'master_orchestrator.py'
+        legacy_script = SCRIPTS_DIR / 'generate-sites.py'
+        
+        if use_full_flow and not orchestrator_script.exists():
+            return jsonify({
+                'success': False,
+                'error': f'Script no encontrado: {orchestrator_script}'
+            }), 500
+        
+        if not use_full_flow and not legacy_script.exists():
+            return jsonify({
+                'success': False,
+                'error': f'Script no encontrado: {legacy_script}'
+            }), 500
         
         # Construir comando
         if use_full_flow:
             # Usar master orchestrator (flujo completo)
             cmd = [
                 'python3',
-                str(SCRIPTS_DIR / 'master_orchestrator.py'),
+                str(orchestrator_script),
                 '--sitios', str(quantity)
             ]
             
@@ -142,7 +172,7 @@ def generate_sites():
             
             cmd = [
                 'python3',
-                str(SCRIPTS_DIR / 'generate-sites.py'),
+                str(legacy_script),
                 '--cantidad', str(quantity),
                 '--no-interactivo'
             ]
@@ -177,6 +207,11 @@ def generate_sites():
             return jsonify({
                 'success': False,
                 'error': f'La generación excedió el tiempo límite de {timeout//60} minutos'
+            }), 408
+        except FileNotFoundError:
+            return jsonify({
+                'success': False,
+                'error': 'Python3 no encontrado en el sistema'
             }), 500
         except Exception as e:
             return jsonify({
@@ -188,13 +223,27 @@ def generate_sites():
         execution_time = (end_time - start_time).total_seconds()
         
         if result.returncode != 0:
-            error_message = result.stderr or result.stdout or 'Error desconocido al generar sitios'
+            # Parse error from stderr/stdout
+            error_output = result.stderr.strip() if result.stderr else result.stdout.strip()
+            
+            # Extract most relevant error message
+            error_lines = error_output.split('\n')
+            error_message = 'Error al generar sitios'
+            
+            # Try to find the actual error message
+            for line in reversed(error_lines):
+                line = line.strip()
+                if line and not line.startswith('Traceback') and not line.startswith('File '):
+                    error_message = line[:500]  # Limit length
+                    break
+            
             return jsonify({
                 'success': False,
                 'error': error_message,
-                'stdout': result.stdout,
-                'stderr': result.stderr,
-                'returncode': result.returncode
+                'stderr': result.stderr[:1000] if result.stderr else None,  # Limit output
+                'stdout': result.stdout[:1000] if result.stdout else None,
+                'returncode': result.returncode,
+                'command': ' '.join(cmd)
             }), 500
         
         # Contar sitios generados
@@ -213,16 +262,18 @@ def generate_sites():
             'domainsAvailable': int(quantity * 0.8) if verify_domains else 0,
             'metadataFile': latest_metadata,
             'executionTime': f'{execution_time:.1f}s',
-            'output': result.stdout
+            'output': result.stdout[:1000] if result.stdout else None  # Limit output
         })
         
     except Exception as e:
         import traceback
         error_details = traceback.format_exc()
+        app.logger.error(f"Error in generate_sites: {error_details}")
+        
         return jsonify({
             'success': False,
             'error': str(e),
-            'details': error_details
+            'type': type(e).__name__
         }), 500
 
 

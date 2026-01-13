@@ -1,0 +1,33 @@
+# GitHub Actions - Keep Alive Alternativo
+# Ejecuta cada 10 minutos para mantener activo el backend
+# Funciona como backup si el cron de Render falla
+
+name: Keep Backend Alive
+
+on:
+  schedule:
+    # Cada 10 minutos
+    - cron: '*/10 * * * *'
+  
+  # Permitir ejecución manual
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Ping Backend Health
+        run: |
+          echo "🔄 Pinging backend to keep it alive..."
+          
+          # Health check
+          curl -f -s -o /dev/null -w "Health: %{http_code}\n" \
+            https://news-generator-backend.onrender.com/api/health || echo "❌ Health check failed"
+          
+          # Keep alive endpoint
+          curl -f -s -o /dev/null -w "Keep-Alive: %{http_code}\n" \
+            https://news-generator-backend.onrender.com/api/keep-alive || echo "❌ Keep-alive failed"
+          
+          echo "✅ Ping completed"
+        continue-on-error: true

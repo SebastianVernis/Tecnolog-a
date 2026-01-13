@@ -39,7 +39,25 @@ function CreateSites() {
         setError(response.error || 'Error desconocido al generar sitios')
       }
     } catch (err) {
-      setError(err.response?.data?.error || err.message || 'Error al generar sitios')
+      // Handle different error types
+      let errorMessage = 'Error al generar sitios'
+      
+      if (err.response?.data) {
+        // Backend returned an error response
+        const data = err.response.data
+        errorMessage = data.error || data.message || errorMessage
+        
+        // Add stderr if available for debugging
+        if (data.stderr) {
+          errorMessage += `\n\nDetalles: ${data.stderr}`
+        }
+      } else if (err.message) {
+        // Network or other axios error
+        errorMessage = err.message
+      }
+      
+      setError(errorMessage)
+      console.error('Generation error:', err)
     } finally {
       setLoading(false)
     }

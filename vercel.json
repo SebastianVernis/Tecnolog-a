@@ -39,6 +39,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://news-generator-backend-ae62.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
 

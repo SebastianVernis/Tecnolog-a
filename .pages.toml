@@ -1,0 +1,22 @@
+# Cloudflare Pages Configuration
+# Para el frontend admin
+
+name = "news-generator-admin"
+
+[build]
+command = "npm run build"
+output_directory = "frontend/dist"
+
+[build.environment]
+NODE_VERSION = "18"
+NPM_VERSION = "9"
+
+# Variables de entorno
+[env.production]
+VITE_API_URL = "https://news-generator-api.workers.dev"
+VITE_APP_NAME = "News Generator Admin"
+VITE_APP_VERSION = "2.0.0"
+
+[env.preview]
+VITE_API_URL = "https://news-generator-api-staging.workers.dev"
+VITE_APP_NAME = "News Generator Admin (Preview)"
