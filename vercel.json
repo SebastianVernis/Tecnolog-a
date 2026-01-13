@@ -1,7 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "name": "news-generator-admin",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
@@ -15,11 +14,6 @@
     "VITE_APP_VERSION": "2.0.0"
   },
   
-  "build": {
-    "env": {
-      "VITE_API_URL": "@api_url"
-    }
-  },
   
   "headers": [
     {
@@ -44,19 +38,10 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://news-generator-backend.onrender.com/api/:path*"
+      "destination": "https://news-generator-backend-ae62.onrender.com/api/:path*"
     }
   ],
-  
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
-  
-  "functions": {},
-  
+
   "regions": ["iad1"],
   
   "github": {

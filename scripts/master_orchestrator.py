@@ -16,17 +16,46 @@ from dotenv import load_dotenv
 
 # Importar módulos del proyecto
 try:
+    import importlib.util
+    
+    def import_module_from_file(module_name, file_path):
+        """Importa un módulo desde un archivo con guiones en el nombre"""
+        spec = importlib.util.spec_from_file_location(module_name, file_path)
+        if spec and spec.loader:
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            return module
+        raise ImportError(f"No se pudo importar {module_name} desde {file_path}")
+    
+    # Obtener directorio actual
+    current_dir = Path(__file__).parent
+    
+    # Importar módulos con guiones
+    article_expander_module = import_module_from_file(
+        'article_expander',
+        current_dir / 'article-expander.py'
+    )
+    ArticleExpander = article_expander_module.ArticleExpander
+    
+    generate_images_module = import_module_from_file(
+        'generate_images_ai',
+        current_dir / 'generate-images-ai.py'
+    )
+    AIImageGenerator = generate_images_module.AIImageGenerator
+    
+    # Importar módulos con guiones bajos normalmente
     from paraphrase import NewsParaphraser
-    from article_expander import ArticleExpander
     from site_name_generator import SiteNameGenerator
     from domain_verifier import DomainVerifier
     from site_pre_creation import SitePreCreation
     from template_combiner import TemplateCombiner
-    from generate_images_ai import AIImageGenerator
     from layout_generator import LayoutGenerator
+    
 except ImportError as e:
     print(f"❌ Error importando módulos: {e}")
-    print("Asegúrate de estar en el directorio correcto")
+    print(f"Directorio actual: {Path(__file__).parent}")
+    import traceback
+    traceback.print_exc()
     sys.exit(1)
 
 load_dotenv()
@@ -35,19 +64,27 @@ load_dotenv()
 class MasterOrchestrator:
     """Orquestador principal del flujo completo de generación"""
     
-    def __init__(self, output_base_dir: str = "../generated_sites"):
+    def __init__(self, output_base_dir: str = None):
         """
         Inicializa el orquestador
         
         Args:
             output_base_dir: Directorio base para sitios generados
         """
-        self.output_base_dir = Path(output_base_dir)
+        # Usar rutas absolutas basadas en la ubicación del script
+        script_dir = Path(__file__).parent
+        base_dir = script_dir.parent
+        
+        if output_base_dir is None:
+            self.output_base_dir = base_dir / "generated_sites"
+        else:
+            self.output_base_dir = Path(output_base_dir)
+        
         self.output_base_dir.mkdir(parents=True, exist_ok=True)
         
-        # Directorios de trabajo
-        self.data_dir = Path("../data")
-        self.templates_dir = Path("../templates")
+        # Directorios de trabajo con rutas absolutas
+        self.data_dir = base_dir / "data"
+        self.templates_dir = base_dir / "templates"
         
         # Inicializar componentes
         self.paraphraser = NewsParaphraser()

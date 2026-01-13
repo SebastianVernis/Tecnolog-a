@@ -160,21 +160,41 @@ def generate_sites():
         # Ejecutar generación
         start_time = datetime.now()
         
-        result = subprocess.run(
-            cmd,
-            cwd=str(SCRIPTS_DIR),
-            capture_output=True,
-            text=True,
-            timeout=timeout
-        )
+        # Añadir PYTHONUNBUFFERED para ver output en tiempo real
+        env = os.environ.copy()
+        env['PYTHONUNBUFFERED'] = '1'
+        
+        try:
+            result = subprocess.run(
+                cmd,
+                cwd=str(SCRIPTS_DIR),
+                capture_output=True,
+                text=True,
+                timeout=timeout,
+                env=env
+            )
+        except subprocess.TimeoutExpired:
+            return jsonify({
+                'success': False,
+                'error': f'La generación excedió el tiempo límite de {timeout//60} minutos'
+            }), 500
+        except Exception as e:
+            return jsonify({
+                'success': False,
+                'error': f'Error ejecutando el script: {str(e)}'
+            }), 500
         
         end_time = datetime.now()
         execution_time = (end_time - start_time).total_seconds()
         
         if result.returncode != 0:
+            error_message = result.stderr or result.stdout or 'Error desconocido al generar sitios'
             return jsonify({
                 'success': False,
-                'error': result.stderr or 'Error al generar sitios'
+                'error': error_message,
+                'stdout': result.stdout,
+                'stderr': result.stderr,
+                'returncode': result.returncode
             }), 500
         
         # Contar sitios generados
@@ -196,15 +216,13 @@ def generate_sites():
             'output': result.stdout
         })
         
-    except subprocess.TimeoutExpired:
-        return jsonify({
-            'success': False,
-            'error': 'La generación excedió el tiempo límite de 10 minutos'
-        }), 500
     except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
         return jsonify({
             'success': False,
-            'error': str(e)
+            'error': str(e),
+            'details': error_details
         }), 500
 
 
@@ -451,6 +469,42 @@ def keep_alive():
         'message': 'Service is active',
         'timestamp': datetime.now().isoformat()
     })
+
+
+@app.route('/api/debug/paths', methods=['GET'])
+def debug_paths():
+    """Debug endpoint para verificar rutas y archivos disponibles"""
+    try:
+        info = {
+            'base_dir': str(BASE_DIR),
+            'sites_dir': str(SITES_DIR),
+            'scripts_dir': str(SCRIPTS_DIR),
+            'metadata_dir': str(METADATA_DIR),
+            'cwd': os.getcwd(),
+            'exists': {
+                'base_dir': BASE_DIR.exists(),
+                'sites_dir': SITES_DIR.exists(),
+                'scripts_dir': SCRIPTS_DIR.exists(),
+                'metadata_dir': METADATA_DIR.exists()
+            },
+            'scripts': {
+                'master_orchestrator': (SCRIPTS_DIR / 'master_orchestrator.py').exists(),
+                'generate_sites': (SCRIPTS_DIR / 'generate-sites.py').exists(),
+                'paraphrase': (SCRIPTS_DIR / 'paraphrase.py').exists(),
+                'article_expander': (SCRIPTS_DIR / 'article-expander.py').exists()
+            },
+            'python_version': sys.version,
+            'python_path': sys.executable
+        }
+        return jsonify({
+            'success': True,
+            'info': info
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
 
 
 if __name__ == '__main__':
