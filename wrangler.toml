@@ -74,6 +74,11 @@ crons = ["0 */6 * * *"]  # Cada 6 horas
 enabled = true
 head_sampling_rate = 1.0
 
+# Assets (static files)
+[assets]
+directory = "../"
+binding = "ASSETS"
+
 # Development
 [env.development]
 name = "news-generator-api-dev"

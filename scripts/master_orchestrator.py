@@ -48,8 +48,9 @@ try:
     from site_name_generator import SiteNameGenerator
     from domain_verifier import DomainVerifier
     from site_pre_creation import SitePreCreation
+    from legal_pages_generator import LegalPagesGenerator
     from template_combiner import TemplateCombiner
-    from layout_generator import LayoutGenerator
+    from layout_generator import LayoutGenerator, HTMLLayoutBuilder
     
 except ImportError as e:
     print(f"❌ Error importando módulos: {e}")
@@ -94,6 +95,7 @@ class MasterOrchestrator:
         self.template_combiner = TemplateCombiner()
         self.image_generator = AIImageGenerator()
         self.layout_generator = LayoutGenerator()
+        self.legal_generator = LegalPagesGenerator()
         
         # Timestamp para esta ejecución
         self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -118,7 +120,7 @@ class MasterOrchestrator:
             "PROGRESS": "🔄"
         }.get(level, "📝")
         
-        print(f"[{timestamp}] {prefix} {message}")
+        print(f"[{timestamp}] {prefix} {message}", flush=True)
     
     def paso_1_descargar_noticias(self, num_noticias: int = 50) -> List[Dict]:
         """
@@ -134,8 +136,8 @@ class MasterOrchestrator:
         self.log("PASO 1: Descargando Noticias", "PROGRESS")
         self.log("=" * 70)
         
-        # Buscar archivo de noticias más reciente
-        noticias_files = list(self.data_dir.glob("noticias_final_*.json"))
+        # Buscar archivo de noticias ORIGINALES (NewsAPI, no parafraseadas)
+        noticias_files = list(self.data_dir.glob("noticias_newsapi_*.json"))
         if noticias_files:
             latest_file = max(noticias_files, key=lambda p: p.stat().st_mtime)
             self.log(f"Usando archivo existente: {latest_file.name}")
@@ -144,7 +146,7 @@ class MasterOrchestrator:
                 noticias = json.load(f)
             
             self.stats["noticias_descargadas"] = len(noticias)
-            self.log(f"Cargadas {len(noticias)} noticias", "SUCCESS")
+            self.log(f"Cargadas {len(noticias)} noticias originales", "SUCCESS")
             return noticias[:num_noticias]
         else:
             self.log("No hay noticias disponibles. Ejecuta el scraper primero.", "ERROR")
@@ -197,14 +199,15 @@ class MasterOrchestrator:
                         structure=structure
                     )
                     
-                    # Combinar datos
+                    # Combinar datos con autor aleatorio
                     article_data = {
                         **paraphrased,
                         "full_article": full_article,
                         "original_id": noticia.get('id', noticia_idx),
                         "site_id": site_id,
                         "style": style,
-                        "structure": structure
+                        "structure": structure,
+                        "author": self.legal_generator.generar_autor_aleatorio()
                     }
                     
                     noticias_por_sitio[site_id].append(article_data)
@@ -212,12 +215,13 @@ class MasterOrchestrator:
                     
                 except Exception as e:
                     self.log(f"Error parafraseando para sitio {site_id}: {e}", "ERROR")
-                    # Usar original como fallback
+                    # Usar original como fallback con autor aleatorio
                     noticias_por_sitio[site_id].append({
                         **noticia,
                         "full_article": noticia.get('content', noticia.get('description', '')),
                         "original_id": noticia.get('id', noticia_idx),
-                        "site_id": site_id
+                        "site_id": site_id,
+                        "author": self.legal_generator.generar_autor_aleatorio()
                     })
                 
                 # Rate limiting
@@ -439,6 +443,9 @@ Vector style, flat design, high contrast."""
                 # Generar páginas de artículos individuales
                 self._generar_paginas_articulos(site_dir, noticias, metadata, template_info, idx)
                 
+                # Generar páginas legales
+                self._generar_paginas_legales(site_dir, metadata)
+                
                 # Copiar CSS
                 self._copiar_css(site_dir, idx)
                 
@@ -453,8 +460,38 @@ Vector style, flat design, high contrast."""
     
     def _generar_index_html(self, metadata: Dict, noticias: List[Dict], 
                            template_info: Dict, site_num: int) -> str:
-        """Genera el HTML del index del sitio"""
-        # Implementación simplificada - integrar con generate-sites.py
+        """Genera el HTML del index del sitio usando generadores modulares"""
+        
+        # Generar configuración de layout
+        layout_config = self.layout_generator.generar_configuracion_layout()
+        
+        # Crear builder con la configuración
+        builder = HTMLLayoutBuilder(layout_config)
+        
+        # Configuración del sitio
+        site_config = {
+            "title": metadata['nombre'],
+            "tagline": metadata['tagline']
+        }
+        
+        # Obtener categorías de las noticias
+        categorias_set = set()
+        for noticia in noticias:
+            cat = noticia.get('category', 'General')
+            if cat:
+                categorias_set.add(cat.capitalize())
+        categorias = ["Inicio"] + sorted(list(categorias_set))[:6]  # Limitar a 7 categorías
+        
+        # Generar componentes usando los nuevos generadores
+        header_html = builder.build_header(site_config, categorias)
+        
+        # Obtener información del layout para el footer
+        layout_info = layout_config.get('layout_type', 'default')
+        footer_html = builder.build_footer(site_config, layout_info, site_num)
+        
+        # Generar sección de noticias
+        clases_css = self.layout_generator.generar_clases_css_dinamicas(layout_config)
+        
         html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -462,54 +499,148 @@ Vector style, flat design, high contrast."""
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{metadata['nombre']} - {metadata['tagline']}</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="{metadata['tagline']}">
+    <meta name="layout" content="{layout_info}">
 </head>
-<body>
-    <header class="header">
+<body class="{clases_css['container']}">
+
+{header_html}
+
+    <main class="{clases_css['main']}">
+        <div class="content-wrapper">
+    <section class="{clases_css['featured']}">
+    </section>
+
+    <section class="news-section {layout_info}">
         <div class="container">
-            <div class="logo-section">
-                <img src="logo.jpg" alt="{metadata['nombre']}" class="logo-img">
-                <div>
-                    <h1 class="logo">{metadata['nombre']}</h1>
-                    <p class="tagline">{metadata['tagline']}</p>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <main class="main">
-        <div class="container">
-            <section class="news-grid">
+            <div class="{clases_css['news_grid']}">
 """
         
         for idx, noticia in enumerate(noticias[:12], 1):
-            html += f"""                <article class="news-card">
-                    <img src="images/news_{idx}.jpg" alt="{noticia.get('category', 'Noticia')}" class="card-image">
+            image_path = f"images/news_{idx}.jpg"
+            html += f"""                <article class="news-card {layout_info}">
+                    <div class="card-image-wrapper">
+                        <img src="{image_path}" alt="" style="max-height: 240px; width: 100%; object-fit: cover;">
+                        <span class="card-category-badge">{noticia.get('category', 'General')}</span>
+                    </div>
                     <div class="card-content">
-                        <span class="category">{noticia.get('category', 'General').capitalize()}</span>
-                        <h3 class="card-title"><a href="article_{idx}.html">{noticia.get('title', 'Título')}</a></h3>
-                        <p class="card-excerpt">{noticia.get('description', '')[:150]}...</p>
+                        <h3 class="card-title"><a href="article_{idx}.html">{noticia.get('title', '')}</a></h3>
+                        <p class="card-text">{noticia.get('description', '')[:130]}...</p>
+                        <div class="card-footer">
+                            <span class="author">{noticia.get('author', 'Redacción')}</span>
+                            <span class="date">{noticia.get('published_at', '')}</span>
+                        </div>
                     </div>
                 </article>
 """
         
-        html += """            </section>
+        html += f"""            </div>
+        </div>
+    </section>
+
         </div>
     </main>
-    
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 {}</p>
-        </div>
-    </footer>
+
+{footer_html}
 </body>
-</html>""".format(metadata['nombre'])
+</html>
+"""
         
         return html
     
+    def _generar_sidebar_articulos(self, otras_noticias: List[Dict], metadata: Dict) -> str:
+        """
+        Genera sidebar con miniaturas de otros artículos
+        
+        Args:
+            otras_noticias: Lista de otras noticias con índices
+            metadata: Metadata del sitio
+            
+        Returns:
+            str: HTML del sidebar
+        """
+        items_html = []
+        for i, noticia in enumerate(otras_noticias):
+            # Usar el índice de la noticia original si existe
+            article_idx = noticia.get('_display_index', i + 1)
+            title = noticia.get('title', '')
+            title_truncated = title if len(title) <= 80 else title[:80] + '...'
+            
+            items_html.append(f"""
+                    <article class="sidebar-article">
+                        <a href="article_{article_idx}.html" class="sidebar-article-link">
+                            <div class="sidebar-article-image">
+                                <img src="images/news_{article_idx}.jpg" alt="{title[:50]}">
+                                <span class="sidebar-category">{noticia.get('category', 'General')}</span>
+                            </div>
+                            <div class="sidebar-article-content">
+                                <h3 class="sidebar-article-title">{title_truncated}</h3>
+                                <span class="sidebar-article-date">{noticia.get('published_at', '')[:10]}</span>
+                            </div>
+                        </a>
+                    </article>""")
+        
+        sidebar_html = f"""
+                <aside class="article-sidebar">
+                    <div class="sidebar-section">
+                        <h2 class="sidebar-title">Más Noticias</h2>
+                        <div class="sidebar-articles">
+{''.join(items_html)}
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-section sidebar-newsletter">
+                        <h3>Suscríbete</h3>
+                        <p>Recibe las últimas noticias en tu correo</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu email" required>
+                            <button type="submit">Suscribirse</button>
+                        </form>
+                    </div>
+                </aside>"""
+        
+        return sidebar_html
+    
+    def _formatear_contenido_html(self, texto: str) -> str:
+        """
+        Convierte texto plano en HTML con estructura semántica y marcado
+        """
+        if not texto:
+            return ""
+        
+        # Dividir por líneas vacías (doble salto de línea)
+        parrafos = texto.strip().split('\n\n')
+        
+        # Envolver cada párrafo en tags <p> con clases semánticas
+        html_parrafos = []
+        for i, parrafo in enumerate(parrafos):
+            parrafo = parrafo.strip()
+            if parrafo:
+                # Limpiar saltos de línea internos y espacios múltiples
+                parrafo = ' '.join(parrafo.split())
+                
+                # Primer párrafo como lead/intro
+                if i == 0:
+                    html_parrafos.append(f'<p class="lead">{parrafo}</p>')
+                else:
+                    html_parrafos.append(f'<p>{parrafo}</p>')
+        
+        return '\n                    '.join(html_parrafos)
+    
     def _generar_paginas_articulos(self, site_dir: Path, noticias: List[Dict],
                                    metadata: Dict, template_info: Dict, site_num: int):
-        """Genera páginas HTML individuales para cada artículo"""
+        """Genera páginas HTML individuales para cada artículo con sidebar"""
         for idx, noticia in enumerate(noticias, 1):
+            # Generar sidebar con otros artículos (excluyendo el actual)
+            otras_noticias = []
+            for i, n in enumerate(noticias, 1):
+                if i != idx:
+                    n_copy = n.copy()
+                    n_copy['_display_index'] = i
+                    otras_noticias.append(n_copy)
+            
+            sidebar_html = self._generar_sidebar_articulos(otras_noticias[:6], metadata)
+            
             article_html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -517,35 +648,62 @@ Vector style, flat design, high contrast."""
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{noticia.get('title', 'Artículo')} - {metadata['nombre']}</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="{noticia.get('description', '')[:150]}">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <h1 class="logo"><a href="index.html">{metadata['nombre']}</a></h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+            </nav>
         </div>
     </header>
     
-    <main class="main">
-        <article class="article-full">
-            <div class="container">
-                <h1 class="article-title">{noticia.get('title', '')}</h1>
-                <div class="article-meta">
-                    <span class="category">{noticia.get('category', 'General')}</span>
-                    <span class="author">Por {noticia.get('author', 'Redacción')}</span>
-                    <span class="date">{noticia.get('published_at', '')}</span>
-                </div>
-                <img src="images/news_{idx}.jpg" alt="{noticia.get('title', '')}" class="article-image">
-                <div class="article-content">
-                    {noticia.get('full_article', noticia.get('content', noticia.get('description', '')))}
-                </div>
+    <main class="main article-page">
+        <div class="container">
+            <div class="article-layout">
+                <article class="article-full">
+                    <header class="article-header">
+                        <div class="article-category-badge">{noticia.get('category', 'General')}</div>
+                        <h1 class="article-title">{noticia.get('title', '')}</h1>
+                        <div class="article-meta">
+                            <span class="author">Por {noticia.get('author', 'Redacción')}</span>
+                            <span class="separator">•</span>
+                            <time class="date">{noticia.get('published_at', '')}</time>
+                        </div>
+                    </header>
+                    
+                    <figure class="article-image-wrapper">
+                        <img src="images/news_{idx}.jpg" alt="{noticia.get('title', '')}" class="article-image">
+                    </figure>
+                    
+                    <div class="article-content">
+                    {self._formatear_contenido_html(noticia.get('full_article', noticia.get('content', noticia.get('description', ''))))}
+                    </div>
+                    
+                    <footer class="article-footer">
+                        <div class="article-tags">
+                            <span class="tag">{noticia.get('category', 'General')}</span>
+                        </div>
+                        <div class="article-share">
+                            <span>Compartir:</span>
+                            <a href="#" class="share-link">Facebook</a>
+                            <a href="#" class="share-link">Twitter</a>
+                            <a href="#" class="share-link">WhatsApp</a>
+                        </div>
+                    </footer>
+                </article>
+                
+                {sidebar_html}
             </div>
-        </article>
+        </div>
     </main>
     
     <footer class="footer">
         <div class="container">
             <p><a href="index.html">← Volver al inicio</a></p>
-            <p>&copy; 2025 {metadata['nombre']}</p>
+            <p>&copy; 2026 {metadata['nombre']}</p>
         </div>
     </footer>
 </body>
@@ -554,6 +712,42 @@ Vector style, flat design, high contrast."""
             article_path = site_dir / f"article_{idx}.html"
             with open(article_path, 'w', encoding='utf-8') as f:
                 f.write(article_html)
+    
+    def _generar_paginas_legales(self, site_dir: Path, metadata: Dict):
+        """
+        Genera páginas legales (Términos, Privacidad, FAQs, Acerca de)
+        
+        Args:
+            site_dir: Directorio del sitio
+            metadata: Metadata del sitio
+        """
+        site_name = metadata['nombre']
+        domain = metadata['dominio']
+        tagline = metadata['tagline']
+        
+        # Generar Términos y Condiciones
+        terms_html = self.legal_generator.generar_terminos_condiciones(site_name, domain)
+        terms_path = site_dir / "terminos.html"
+        with open(terms_path, 'w', encoding='utf-8') as f:
+            f.write(terms_html)
+        
+        # Generar Política de Privacidad
+        privacy_html = self.legal_generator.generar_politica_privacidad(site_name, domain)
+        privacy_path = site_dir / "privacidad.html"
+        with open(privacy_path, 'w', encoding='utf-8') as f:
+            f.write(privacy_html)
+        
+        # Generar FAQs
+        faqs_html = self.legal_generator.generar_faqs(site_name)
+        faqs_path = site_dir / "faqs.html"
+        with open(faqs_path, 'w', encoding='utf-8') as f:
+            f.write(faqs_html)
+        
+        # Generar Acerca de
+        about_html = self.legal_generator.generar_acerca_de(site_name, tagline, domain)
+        about_path = site_dir / "acerca.html"
+        with open(about_path, 'w', encoding='utf-8') as f:
+            f.write(about_html)
     
     def _copiar_css(self, site_dir: Path, site_num: int):
         """Copia el CSS del template al directorio del sitio"""
@@ -661,7 +855,7 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description="Master Orchestrator - Generación Completa de Sitios")
-    parser.add_argument('--sitios', type=int, default=5, help='Número de sitios a generar')
+    parser.add_argument('--sitios', '--sites', type=int, default=3, help='Número de sitios a generar')
     parser.add_argument('--verificar-dominios', action='store_true', help='Verificar disponibilidad de dominios')
     parser.add_argument('--output-dir', type=str, default='../generated_sites', help='Directorio de salida')
     

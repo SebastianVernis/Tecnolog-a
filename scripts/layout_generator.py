@@ -5,7 +5,9 @@ Crea estructuras HTML variadas con diferentes disposiciones y estilos
 """
 
 import random
-from typing import Dict, List
+from typing import Dict, List, Optional
+from header_generator import HeaderGenerator
+from footer_generator import FooterGenerator
 
 
 class LayoutGenerator:
@@ -92,6 +94,8 @@ class LayoutGenerator:
     def __init__(self):
         """Inicializa el generador"""
         self.used_combinations = set()
+        self.header_gen = HeaderGenerator()
+        self.footer_gen = FooterGenerator()
     
     def generar_configuracion_layout(self) -> Dict:
         """
@@ -100,18 +104,26 @@ class LayoutGenerator:
         Returns:
             dict: Configuración del layout
         """
+        # Generar configuraciones de header y footer usando los nuevos generadores
+        header_config = self.header_gen.generar_configuracion_aleatoria()
+        footer_config = self.footer_gen.generar_configuracion_aleatoria()
+        
         config = {
             "layout_type": random.choice(self.LAYOUT_TYPES),
             "sidebar_position": random.choice(self.SIDEBAR_POSITIONS),
-            "header_style": random.choice(self.HEADER_STYLES),
-            "nav_style": random.choice(self.NAV_STYLES),
+            "header_style": header_config["header_style"],
+            "nav_style": header_config["nav_style"],
+            "header_elementos_extra": header_config.get("elementos_extra", []),
             "featured_layout": random.choice(self.FEATURED_LAYOUTS),
             "show_images": random.choice([True, True, True, False]),  # 75% probabilidad
             "news_per_row": random.choice([1, 2, 3, 4]),
             "show_sidebar_widgets": random.choice([True, False]),
-            "footer_columns": random.choice([2, 3, 4]),
+            "footer_style": footer_config["footer_style"],
+            "footer_columns": footer_config["num_columns"],
+            "footer_include_social": footer_config["include_social"],
+            "footer_include_newsletter": footer_config["include_newsletter"],
             "use_breadcrumbs": random.choice([True, False]),
-            "sticky_header": random.choice([True, False]),
+            "sticky_header": header_config.get("sticky", False),
         }
         
         return config
@@ -231,10 +243,12 @@ class HTMLLayoutBuilder:
         """
         self.config = layout_config
         self.generator = LayoutGenerator()
+        self.header_gen = HeaderGenerator()
+        self.footer_gen = FooterGenerator()
     
     def build_header(self, site_config: Dict, categorias: List[str]) -> str:
         """
-        Construye el header según el estilo configurado
+        Construye el header según el estilo configurado usando HeaderGenerator
         
         Args:
             site_config: Configuración del sitio
@@ -243,58 +257,16 @@ class HTMLLayoutBuilder:
         Returns:
             str: HTML del header
         """
-        style = self.config['header_style']
-        nav_style = self.config['nav_style']
-        
-        header_class = f"header header-{style} nav-{nav_style}"
-        if self.config.get('sticky_header'):
-            header_class += " sticky"
-        
-        html = f'    <header class="{header_class}">\n'
-        html += '        <div class="container">\n'
-        
-        if style == "centered":
-            html += '            <div class="header-center">\n'
-            html += f'                <h1 class="logo">{site_config["title"]}</h1>\n'
-            html += f'                <p class="tagline">{site_config["tagline"]}</p>\n'
-            html += '            </div>\n'
-            html += self._build_nav(categorias, nav_style)
-        
-        elif style == "split":
-            html += '            <div class="header-split">\n'
-            html += '                <div class="header-left">\n'
-            html += f'                    <h1 class="logo">{site_config["title"]}</h1>\n'
-            html += f'                    <p class="tagline">{site_config["tagline"]}</p>\n'
-            html += '                </div>\n'
-            html += '                <div class="header-right">\n'
-            html += self._build_nav(categorias, nav_style, wrapper=False)
-            html += '                </div>\n'
-            html += '            </div>\n'
-        
-        elif style == "minimal":
-            html += '            <div class="header-minimal">\n'
-            html += f'                <h1 class="logo-minimal">{site_config["title"]}</h1>\n'
-            html += self._build_nav(categorias, nav_style, minimal=True)
-            html += '            </div>\n'
-        
-        elif style == "bold":
-            html += '            <div class="header-bold">\n'
-            html += f'                <h1 class="logo-bold">{site_config["title"]}</h1>\n'
-            html += f'                <p class="tagline-bold">{site_config["tagline"]}</p>\n'
-            html += '            </div>\n'
-            html += self._build_nav(categorias, nav_style)
-        
-        else:  # left_aligned
-            html += '            <div class="header-left-aligned">\n'
-            html += f'                <h1 class="logo">{site_config["title"]}</h1>\n'
-            html += f'                <p class="tagline">{site_config["tagline"]}</p>\n'
-            html += '            </div>\n'
-            html += self._build_nav(categorias, nav_style)
-        
-        html += '        </div>\n'
-        html += '    </header>\n\n'
-        
-        return html
+        # Usar el generador modular de headers
+        return self.header_gen.generar_header(
+            site_name=site_config["title"],
+            tagline=site_config["tagline"],
+            categorias=categorias,
+            header_style=self.config.get('header_style'),
+            nav_style=self.config.get('nav_style'),
+            elementos_extra=self.config.get('header_elementos_extra', []),
+            sticky=self.config.get('sticky_header', False)
+        )
     
     def _build_nav(self, categorias: List[str], style: str, wrapper: bool = True, minimal: bool = False) -> str:
         """Construye la navegación según el estilo"""
@@ -644,6 +616,30 @@ class HTMLLayoutBuilder:
         html += '        </div>\n\n'
         
         return html
+    
+    def build_footer(self, site_config: Dict, layout_info: Optional[str] = None, 
+                    template_num: Optional[int] = None) -> str:
+        """
+        Construye el footer usando FooterGenerator
+        
+        Args:
+            site_config: Configuración del sitio
+            layout_info: Información del layout usado
+            template_num: Número de template
+            
+        Returns:
+            str: HTML del footer
+        """
+        # Usar el generador modular de footers
+        return self.footer_gen.generar_footer(
+            site_name=site_config["title"],
+            tagline=site_config["tagline"],
+            footer_style=self.config.get('footer_style'),
+            include_social=self.config.get('footer_include_social', True),
+            include_newsletter=self.config.get('footer_include_newsletter', False),
+            layout_info=layout_info,
+            template_num=template_num
+        )
 
 
 def main():

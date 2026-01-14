@@ -1,0 +1,179 @@
+[
+  {
+    "id": "site_20260113_225724_6931",
+    "nombre": "Sur Reportes",
+    "tagline": "Información Que Transforma",
+    "estilo": "aleatorio",
+    "dominio": "surreportes.com",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "Sur Reportes",
+      "iniciales": "SR",
+      "estilo": "modern",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Montserrat",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Mundo",
+      "Deportes",
+      "Entretenimiento",
+      "Cultura"
+    ],
+    "contacto": {
+      "email_general": "contacto@surreportes.com",
+      "email_redaccion": "redaccion@surreportes.com",
+      "email_publicidad": "publicidad@surreportes.com",
+      "telefono": "+52 55 9244 8871",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/surreportes",
+      "twitter": "https://twitter.com/surreportes",
+      "instagram": "https://instagram.com/surreportes",
+      "youtube": "https://youtube.com/@surreportes",
+      "linkedin": "https://linkedin.com/company/surreportes",
+      "telegram": "https://t.me/surreportes"
+    },
+    "seo": {
+      "titulo": "Sur Reportes - Información Que Transforma",
+      "descripcion": "Sur Reportes es tu fuente confiable de noticias e información actualizada. Información Que Transforma. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "sur reportes",
+        "surreportes"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-13T22:57:24.840016",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260113_225724_8829",
+    "nombre": "Bajío Digital",
+    "tagline": "Información Digital en Tiempo Real",
+    "estilo": "aleatorio",
+    "dominio": "bajíodigital.info",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "Bajío Digital",
+      "iniciales": "BD",
+      "estilo": "classic",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Roboto",
+      "peso_fuente": "medium",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Economía",
+      "Ciencia",
+      "Educación",
+      "Deportes",
+      "Negocios"
+    ],
+    "contacto": {
+      "email_general": "contacto@bajíodigital.info",
+      "email_redaccion": "redaccion@bajíodigital.info",
+      "email_publicidad": "publicidad@bajíodigital.info",
+      "telefono": "+52 55 4169 9260",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/bajíodigital",
+      "twitter": "https://twitter.com/bajíodigital",
+      "instagram": "https://instagram.com/bajíodigital",
+      "youtube": "https://youtube.com/@bajíodigital",
+      "linkedin": "https://linkedin.com/company/bajíodigital",
+      "telegram": "https://t.me/bajíodigital"
+    },
+    "seo": {
+      "titulo": "Bajío Digital - Información Digital en Tiempo Real",
+      "descripcion": "Bajío Digital es tu fuente confiable de noticias e información actualizada. Información Digital en Tiempo Real. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "bajío digital",
+        "bajíodigital"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-13T22:57:24.840088",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

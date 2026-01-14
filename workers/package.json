@@ -21,8 +21,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "hono": "^4.0.5",
     "@hono/zod-validator": "^0.2.1",
+    "hono": "^4.11.4",
     "zod": "^3.22.4"
   },
   "devDependencies": {

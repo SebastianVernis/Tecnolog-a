@@ -1,0 +1,177 @@
+[
+  {
+    "id": "site_20260113_232631_8612",
+    "nombre": "PMM Journal",
+    "tagline": "Actualidad en Tiempo Real",
+    "estilo": "aleatorio",
+    "dominio": "pmmjournal.digital",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "PMM Journal",
+      "iniciales": "PJ",
+      "estilo": "minimal",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Negocios",
+      "Sociedad",
+      "Mundo",
+      "Tecnología"
+    ],
+    "contacto": {
+      "email_general": "contacto@pmmjournal.digital",
+      "email_redaccion": "redaccion@pmmjournal.digital",
+      "email_publicidad": "publicidad@pmmjournal.digital",
+      "telefono": "+52 55 4646 1813",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/pmmjournal",
+      "twitter": "https://twitter.com/pmmjournal",
+      "instagram": "https://instagram.com/pmmjournal",
+      "youtube": "https://youtube.com/@pmmjournal",
+      "linkedin": "https://linkedin.com/company/pmmjournal",
+      "telegram": "https://t.me/pmmjournal"
+    },
+    "seo": {
+      "titulo": "PMM Journal - Actualidad en Tiempo Real",
+      "descripcion": "PMM Journal es tu fuente confiable de noticias e información actualizada. Actualidad en Tiempo Real. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "pmm journal",
+        "pmmjournal"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-13T23:26:31.619623",
+    "version": "1.0",
+    "estado": "pre-creado"
+  },
+  {
+    "id": "site_20260113_232631_9735",
+    "nombre": "La MX Ahora",
+    "tagline": "Noticias desde el Corazón de México",
+    "estilo": "aleatorio",
+    "dominio": "mxahora.com.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "La MX Ahora",
+      "iniciales": "LMA",
+      "estilo": "minimal",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Montserrat",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Cultura",
+      "Ciencia",
+      "Tecnología"
+    ],
+    "contacto": {
+      "email_general": "contacto@mxahora.com.mx",
+      "email_redaccion": "redaccion@mxahora.com.mx",
+      "email_publicidad": "publicidad@mxahora.com.mx",
+      "telefono": "+52 55 7096 7382",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/mxahora",
+      "twitter": "https://twitter.com/mxahora",
+      "instagram": "https://instagram.com/mxahora",
+      "youtube": "https://youtube.com/@mxahora",
+      "linkedin": "https://linkedin.com/company/mxahora",
+      "telegram": "https://t.me/mxahora"
+    },
+    "seo": {
+      "titulo": "La MX Ahora - Noticias desde el Corazón de México",
+      "descripcion": "La MX Ahora es tu fuente confiable de noticias e información actualizada. Noticias desde el Corazón de México. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "la mx ahora",
+        "mxahora"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-13T23:26:31.619686",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

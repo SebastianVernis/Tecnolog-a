@@ -21,6 +21,7 @@ type Bindings = {
   DB: D1Database;
   CACHE: KVNamespace;
   SITE_GENERATION_QUEUE: Queue;
+  ASSETS: Fetcher;
   BLACKBOX_API_KEY: string;
   NEWSAPI_KEY: string;
   CLOUDFLARE_API_TOKEN: string;

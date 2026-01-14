@@ -113,6 +113,70 @@ Artículo expandido:"""
             print(f"❌ Error procesando respuesta: {e}")
             return text
     
+    def paraphrase_article(self, article: Dict, style: str = "neutral") -> Dict:
+        """
+        Parafrasea un artículo completo
+        
+        Args:
+            article: Diccionario con datos del artículo
+            style: Estilo de escritura deseado
+            
+        Returns:
+            Diccionario con artículo parafraseado
+        """
+        # Detectar formato del artículo
+        is_normalized = isinstance(article.get('source'), str)
+        
+        # Extraer campos según formato
+        if is_normalized:
+            title = article.get('title', '')
+            description = article.get('description', '')
+            content = article.get('content', '')
+            full_text = article.get('full_text', '')
+        else:
+            title = article.get('title', '')
+            description = article.get('description', '')
+            content = article.get('content', '')
+            full_text = article.get('full_text', article.get('content', ''))
+        
+        # Texto base para parafrasear
+        text_parts = [title, description]
+        if full_text:
+            text_parts.append(full_text[:1000])
+        elif content:
+            text_parts.append(content[:1000])
+        
+        base_text = '\n\n'.join(filter(None, text_parts))
+        
+        # Parafrasear
+        paraphrased = self.paraphrase_text(base_text, style)
+        
+        # Crear copia del artículo con texto parafraseado
+        result = article.copy()
+        
+        # Extraer título y artículo del formato estructurado
+        if '[TÍTULO]' in paraphrased and '[ARTÍCULO]' in paraphrased:
+            parts = paraphrased.split('[ARTÍCULO]')
+            title_section = parts[0].replace('[TÍTULO]', '').strip()
+            article_body = parts[1].strip() if len(parts) > 1 else paraphrased
+            
+            title_section = title_section.strip('[]').strip()
+            
+            result['title'] = title_section[:150] if title_section else article.get('title', '')[:150]
+            result['full_text'] = article_body
+            result['description'] = article_body[:300] + '...' if len(article_body) > 300 else article_body
+        else:
+            lines = paraphrased.split('\n\n')
+            result['title'] = lines[0][:150] if lines else article.get('title', '')[:150]
+            result['full_text'] = '\n\n'.join(lines[1:]) if len(lines) > 1 else paraphrased
+            result['description'] = result['full_text'][:300] + '...' if len(result['full_text']) > 300 else result['full_text']
+        
+        # Actualizar campo 'content'
+        if 'content' in result:
+            result['content'] = result['full_text']
+        
+        return result
+    
     def generate_variations(self, article: Dict, num_variations: int = 40) -> List[Dict]:
         """
         Genera múltiples variaciones de un artículo

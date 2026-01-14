@@ -59,7 +59,13 @@ class ArticleExpander:
         description = article.get('description', '')
         content = article.get('content', '')
         full_text = article.get('full_text', '')
-        source = article.get('source_name', article.get('source', {}).get('name', 'Fuente'))
+        
+        # Manejar source como string o dict
+        source_data = article.get('source', {})
+        if isinstance(source_data, dict):
+            source = article.get('source_name', source_data.get('name', 'Fuente'))
+        else:
+            source = article.get('source_name', source_data if source_data else 'Fuente')
         
         # Compilar todo el contexto disponible
         context = f"""

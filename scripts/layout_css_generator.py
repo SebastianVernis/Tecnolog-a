@@ -314,26 +314,27 @@ class LayoutCSSGenerator:
         """
         css = f"""/* Layout: {layout['nombre']} - {layout['descripcion']} */
 
-/* Container */
+/* Container - Modern CSS approach with clamp() for fluid sizing */
 .container {{
     max-width: {layout['container_width']};
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 clamp(1rem, 5vw, 2rem);
+    width: 100%;
 }}
 
-/* Header */
+/* Header - Flexible height with modern flexbox */
 .header {{
-    height: {layout['header_height']};
+    min-height: {layout['header_height']};
     display: flex;
     align-items: center;
 }}
 
-/* News Grid */
+/* News Grid - Using CSS Grid best practices with auto-fit */
 .news-grid {{
     display: grid;
-    grid-template-columns: {layout['grid_template']};
-    gap: {layout['gap']};
-    margin: 40px 0;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: clamp(1rem, 3vw, {layout['gap']});
+    margin: clamp(1.5rem, 5vw, 2.5rem) 0;
 }}
 
 /* Card Styles - {layout['card_style']} */
@@ -532,27 +533,50 @@ class LayoutCSSGenerator:
         return ""
     
     def _get_responsive_styles(self, layout: Dict[str, any]) -> str:
-        """Genera media queries responsivas"""
+        """Genera media queries responsivas usando mejores prácticas"""
+        # Usar auto-fit para grids más inteligentes según Context7
         return f"""
-/* Responsive Design */
-@media (max-width: 1200px) {{
-    .news-grid {{
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
+/* Responsive Design - Modern CSS Grid Approach */
+/* Mobile First: Base styles for small screens */
+@media (max-width: 640px) {{
+    .container {{
+        padding: 0 15px;
     }}
-}}
-
-@media (max-width: 768px) {{
     .news-grid {{
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 1rem;
     }}
     .header {{
-        height: 60px;
+        height: auto;
+        min-height: 60px;
     }}
     .sidebar {{
         position: relative;
         top: 0;
+    }}
+}}
+
+/* Tablet: 641px - 1024px */
+@media (min-width: 641px) and (max-width: 1024px) {{
+    .news-grid {{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }}
+}}
+
+/* Desktop: 1025px - 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {{
+    .news-grid {{
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }}
+}}
+
+/* Large Desktop: 1441px+ */
+@media (min-width: 1441px) {{
+    .news-grid {{
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2.5rem;
     }}
 }}
 """
