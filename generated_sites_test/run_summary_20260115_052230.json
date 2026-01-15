@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "run_id": "20260115_052230",
+  "sitios_generados": [
+    "/home/sebastianvernis/news-prototype/Tecnología/generated_sites_test/site_1/index.html"
+  ],
+  "stats": {
+    "noticias_descargadas": 20,
+    "noticias_parafraseadas": 2,
+    "imagenes_generadas": 2,
+    "sitios_creados": 1,
+    "tiempo_inicio": 1768476150.7009664,
+    "tiempo_total_segundos": 142.00454926490784,
+    "tiempo_total_minutos": 2.3667424877484637
+  },
+  "output_dir": "/home/sebastianvernis/news-prototype/Tecnología/generated_sites_test"
+}

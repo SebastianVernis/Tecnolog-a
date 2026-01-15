@@ -246,13 +246,14 @@ class HTMLLayoutBuilder:
         self.header_gen = HeaderGenerator()
         self.footer_gen = FooterGenerator()
     
-    def build_header(self, site_config: Dict, categorias: List[str]) -> str:
+    def build_header(self, site_config: Dict, categorias: List[str], logo_path: str = None) -> str:
         """
         Construye el header según el estilo configurado usando HeaderGenerator
         
         Args:
             site_config: Configuración del sitio
             categorias: Lista de categorías
+            logo_path: Ruta al archivo de logo (opcional)
             
         Returns:
             str: HTML del header
@@ -265,7 +266,8 @@ class HTMLLayoutBuilder:
             header_style=self.config.get('header_style'),
             nav_style=self.config.get('nav_style'),
             elementos_extra=self.config.get('header_elementos_extra', []),
-            sticky=self.config.get('sticky_header', False)
+            sticky=self.config.get('sticky_header', False),
+            logo_path=logo_path
         )
     
     def _build_nav(self, categorias: List[str], style: str, wrapper: bool = True, minimal: bool = False) -> str:

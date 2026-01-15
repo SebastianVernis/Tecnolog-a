@@ -22,7 +22,7 @@ API_URL = 'https://api.blackbox.ai/chat/completions'
 class AIImageGenerator:
     """Genera imágenes usando IA (Flux Schnell de Blackbox)"""
     
-    def __init__(self, output_dir='images/news', api_key: str = None):
+    def __init__(self, output_dir='generated_images', api_key: str = None):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         

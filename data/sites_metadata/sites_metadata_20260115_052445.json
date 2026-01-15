@@ -1,0 +1,89 @@
+[
+  {
+    "id": "site_20260115_052445_1353",
+    "nombre": "InfoMéxico Tiempo",
+    "tagline": "La Voz de México",
+    "estilo": "aleatorio",
+    "dominio": "infoméxicotiempo.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#27AE60",
+      "secundario": "#16A085",
+      "acento": "#F39C12",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "InfoMéxico Tiempo",
+      "iniciales": "IT",
+      "estilo": "minimal",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#27AE60",
+        "secundario": "#16A085",
+        "acento": "#F39C12",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Opinión",
+      "Negocios",
+      "Entretenimiento"
+    ],
+    "contacto": {
+      "email_general": "contacto@infoméxicotiempo.mx",
+      "email_redaccion": "redaccion@infoméxicotiempo.mx",
+      "email_publicidad": "publicidad@infoméxicotiempo.mx",
+      "telefono": "+52 55 9184 8463",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/infoméxicotiempo",
+      "twitter": "https://twitter.com/infoméxicotiempo",
+      "instagram": "https://instagram.com/infoméxicotiempo",
+      "youtube": "https://youtube.com/@infoméxicotiempo",
+      "linkedin": "https://linkedin.com/company/infoméxicotiempo",
+      "telegram": "https://t.me/infoméxicotiempo"
+    },
+    "seo": {
+      "titulo": "InfoMéxico Tiempo - La Voz de México",
+      "descripcion": "InfoMéxico Tiempo es tu fuente confiable de noticias e información actualizada. La Voz de México. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "infoméxico tiempo",
+        "infoméxicotiempo"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-15T05:24:45.946924",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

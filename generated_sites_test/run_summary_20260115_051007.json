@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "run_id": "20260115_051007",
+  "sitios_generados": [
+    "/home/sebastianvernis/mnt/sebastianvernis/news-prototype/Tecnología/generated_sites_test/site_1/index.html"
+  ],
+  "stats": {
+    "noticias_descargadas": 20,
+    "noticias_parafraseadas": 2,
+    "imagenes_generadas": 2,
+    "sitios_creados": 1,
+    "tiempo_inicio": 1768475407.8784668,
+    "tiempo_total_segundos": 110.48013114929199,
+    "tiempo_total_minutos": 1.8413355191548666
+  },
+  "output_dir": "/home/sebastianvernis/mnt/sebastianvernis/news-prototype/Tecnología/generated_sites_test"
+}

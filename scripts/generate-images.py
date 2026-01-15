@@ -91,7 +91,7 @@ class NewsImageGenerator:
         }
     }
 
-    def __init__(self, output_dir='images/news'):
+    def __init__(self, output_dir='generated_images'):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.width = 1200

@@ -164,7 +164,8 @@ class HeaderGenerator:
                       header_style: Optional[str] = None,
                       nav_style: Optional[str] = None,
                       elementos_extra: Optional[List[str]] = None,
-                      sticky: bool = False) -> str:
+                      sticky: bool = False,
+                      logo_path: Optional[str] = None) -> str:
         """
         Genera el HTML de un header completo
         
@@ -176,6 +177,7 @@ class HeaderGenerator:
             nav_style: Estilo de navegación (aleatorio si es None)
             elementos_extra: Elementos adicionales a incluir
             sticky: Si el header debe ser sticky
+            logo_path: Ruta al archivo de logo (opcional)
             
         Returns:
             str: HTML del header
@@ -203,7 +205,7 @@ class HeaderGenerator:
         nav_html = self._generar_navegacion(categorias, nav_config)
         
         # Generar logo y tagline
-        logo_html = self._generar_logo_tagline(site_name, tagline, header_style)
+        logo_html = self._generar_logo_tagline(site_name, tagline, header_style, logo_path)
         
         # Ensamblar header según estilo
         if header_style in ["centered", "stacked"]:
@@ -240,19 +242,28 @@ class HeaderGenerator:
         return header_html
     
     def _generar_logo_tagline(self, site_name: str, tagline: str, 
-                             header_style: str) -> str:
+                             header_style: str, logo_path: str = None) -> str:
         """Genera el HTML del logo y tagline"""
         
         # Usar 'header-branding' como clase consistente para el contenedor
+        # Si existe logo, mostrar imagen + texto, sino solo texto
+        logo_html = f'<h1 class="logo">{site_name}</h1>'
+        
+        if logo_path:
+            logo_html = f'''<div class="logo-image">
+                    <img src="logo.jpg" alt="{site_name}" class="logo-img">
+                    <h1 class="logo">{site_name}</h1>
+                </div>'''
+        
         if header_style in ["minimal", "modern_thin"]:
             return f"""
             <div class="header-branding">
-                <h1 class="logo">{site_name}</h1>
+                {logo_html}
             </div>"""
         
         return f"""
             <div class="header-branding">
-                <h1 class="logo">{site_name}</h1>
+                {logo_html}
                 <p class="tagline">{tagline}</p>
             </div>"""
     

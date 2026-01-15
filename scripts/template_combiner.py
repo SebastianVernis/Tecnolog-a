@@ -245,6 +245,32 @@ img {
     font-size: 0.85em;
 }
 
+/* Logo con imagen */
+.logo-image {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Responsive logo */
+@media (max-width: 640px) {
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .header-branding .logo {
+        font-size: 1.2rem;
+    }
+}
+
 /* Navigation */
 .nav {
     display: flex;

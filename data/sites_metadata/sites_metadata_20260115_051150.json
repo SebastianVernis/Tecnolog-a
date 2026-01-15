@@ -1,0 +1,89 @@
+[
+  {
+    "id": "site_20260115_051150_7632",
+    "nombre": "Información de Ibero",
+    "tagline": "El Pulso de la Actualidad",
+    "estilo": "aleatorio",
+    "dominio": "informaciónibero.digital",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "Información de Ibero",
+      "iniciales": "IDI",
+      "estilo": "elegant",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Ciencia",
+      "Deportes",
+      "Cultura"
+    ],
+    "contacto": {
+      "email_general": "contacto@informaciónibero.digital",
+      "email_redaccion": "redaccion@informaciónibero.digital",
+      "email_publicidad": "publicidad@informaciónibero.digital",
+      "telefono": "+52 55 1370 4130",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/informaciónibero",
+      "twitter": "https://twitter.com/informaciónibero",
+      "instagram": "https://instagram.com/informaciónibero",
+      "youtube": "https://youtube.com/@informaciónibero",
+      "linkedin": "https://linkedin.com/company/informaciónibero",
+      "telegram": "https://t.me/informaciónibero"
+    },
+    "seo": {
+      "titulo": "Información de Ibero - El Pulso de la Actualidad",
+      "descripcion": "Información de Ibero es tu fuente confiable de noticias e información actualizada. El Pulso de la Actualidad. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "información de ibero",
+        "informaciónibero"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-15T05:11:50.149235",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

@@ -122,12 +122,13 @@ class MasterOrchestrator:
         
         print(f"[{timestamp}] {prefix} {message}", flush=True)
     
-    def paso_1_descargar_noticias(self, num_noticias: int = 50) -> List[Dict]:
+    def paso_1_descargar_noticias(self, num_noticias: int = 50, force_download: bool = False) -> List[Dict]:
         """
         Paso 1: Descarga noticias desde APIs
         
         Args:
             num_noticias: Número de noticias a descargar
+            force_download: Forzar descarga en vivo incluso si hay archivos
             
         Returns:
             Lista de noticias descargadas
@@ -136,20 +137,48 @@ class MasterOrchestrator:
         self.log("PASO 1: Descargando Noticias", "PROGRESS")
         self.log("=" * 70)
         
-        # Buscar archivo de noticias ORIGINALES (NewsAPI, no parafraseadas)
-        noticias_files = list(self.data_dir.glob("noticias_newsapi_*.json"))
-        if noticias_files:
-            latest_file = max(noticias_files, key=lambda p: p.stat().st_mtime)
-            self.log(f"Usando archivo existente: {latest_file.name}")
+        # Si no se fuerza descarga, intentar usar archivo existente
+        if not force_download:
+            noticias_files = list(self.data_dir.glob("noticias_newsapi_*.json"))
+            if noticias_files:
+                latest_file = max(noticias_files, key=lambda p: p.stat().st_mtime)
+                self.log(f"Usando archivo existente: {latest_file.name}")
+                
+                with open(latest_file, 'r', encoding='utf-8') as f:
+                    noticias = json.load(f)
+                
+                self.stats["noticias_descargadas"] = len(noticias)
+                self.log(f"Cargadas {len(noticias)} noticias originales", "SUCCESS")
+                return noticias[:num_noticias]
+        
+        # Descargar noticias en vivo desde NewsAPI
+        self.log("Descargando noticias en vivo desde NewsAPI...", "PROGRESS")
+        
+        try:
+            # Importar el módulo de NewsAPI
+            import sys
+            from pathlib import Path
+            api_dir = Path(__file__).parent / "api"
+            if str(api_dir) not in sys.path:
+                sys.path.insert(0, str(api_dir))
             
-            with open(latest_file, 'r', encoding='utf-8') as f:
-                noticias = json.load(f)
+            from newsapi import fetch_newsapi
+            
+            # Descargar noticias
+            noticias = fetch_newsapi(
+                query='tecnología',
+                language='es',
+                page_size=num_noticias,
+                enrich=True,
+                silent=False
+            )
             
             self.stats["noticias_descargadas"] = len(noticias)
-            self.log(f"Cargadas {len(noticias)} noticias originales", "SUCCESS")
-            return noticias[:num_noticias]
-        else:
-            self.log("No hay noticias disponibles. Ejecuta el scraper primero.", "ERROR")
+            self.log(f"Descargadas {len(noticias)} noticias desde NewsAPI", "SUCCESS")
+            return noticias
+            
+        except Exception as e:
+            self.log(f"Error descargando noticias: {e}", "ERROR")
             return []
     
     def paso_2_parafrasear_noticias(self, noticias: List[Dict]) -> List[Dict]:
@@ -413,12 +442,13 @@ Vector style, flat design, high contrast."""
             site_dir.mkdir(parents=True, exist_ok=True)
             
             template_info = templates_metadata[0]
+            logo_path = logos.get(idx)
             
             self.log(f"Generando: {metadata['nombre']}", "PROGRESS")
             
             # Generar HTML del sitio (index.html)
             index_html = self._generar_index_html(
-                metadata, noticias, template_info, idx
+                metadata, noticias, template_info, idx, logo_path
             )
             
             index_path = site_dir / "index.html"
@@ -426,7 +456,7 @@ Vector style, flat design, high contrast."""
                 f.write(index_html)
             
             # Generar páginas de artículos individuales
-            self._generar_paginas_articulos(site_dir, noticias, metadata, template_info, idx)
+            self._generar_paginas_articulos(site_dir, noticias, metadata, template_info, idx, logo_path)
             
             # Generar páginas legales
             self._generar_paginas_legales(site_dir, metadata)
@@ -444,7 +474,7 @@ Vector style, flat design, high contrast."""
         return sitios_generados
     
     def _generar_index_html(self, metadata: Dict, noticias: List[Dict], 
-                           template_info: Dict, site_num: int) -> str:
+                           template_info: Dict, site_num: int, logo_path: str = None) -> str:
         """Genera el HTML del index del sitio usando generadores modulares"""
         
         # Generar configuración de layout
@@ -468,7 +498,7 @@ Vector style, flat design, high contrast."""
         categorias = ["Inicio"] + sorted(list(categorias_set))[:6]  # Limitar a 7 categorías
         
         # Generar componentes usando los nuevos generadores
-        header_html = builder.build_header(site_config, categorias)
+        header_html = builder.build_header(site_config, categorias, logo_path)
         
         # Obtener información del layout para el footer
         layout_info = layout_config.get('layout_type', 'default')
@@ -613,7 +643,7 @@ Vector style, flat design, high contrast."""
         return '\n                    '.join(html_parrafos)
     
     def _generar_paginas_articulos(self, site_dir: Path, noticias: List[Dict],
-                                   metadata: Dict, template_info: Dict, site_num: int):
+                                   metadata: Dict, template_info: Dict, site_num: int, logo_path: str = None):
         """Genera páginas HTML individuales para cada artículo con sidebar"""
         for idx, noticia in enumerate(noticias, 1):
             # Generar sidebar con otros artículos (excluyendo el actual)
@@ -638,7 +668,10 @@ Vector style, flat design, high contrast."""
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="logo"><a href="index.html">{metadata['nombre']}</a></h1>
+            <div class="header-branding">
+                {'<img src="logo.jpg" alt="' + metadata['nombre'] + '" class="logo-img">' if logo_path else ''}
+                <h1 class="logo"><a href="index.html">{metadata['nombre']}</a></h1>
+            </div>
             <nav class="nav">
                 <a href="index.html" class="nav-link">Inicio</a>
             </nav>
@@ -742,12 +775,13 @@ Vector style, flat design, high contrast."""
         if css_source.exists():
             shutil.copy2(css_source, css_dest)
     
-    def ejecutar_flujo_completo(self, verificar_dominios: bool = False) -> Dict:
+    def ejecutar_flujo_completo(self, verificar_dominios: bool = False, force_download: bool = True) -> Dict:
         """
         Ejecuta el flujo completo de generación
         
         Args:
             verificar_dominios: Si True, verifica disponibilidad de dominios
+            force_download: Si True, descarga noticias en vivo desde NewsAPI
             
         Returns:
             Diccionario con resultados y estadísticas
@@ -757,10 +791,11 @@ Vector style, flat design, high contrast."""
         self.log("=" * 70)
         self.log(f"Run ID: {self.run_id}")
         self.log(f"Verificar dominios: {verificar_dominios}")
+        self.log(f"Descarga en vivo: {force_download}")
         
         try:
             # Paso 1: Descargar noticias
-            noticias = self.paso_1_descargar_noticias(num_noticias=20)
+            noticias = self.paso_1_descargar_noticias(num_noticias=20, force_download=force_download)
             if not noticias:
                 raise Exception("No hay noticias disponibles")
             
@@ -839,15 +874,17 @@ def main():
     parser = argparse.ArgumentParser(description="Master Orchestrator - Generación Completa de Sitio")
     parser.add_argument('--verificar-dominios', action='store_true', help='Verificar disponibilidad de dominios')
     parser.add_argument('--output-dir', type=str, default=None, help='Directorio de salida')
+    parser.add_argument('--usar-cache', action='store_true', help='Usar noticias en cache en lugar de descargar nuevas')
     
     args = parser.parse_args()
     
     # Crear orquestador
     orchestrator = MasterOrchestrator(output_base_dir=args.output_dir)
     
-    # Ejecutar flujo
+    # Ejecutar flujo (por defecto descarga en vivo)
     resultado = orchestrator.ejecutar_flujo_completo(
-        verificar_dominios=args.verificar_dominios
+        verificar_dominios=args.verificar_dominios,
+        force_download=not args.usar_cache
     )
     
     # Retornar código de salida

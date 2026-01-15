@@ -8,17 +8,54 @@
 
 ---
 
+## 📊 DIAGRAMA DE FLUJO COMPLETO
+
+**Ver diagrama detallado en:** `DIAGRAMA-FLUJO-COMPLETO.md`
+
+### Resumen Visual del Flujo:
+```
+NewsAPI → Parafraseo → Expansión → Imágenes AI → Metadata → Logos → CSS → HTML → Sitios
+```
+
+---
+
 ## 🏗️ Arquitectura del Sistema
 
 ### Flujo Principal (master_orchestrator.py)
 ```
-1. Descarga de Noticias → NewsAPI
-2. Parafraseo + Expansión → Artículos únicos (800 palabras)
-3. Generación de Imágenes → IA (Flux Schnell)
-4. Metadata de Sitios → Nombres, dominios, taglines
-5. Generación de Logos → IA
-6. Templates CSS → Combinaciones de paletas + fuentes + layouts
-7. Generación HTML → Sitios completos con artículos
+FASE 1: CONTENIDO
+1. Descargar Noticias → NewsAPI (20 noticias)
+
+FASE 2: TRANSFORMACIÓN
+2A. Parafraseo → NewsParaphraser (8 estilos)
+2B. Expansión → ArticleExpander (800 palabras, 8 estructuras)
+2C. Asignar Autores → LegalPagesGenerator (20 autores)
+
+FASE 3: IMÁGENES
+3. Generar Imágenes → AIImageGenerator (Flux Schnell, 20 imágenes)
+
+FASE 4: METADATA
+4. Crear Metadata → SitePreCreation + SiteNameGenerator + DomainVerifier
+   - 12 estilos de nombres
+   - Verificación WHOIS (opcional)
+   - Colores, categorías, contacto, SEO
+
+FASE 5: LOGO
+5. Generar Logo → AIImageGenerator (Flux Schnell, 1 logo)
+
+FASE 6: CSS
+6. Generar CSS → TemplateCombiner
+   - ColorPaletteGenerator (20 paletas)
+   - FontFamilyGenerator (15 fuentes)
+   - LayoutCSSGenerator (20 layouts)
+   - 6,000 combinaciones posibles
+
+FASE 7: HTML
+7. Generar HTML → LayoutGenerator + HTMLLayoutBuilder
+   - HeaderGenerator (12 estilos)
+   - FooterGenerator (3 columnas)
+   - LegalPagesGenerator (4 páginas legales)
+   - 25 páginas HTML totales
 ```
 
 ### Componentes Clave
@@ -65,34 +102,78 @@
 
 ---
 
+## 🎮 Menú Principal Interactivo
+
+**RECOMENDADO:** Usar el menú interactivo para todas las operaciones
+
+```bash
+# Ejecutar menú principal
+./menu.sh
+# o
+python menu.py
+```
+
+**Features:**
+- ✅ Generación de sitios (5 modos)
+- ✅ Tests y verificación (6 tests)
+- ✅ Documentación completa (8 documentos)
+- ✅ Utilidades del sistema (6 herramientas)
+
+**Ver:** `MENU-PRINCIPAL.md` para guía completa
+
+---
+
 ## 🔧 Comandos Comunes
 
-### Limpiar Datos
+### Menú Interactivo (Recomendado)
 ```bash
-# Limpiar todo excepto archivo base
-rm -rf data/noticias_*.json data/sites_metadata/*.json generated_sites/site_* generated_sites/*.json
+./menu.sh                           # Menú principal
+# → 1 (Generación) → 1 (Rápido)    # Generar sitio
+# → 2 (Tests) → 1 (Módulos)        # Verificar módulos
+# → 3 (Docs) → 4 (Diagrama)        # Ver documentación
 ```
 
-### Generar Sitios
-```bash
-# Flujo completo (2 sitios, verificar dominios)
-python scripts/master_orchestrator.py --sitios 2 --verificar-dominios
+### CLI Directo
 
-# Sin verificar dominios (más rápido)
-python scripts/master_orchestrator.py --sitios 3
+#### Generar Sitios
+```bash
+# Flujo completo (modo rápido)
+python scripts/master_orchestrator.py
+
+# Con verificación de dominios
+python scripts/master_orchestrator.py --verificar-dominios
+
+# Usar cache de noticias
+python scripts/master_orchestrator.py --usar-cache
+
+# Directorio personalizado
+python scripts/master_orchestrator.py --output-dir /custom/path
 ```
 
-### Servir Sitio Local
+#### Tests
+```bash
+# Verificar 16 módulos
+python scripts/test/test_modulos_completo.py
+
+# Test flujo completo (2 artículos)
+python scripts/test/test_flujo_completo.py
+
+# Test Blackbox API
+python scripts/test/test_blackbox.py
+```
+
+#### Servir Sitio Local
 ```bash
 cd generated_sites/site_1
 python -m http.server 8001
 # Abrir: http://localhost:8001
 ```
 
-### Tests
+#### Limpiar
 ```bash
-# Test de headers y footers
-python scripts/test_headers_footers.py
+# Desde el menú: ./menu.sh → 4 → 1
+# O manual:
+rm -rf generated_sites generated_sites_test test_output_modules
 ```
 
 ---
@@ -355,6 +436,21 @@ Las páginas legales están enlazadas automáticamente en la sección "Legal" de
 
 ## 🔄 Historial de Cambios
 
+### 2026-01-15 - 15:40
+- **Menú interactivo unificado**: `menu.py` con 4 secciones principales
+- **Servidor HTTP integrado**: Servir sitios directamente desde el menú (4 modos)
+- **Script auxiliar**: `scripts/serve_sites.py` para CLI directo
+- **Documentación actualizada**: MENU-PRINCIPAL.md, ORGANIZACION-FINAL.md
+- **30 opciones en menú**: Generación (6), Tests (6), Docs (8), Utilidades (6), Servidor (4)
+
+### 2026-01-15 - 14:35
+- **Diagrama de flujo completo**: Documentación exhaustiva del sistema completo
+- **Verificación de módulos**: Confirmación de integración de todos los 16 módulos
+- **Estadísticas del sistema**: 6,000 combinaciones CSS × 43,200 configuraciones HTML
+- **Estructura de archivos**: Documentación de 27 archivos por sitio generado
+- **Tiempos de ejecución**: ~2-3 minutos por sitio completo
+- **Referencias actualizadas**: Links a DIAGRAMA-FLUJO-COMPLETO.md
+
 ### 2026-01-13 - 23:17
 - **Generador de páginas legales**: Términos, Privacidad, FAQs, Acerca de
 - **Autores aleatorios**: 20 nombres ficticios, sin usar fuentes originales
@@ -379,5 +475,14 @@ Las páginas legales están enlazadas automáticamente en la sección "Legal" de
 
 ---
 
-**Última actualización**: 2026-01-13 23:10  
+## 🔗 Referencias
+
+- **Diagrama completo:** `DIAGRAMA-FLUJO-COMPLETO.md` - Flujo detallado con todos los módulos, estadísticas y ejemplos
+- **Context7 Libraries:** `/websites/css-tricks_almanac`, `/websites/v3_tailwindcss`
+- **Test files:** `scripts/test/test_*.py`
+
+---
+
+**Última actualización**: 2026-01-15 14:35  
+**Versión**: 2.0  
 **Mantenido por**: Agentes IA asistiendo el desarrollo
