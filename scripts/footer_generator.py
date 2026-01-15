@@ -207,35 +207,12 @@ class FooterGenerator:
     
     def _seleccionar_secciones_automaticas(self, num_columnas: int,
                                           include_newsletter: bool) -> List[str]:
-        """Selecciona secciones automáticamente según número de columnas"""
+        """Selecciona secciones automáticamente (siempre 3 columnas en grid horizontal)"""
         
-        # Secciones principales siempre incluidas
-        core_sections = ["about", "sections", "legal", "contact"]
-        
-        # Secciones adicionales opcionales
-        optional_sections = ["categories", "services", "recent_posts", "apps"]
-        
-        if num_columnas == 1:
-            return ["about"]
-        
-        elif num_columnas == 2:
-            return ["about", "sections"]
-        
-        elif num_columnas == 3:
-            if include_newsletter:
-                return ["about", "sections", "newsletter"]
-            return ["about", "sections", "legal"]
-        
-        elif num_columnas == 4:
-            sections = core_sections.copy()
-            if include_newsletter:
-                sections[2] = "newsletter"
-            return sections
-        
-        else:  # 5+ columnas
-            sections = core_sections + random.sample(optional_sections, 
-                                                    min(num_columnas - 4, len(optional_sections)))
-            return sections[:num_columnas]
+        # Siempre retornar 3 secciones para grid horizontal
+        if include_newsletter:
+            return ["about", "sections", "newsletter"]
+        return ["about", "sections", "legal"]
     
     def _generar_columnas(self, secciones: List[str], site_name: str,
                          tagline: str, include_social: bool,
@@ -388,24 +365,18 @@ class FooterGenerator:
 
 .footer-grid {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
-.footer.cols-2 .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.footer.cols-3 .footer-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.footer.cols-4 .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
-}
-
+/* Forzar 3 columnas horizontales en una fila */
+.footer.cols-2 .footer-grid,
+.footer.cols-3 .footer-grid,
+.footer.cols-4 .footer-grid,
 .footer.cols-5 .footer-grid {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
 }
 
 /* Footer Column */
@@ -571,9 +542,11 @@ class FooterGenerator:
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+    /* Solo en móvil pequeño: 1 columna vertical */
     .footer-grid {
         grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
     }
     
     .footer {
@@ -582,6 +555,22 @@ class FooterGenerator:
     
     .social-links {
         justify-content: center;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* Tablets: mantener 3 columnas horizontales */
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Desktop: 3 columnas horizontales con más espacio */
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 """

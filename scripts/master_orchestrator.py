@@ -152,142 +152,128 @@ class MasterOrchestrator:
             self.log("No hay noticias disponibles. Ejecuta el scraper primero.", "ERROR")
             return []
     
-    def paso_2_parafrasear_noticias(self, noticias: List[Dict], num_sitios: int) -> Dict[int, List[Dict]]:
+    def paso_2_parafrasear_noticias(self, noticias: List[Dict]) -> List[Dict]:
         """
-        Paso 2: Parafrasea cada noticia N veces (1 por sitio)
+        Paso 2: Parafrasea cada noticia 1 vez
         
         Args:
             noticias: Lista de noticias originales
-            num_sitios: Número de sitios a crear (variaciones por noticia)
             
         Returns:
-            Dict[site_id -> List[noticias_parafraseadas]]
+            Lista de noticias parafraseadas
         """
         self.log("=" * 70)
         self.log("PASO 2: Parafraseando Noticias y Generando Artículos Completos", "PROGRESS")
         self.log("=" * 70)
         
-        # Estructura: {site_id: [noticias_parafraseadas]}
-        noticias_por_sitio = {i: [] for i in range(1, num_sitios + 1)}
-        
-        total_operaciones = len(noticias) * num_sitios
-        contador = 0
+        noticias_parafraseadas = []
         
         for noticia_idx, noticia in enumerate(noticias, 1):
             self.log(f"Procesando noticia {noticia_idx}/{len(noticias)}: {noticia.get('title', '')[:60]}...")
             
-            for site_id in range(1, num_sitios + 1):
-                contador += 1
+            try:
+                # Parafrasear con estilo aleatorio
+                style_idx = noticia_idx % len(self.paraphraser.styles)
+                style = self.paraphraser.styles[style_idx]
                 
-                try:
-                    # Parafrasear con estilo único
-                    style_idx = (site_id - 1) % len(self.paraphraser.styles)
-                    style = self.paraphraser.styles[style_idx]
-                    
-                    self.log(f"  [{contador}/{total_operaciones}] Sitio {site_id} - Estilo: {style}", "PROGRESS")
-                    
-                    # Parafrasear título y descripción
-                    paraphrased = self.paraphraser.paraphrase_article(noticia, style=style)
-                    
-                    # Expandir a artículo completo
-                    structure_idx = (site_id - 1) % len(self.article_expander.structures)
-                    structure = self.article_expander.structures[structure_idx]
-                    
-                    full_article = self.article_expander.expand_article(
-                        paraphrased,
-                        target_words=800,
-                        structure=structure
-                    )
-                    
-                    # Combinar datos con autor aleatorio
-                    article_data = {
-                        **paraphrased,
-                        "full_article": full_article,
-                        "original_id": noticia.get('id', noticia_idx),
-                        "site_id": site_id,
-                        "style": style,
-                        "structure": structure,
-                        "author": self.legal_generator.generar_autor_aleatorio()
-                    }
-                    
-                    noticias_por_sitio[site_id].append(article_data)
-                    self.stats["noticias_parafraseadas"] += 1
-                    
-                except Exception as e:
-                    self.log(f"Error parafraseando para sitio {site_id}: {e}", "ERROR")
-                    # Usar original como fallback con autor aleatorio
-                    noticias_por_sitio[site_id].append({
-                        **noticia,
-                        "full_article": noticia.get('content', noticia.get('description', '')),
-                        "original_id": noticia.get('id', noticia_idx),
-                        "site_id": site_id,
-                        "author": self.legal_generator.generar_autor_aleatorio()
-                    })
+                self.log(f"  [{noticia_idx}/{len(noticias)}] Estilo: {style}", "PROGRESS")
                 
-                # Rate limiting
-                time.sleep(0.5)
+                # Parafrasear título y descripción
+                paraphrased = self.paraphraser.paraphrase_article(noticia, style=style)
+                
+                # Expandir a artículo completo
+                structure_idx = noticia_idx % len(self.article_expander.structures)
+                structure = self.article_expander.structures[structure_idx]
+                
+                full_article = self.article_expander.expand_article(
+                    paraphrased,
+                    target_words=800,
+                    structure=structure
+                )
+                
+                # Combinar datos con autor aleatorio
+                article_data = {
+                    **paraphrased,
+                    "full_article": full_article,
+                    "original_id": noticia.get('id', noticia_idx),
+                    "style": style,
+                    "structure": structure,
+                    "author": self.legal_generator.generar_autor_aleatorio()
+                }
+                
+                noticias_parafraseadas.append(article_data)
+                self.stats["noticias_parafraseadas"] += 1
+                
+            except Exception as e:
+                self.log(f"Error parafraseando noticia {noticia_idx}: {e}", "ERROR")
+                # Usar original como fallback con autor aleatorio
+                noticias_parafraseadas.append({
+                    **noticia,
+                    "full_article": noticia.get('content', noticia.get('description', '')),
+                    "original_id": noticia.get('id', noticia_idx),
+                    "author": self.legal_generator.generar_autor_aleatorio()
+                })
+            
+            # Rate limiting
+            time.sleep(0.5)
         
-        self.log(f"Parafraseado completado: {self.stats['noticias_parafraseadas']} variaciones generadas", "SUCCESS")
-        return noticias_por_sitio
+        self.log(f"Parafraseado completado: {self.stats['noticias_parafraseadas']} artículos generados", "SUCCESS")
+        return noticias_parafraseadas
     
-    def paso_3_generar_imagenes(self, noticias_por_sitio: Dict[int, List[Dict]]) -> Dict[int, Dict[str, str]]:
+    def paso_3_generar_imagenes(self, noticias: List[Dict], site_num: int) -> Dict[str, str]:
         """
-        Paso 3: Genera 1 imagen por noticia parafraseada (ultra específica)
+        Paso 3: Genera 1 imagen por noticia
         
         Args:
-            noticias_por_sitio: Noticias organizadas por sitio
+            noticias: Lista de noticias parafraseadas
+            site_num: Número del sitio
             
         Returns:
-            Dict[site_id -> Dict[article_id -> image_path]]
+            Dict[article_id -> image_path]
         """
         self.log("=" * 70)
         self.log("PASO 3: Generando Imágenes de Noticias", "PROGRESS")
         self.log("=" * 70)
         
-        imagenes_por_sitio = {}
+        site_images_dir = self.output_base_dir / f"site_{site_num}" / "images"
+        site_images_dir.mkdir(parents=True, exist_ok=True)
         
-        for site_id, noticias in noticias_por_sitio.items():
-            self.log(f"Generando imágenes para Sitio {site_id}...")
-            
-            site_images_dir = self.output_base_dir / f"site_{site_id}" / "images"
-            site_images_dir.mkdir(parents=True, exist_ok=True)
-            
-            imagenes_por_sitio[site_id] = {}
-            
-            for idx, noticia in enumerate(noticias, 1):
-                try:
-                    # Crear prompt ultra específico
-                    title = noticia.get('title', '')
-                    description = noticia.get('description', '')
-                    category = noticia.get('category', 'tecnología')
-                    
-                    prompt = f"""Professional news image for technology article: {title}. 
+        imagenes = {}
+        
+        for idx, noticia in enumerate(noticias, 1):
+            try:
+                # Crear prompt ultra específico
+                title = noticia.get('title', '')
+                description = noticia.get('description', '')
+                category = noticia.get('category', 'tecnología')
+                
+                prompt = f"""Professional news image for technology article: {title}. 
 {description}. 
 Style: Modern, clean, tech-focused. Category: {category}. 
 High quality, photojournalistic, relevant to the specific topic. 
 No text, no watermarks."""
-                    
-                    self.log(f"  [{idx}/{len(noticias)}] Generando imagen: {title[:50]}...", "PROGRESS")
-                    
-                    # Generar imagen
-                    article_id = f"article_{site_id}_{idx}"
-                    image_path = self.image_generator.generate_image(prompt, article_id, idx)
-                    
-                    # Mover a directorio del sitio
-                    if image_path and Path(image_path).exists():
-                        dest_path = site_images_dir / f"news_{idx}.jpg"
-                        shutil.copy2(image_path, dest_path)
-                        imagenes_por_sitio[site_id][article_id] = str(dest_path)
-                        self.stats["imagenes_generadas"] += 1
-                    
-                except Exception as e:
-                    self.log(f"Error generando imagen {idx}: {e}", "WARNING")
                 
-                # Rate limiting
-                time.sleep(1)
+                self.log(f"  [{idx}/{len(noticias)}] Generando imagen: {title[:50]}...", "PROGRESS")
+                
+                # Generar imagen
+                article_id = f"article_{idx}"
+                image_path = self.image_generator.generate_image(prompt, article_id, idx)
+                
+                # Mover a directorio del sitio
+                if image_path and Path(image_path).exists():
+                    dest_path = site_images_dir / f"news_{idx}.jpg"
+                    shutil.copy2(image_path, dest_path)
+                    imagenes[article_id] = str(dest_path)
+                    self.stats["imagenes_generadas"] += 1
+                
+            except Exception as e:
+                self.log(f"Error generando imagen {idx}: {e}", "WARNING")
+            
+            # Rate limiting
+            time.sleep(1)
         
         self.log(f"Generación de imágenes completada: {self.stats['imagenes_generadas']} imágenes", "SUCCESS")
-        return imagenes_por_sitio
+        return imagenes
     
     def paso_4_crear_metadata_sitios(self, num_sitios: int, verificar_dominios: bool = False) -> List[Dict]:
         """
@@ -397,65 +383,64 @@ Vector style, flat design, high contrast."""
     
     def paso_7_generar_sitios_html(self, 
                                    sites_metadata: List[Dict],
-                                   noticias_por_sitio: Dict[int, List[Dict]],
-                                   imagenes_por_sitio: Dict[int, Dict[str, str]],
+                                   noticias: List[Dict],
+                                   imagenes: Dict[str, str],
                                    logos: Dict[int, str],
                                    templates_metadata: List[Dict]) -> List[str]:
         """
-        Paso 7: Genera sitios HTML completos
+        Paso 7: Genera sitio HTML completo
         
         Args:
-            sites_metadata: Metadata de sitios
-            noticias_por_sitio: Noticias por sitio
-            imagenes_por_sitio: Imágenes por sitio
-            logos: Logos por sitio
+            sites_metadata: Metadata del sitio
+            noticias: Lista de noticias parafraseadas
+            imagenes: Imágenes generadas
+            logos: Logos generados
             templates_metadata: Metadata de templates CSS
             
         Returns:
             Lista de paths de sitios generados
         """
         self.log("=" * 70)
-        self.log("PASO 7: Generando Sitios HTML", "PROGRESS")
+        self.log("PASO 7: Generando Sitio HTML", "PROGRESS")
         self.log("=" * 70)
         
         sitios_generados = []
+        metadata = sites_metadata[0]
+        idx = 1
         
-        for idx, metadata in enumerate(sites_metadata, 1):
-            try:
-                site_dir = self.output_base_dir / f"site_{idx}"
-                site_dir.mkdir(parents=True, exist_ok=True)
-                
-                # Obtener datos
-                noticias = noticias_por_sitio.get(idx, [])
-                template_info = templates_metadata[idx - 1] if idx <= len(templates_metadata) else None
-                
-                self.log(f"  [{idx}/{len(sites_metadata)}] Generando: {metadata['nombre']}", "PROGRESS")
-                
-                # Generar HTML del sitio (index.html)
-                index_html = self._generar_index_html(
-                    metadata, noticias, template_info, idx
-                )
-                
-                index_path = site_dir / "index.html"
-                with open(index_path, 'w', encoding='utf-8') as f:
-                    f.write(index_html)
-                
-                # Generar páginas de artículos individuales
-                self._generar_paginas_articulos(site_dir, noticias, metadata, template_info, idx)
-                
-                # Generar páginas legales
-                self._generar_paginas_legales(site_dir, metadata)
-                
-                # Copiar CSS
-                self._copiar_css(site_dir, idx)
-                
-                sitios_generados.append(str(index_path))
-                self.stats["sitios_creados"] += 1
-                
-            except Exception as e:
-                self.log(f"Error generando sitio {idx}: {e}", "ERROR")
+        try:
+            site_dir = self.output_base_dir / f"site_{idx}"
+            site_dir.mkdir(parents=True, exist_ok=True)
+            
+            template_info = templates_metadata[0]
+            
+            self.log(f"Generando: {metadata['nombre']}", "PROGRESS")
+            
+            # Generar HTML del sitio (index.html)
+            index_html = self._generar_index_html(
+                metadata, noticias, template_info, idx
+            )
+            
+            index_path = site_dir / "index.html"
+            with open(index_path, 'w', encoding='utf-8') as f:
+                f.write(index_html)
+            
+            # Generar páginas de artículos individuales
+            self._generar_paginas_articulos(site_dir, noticias, metadata, template_info, idx)
+            
+            # Generar páginas legales
+            self._generar_paginas_legales(site_dir, metadata)
+            
+            # Copiar CSS
+            self._copiar_css(site_dir, idx)
+            
+            sitios_generados.append(str(index_path))
+            self.stats["sitios_creados"] += 1
+            
+        except Exception as e:
+            self.log(f"Error generando sitio: {e}", "ERROR")
         
-        self.log(f"Sitios HTML generados: {len(sitios_generados)}", "SUCCESS")
+        self.log(f"Sitio HTML generado", "SUCCESS")
         return sitios_generados
     
     def _generar_index_html(self, metadata: Dict, noticias: List[Dict], 
@@ -757,49 +742,46 @@ Vector style, flat design, high contrast."""
         if css_source.exists():
             shutil.copy2(css_source, css_dest)
     
-    def ejecutar_flujo_completo(self, num_sitios: int = 5, 
-                                verificar_dominios: bool = False) -> Dict:
+    def ejecutar_flujo_completo(self, verificar_dominios: bool = False) -> Dict:
         """
         Ejecuta el flujo completo de generación
         
         Args:
-            num_sitios: Número de sitios a generar
             verificar_dominios: Si True, verifica disponibilidad de dominios
             
         Returns:
             Diccionario con resultados y estadísticas
         """
         self.log("=" * 70)
-        self.log("🚀 INICIANDO FLUJO COMPLETO DE GENERACIÓN DE SITIOS")
+        self.log("🚀 INICIANDO FLUJO COMPLETO DE GENERACIÓN DE SITIO")
         self.log("=" * 70)
         self.log(f"Run ID: {self.run_id}")
-        self.log(f"Sitios a generar: {num_sitios}")
         self.log(f"Verificar dominios: {verificar_dominios}")
         
         try:
-            # Paso 1: Descargar noticias (limitado por parámetro)
-            noticias = self.paso_1_descargar_noticias(num_noticias=num_sitios * 2)
+            # Paso 1: Descargar noticias
+            noticias = self.paso_1_descargar_noticias(num_noticias=20)
             if not noticias:
                 raise Exception("No hay noticias disponibles")
             
-            # Paso 2: Parafrasear noticias (1 variación por sitio)
-            noticias_por_sitio = self.paso_2_parafrasear_noticias(noticias, num_sitios)
+            # Paso 2: Parafrasear noticias (1 vez cada una)
+            noticias_parafraseadas = self.paso_2_parafrasear_noticias(noticias)
             
             # Paso 3: Generar imágenes
-            imagenes_por_sitio = self.paso_3_generar_imagenes(noticias_por_sitio)
+            imagenes = self.paso_3_generar_imagenes(noticias_parafraseadas, 1)
             
-            # Paso 4: Crear metadata de sitios
-            sites_metadata = self.paso_4_crear_metadata_sitios(num_sitios, verificar_dominios)
+            # Paso 4: Crear metadata del sitio
+            sites_metadata = self.paso_4_crear_metadata_sitios(1, verificar_dominios)
             
-            # Paso 5: Generar logos
+            # Paso 5: Generar logo
             logos = self.paso_5_generar_logos(sites_metadata)
             
-            # Paso 6: Generar templates CSS
-            templates_metadata = self.paso_6_generar_templates_css(num_sitios)
+            # Paso 6: Generar template CSS
+            templates_metadata = self.paso_6_generar_templates_css(1)
             
-            # Paso 7: Generar sitios HTML
+            # Paso 7: Generar sitio HTML
             sitios_generados = self.paso_7_generar_sitios_html(
-                sites_metadata, noticias_por_sitio, imagenes_por_sitio,
+                sites_metadata, noticias_parafraseadas, imagenes,
                 logos, templates_metadata
             )
             
@@ -824,8 +806,8 @@ Vector style, flat design, high contrast."""
             self.log("=" * 70)
             self.log("🎉 FLUJO COMPLETADO EXITOSAMENTE", "SUCCESS")
             self.log("=" * 70)
-            self.log(f"Sitios creados: {self.stats['sitios_creados']}")
-            self.log(f"Noticias parafraseadas: {self.stats['noticias_parafraseadas']}")
+            self.log(f"Sitio creado: {self.stats['sitios_creados']}")
+            self.log(f"Noticias procesadas: {self.stats['noticias_parafraseadas']}")
             self.log(f"Imágenes generadas: {self.stats['imagenes_generadas']}")
             self.log(f"Tiempo total: {tiempo_total/60:.2f} minutos")
             self.log(f"Directorio de salida: {self.output_base_dir}")
@@ -854,8 +836,7 @@ def main():
     """Función principal"""
     import argparse
     
-    parser = argparse.ArgumentParser(description="Master Orchestrator - Generación Completa de Sitios")
-    parser.add_argument('--sitios', '--sites', type=int, default=3, help='Número de sitios a generar')
+    parser = argparse.ArgumentParser(description="Master Orchestrator - Generación Completa de Sitio")
     parser.add_argument('--verificar-dominios', action='store_true', help='Verificar disponibilidad de dominios')
     parser.add_argument('--output-dir', type=str, default=None, help='Directorio de salida')
     
@@ -866,7 +847,6 @@ def main():
     
     # Ejecutar flujo
     resultado = orchestrator.ejecutar_flujo_completo(
-        num_sitios=args.sitios,
         verificar_dominios=args.verificar_dominios
     )
     
