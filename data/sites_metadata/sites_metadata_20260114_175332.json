@@ -1,0 +1,90 @@
+[
+  {
+    "id": "site_20260114_175332_6611",
+    "nombre": "Actualidad de Sur",
+    "tagline": "El Pulso de la Actualidad",
+    "estilo": "aleatorio",
+    "dominio": "actualidadsur.info",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "Actualidad de Sur",
+      "iniciales": "ADS",
+      "estilo": "modern",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Entretenimiento",
+      "Ciencia",
+      "Salud"
+    ],
+    "contacto": {
+      "email_general": "contacto@actualidadsur.info",
+      "email_redaccion": "redaccion@actualidadsur.info",
+      "email_publicidad": "publicidad@actualidadsur.info",
+      "telefono": "+52 55 3542 6736",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/actualidadsur",
+      "twitter": "https://twitter.com/actualidadsur",
+      "instagram": "https://instagram.com/actualidadsur",
+      "youtube": "https://youtube.com/@actualidadsur",
+      "linkedin": "https://linkedin.com/company/actualidadsur",
+      "telegram": "https://t.me/actualidadsur"
+    },
+    "seo": {
+      "titulo": "Actualidad de Sur - El Pulso de la Actualidad",
+      "descripcion": "Actualidad de Sur es tu fuente confiable de noticias e información actualizada. El Pulso de la Actualidad. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "actualidad de sur",
+        "actualidadsur"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-14T17:53:32.330884",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

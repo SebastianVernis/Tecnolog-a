@@ -777,8 +777,8 @@ Vector style, flat design, high contrast."""
         self.log(f"Verificar dominios: {verificar_dominios}")
         
         try:
-            # Paso 1: Descargar noticias
-            noticias = self.paso_1_descargar_noticias(num_noticias=20)
+            # Paso 1: Descargar noticias (limitado por parámetro)
+            noticias = self.paso_1_descargar_noticias(num_noticias=num_sitios * 2)
             if not noticias:
                 raise Exception("No hay noticias disponibles")
             
@@ -857,7 +857,7 @@ def main():
     parser = argparse.ArgumentParser(description="Master Orchestrator - Generación Completa de Sitios")
     parser.add_argument('--sitios', '--sites', type=int, default=3, help='Número de sitios a generar')
     parser.add_argument('--verificar-dominios', action='store_true', help='Verificar disponibilidad de dominios')
-    parser.add_argument('--output-dir', type=str, default='../generated_sites', help='Directorio de salida')
+    parser.add_argument('--output-dir', type=str, default=None, help='Directorio de salida')
     
     args = parser.parse_args()
     
