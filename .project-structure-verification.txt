@@ -1,0 +1,45 @@
+✅ VERIFICACIÓN DE ESTRUCTURA - 2026-01-15 03:04
+
+📁 Directorios Críticos:
+✓ scripts/               # Scripts principales
+✓ scripts/api/           # Módulos de APIs
+✓ scripts/test/          # Tests
+✓ scripts/utils/         # Utilidades
+✓ data/                  # Datos del proyecto
+✓ data/raw/              # Datos sin procesar (noticias JSON/CSV)
+✓ data/sites_metadata/   # Metadata de sitios
+✓ data/archive/          # Datos históricos
+✓ generated_sites/       # Sitios generados (producción)
+✓ generated_images/      # Imágenes generadas por IA
+✓ templates/             # Templates HTML
+✓ templates/css/         # Templates CSS modulares
+✓ docs/                  # Documentación
+✓ docs/screenshots/      # Capturas de pantalla
+✓ docs/archive/          # Docs antiguos
+✓ archive/               # Código legacy
+✓ archive/docs_old/      # Documentación antigua
+
+📄 Archivos Clave:
+✓ AGENTS.md              # Guía para agentes IA
+✓ README.md              # Documentación principal
+✓ ESTRUCTURA-PROYECTO.md # Estructura completa
+✓ requirements.txt       # Dependencias Python
+✓ package.json           # Dependencias Node.js
+
+🔧 Rutas Actualizadas:
+✓ generate-images-ai.py  → output_dir='generated_images'
+✓ generate-images.py     → output_dir='generated_images'
+✓ test_flujo_completo.py → output_dir='generated_sites_test'
+
+📦 Archivos Movidos:
+✓ site_review*.png       → docs/screenshots/
+✓ newsapi_*.json/csv     → data/raw/
+✓ images/news/*          → generated_images/
+✓ scripts/images/news/*  → generated_images/
+
+🎯 Estructura Limpia:
+✓ Raíz sin imágenes
+✓ Raíz sin archivos de datos raw
+✓ Imágenes consolidadas en generated_images/
+✓ Datos organizados en data/raw/
+✓ Tests separados en generated_sites_test/

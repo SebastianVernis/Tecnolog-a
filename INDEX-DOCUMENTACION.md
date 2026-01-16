@@ -77,26 +77,36 @@ python menu.py
 |-----------|-------------|
 | **[README.md](./README.md)** | README principal del proyecto (incluye panel web) |
 | **[MENU-PRINCIPAL.md](./MENU-PRINCIPAL.md)** | ⭐ Guía del menú interactivo unificado |
-| **[ESTRUCTURA-ORGANIZADA.md](./ESTRUCTURA-ORGANIZADA.md)** | Organización de scripts y tests |
-| **[PROJECT-STRUCTURE.md](./docs/PROJECT-STRUCTURE.md)** | Estructura detallada del proyecto |
 | **[VERIFICACION-MODULOS.md](./VERIFICACION-MODULOS.md)** | ⭐ Verificación de integración de 16 módulos |
+| **[docs/README.md](./docs/README.md)** | Índice de documentación técnica adicional |
 
-### Deployment
+### Deployment y Producción
 
 | Documento | Descripción |
 |-----------|-------------|
-| **[DEPLOYMENT-GUIDE-RENDER-VERCEL.md](./docs/DEPLOYMENT-GUIDE-RENDER-VERCEL.md)** | Deploy en Render + Vercel |
-| **[DEPLOYMENT-ARCHITECTURE.md](./docs/DEPLOYMENT-ARCHITECTURE.md)** | Arquitectura de deployment |
-| **[KEEP-ALIVE-STRATEGY.md](./docs/KEEP-ALIVE-STRATEGY.md)** | Keep-alive para Render free tier |
+| **[docs/DEPLOYMENT-GUIDE-RENDER-VERCEL.md](./docs/DEPLOYMENT-GUIDE-RENDER-VERCEL.md)** | Deploy en Render + Vercel |
+| **[docs/DEPLOYMENT-ARCHITECTURE.md](./docs/DEPLOYMENT-ARCHITECTURE.md)** | Arquitectura de deployment |
+| **[docs/KEEP-ALIVE-STRATEGY.md](./docs/KEEP-ALIVE-STRATEGY.md)** | Keep-alive para Render free tier |
+| **[docs/README.md](./docs/README.md)** | Índice completo de docs técnicos |
+
+### Correcciones y Historial
+
+| Documento | Descripción |
+|-----------|-------------|
+| **[docs/IMAGEN-GENERATION-FIX.md](./docs/IMAGEN-GENERATION-FIX.md)** | Fix generación de imágenes (Flux Schnell) |
+| **[docs/VALIDACION-IMAGEN-FALLBACK.md](./docs/VALIDACION-IMAGEN-FALLBACK.md)** | Validación sistema fallback Unsplash |
+| **[docs/SISTEMA-LISTO.md](./docs/SISTEMA-LISTO.md)** | Estado del sistema listo para producción |
+| **[docs/ERROR-FIX-20260113.md](./docs/ERROR-FIX-20260113.md)** | Correcciones del 13 de enero |
+| **[docs/CHANGELOG.md](./docs/CHANGELOG.md)** | Historial completo de cambios |
 
 ### Específico
 
 | Documento | Descripción |
 |-----------|-------------|
-| **[ERROR-FIX-20260113.md](./docs/ERROR-FIX-20260113.md)** | Correcciones recientes |
-| **[FLUJO-COMPLETO-INTEGRADO.md](./docs/FLUJO-COMPLETO-INTEGRADO.md)** | Flujo de generación detallado |
-| **[README_FRONTEND.md](./docs/README_FRONTEND.md)** | Documentación del panel React |
-| **[QUICKSTART.md](./docs/QUICKSTART.md)** | Guía de inicio rápido legacy |
+| **[docs/PROJECT-STRUCTURE.md](./docs/PROJECT-STRUCTURE.md)** | Estructura detallada del proyecto |
+| **[docs/FLUJO-COMPLETO-INTEGRADO.md](./docs/FLUJO-COMPLETO-INTEGRADO.md)** | Flujo de generación detallado |
+| **[docs/README_FRONTEND.md](./docs/README_FRONTEND.md)** | Documentación del panel React |
+| **[docs/SITE-PRE-CREATION.md](./docs/SITE-PRE-CREATION.md)** | Sistema de pre-creación |
 
 ---
 
@@ -399,6 +409,6 @@ command --flag value
 
 ---
 
-**Última actualización:** 2026-01-15 14:55  
-**Versión:** 2.0  
+**Última actualización:** 2026-01-16 04:45  
+**Versión:** 2.1  
 **Mantenedor:** Sistema de Documentación Automática

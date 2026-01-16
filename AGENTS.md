@@ -436,6 +436,22 @@ Las páginas legales están enlazadas automáticamente en la sección "Legal" de
 
 ## 🔄 Historial de Cambios
 
+### 2026-01-15 - 16:30 ✅ VALIDADO
+- **Sistema de imágenes con fallback**: Completamente funcional y validado
+- **Todos los flujos integrados**: master_orchestrator.py, generate-interactive.py
+- **Tests automatizados**: 7/7 tests pasando (100% éxito)
+- **Compatibilidad**: Métodos generate_image() y process_articles() funcionando
+- **Documentación final**: VALIDACION-IMAGEN-FALLBACK.md con tests completos
+- **Estado**: ✅ LISTO PARA PRODUCCIÓN con Unsplash
+
+### 2026-01-15 - 16:00
+- **Corrección sistema de imágenes**: Flux Schnell no disponible (balance agotado fal.ai)
+- **Nuevo módulo**: `generate-images-unsplash.py` (alternativa gratuita confiable)
+- **Generador unificado**: `generate-images-unified.py` (IA + fallback automático)
+- **Master orchestrator**: Ahora usa UnifiedImageGenerator con resiliencia total
+- **Documentación**: IMAGEN-GENERATION-FIX.md con guía completa
+- **Testing**: Verificado funcionamiento con Unsplash API + Picsum fallback
+
 ### 2026-01-15 - 15:40
 - **Menú interactivo unificado**: `menu.py` con 4 secciones principales
 - **Servidor HTTP integrado**: Servir sitios directamente desde el menú (4 modos)

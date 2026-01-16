@@ -1,12 +1,9 @@
 {
-  "timestamp": "2026-01-16 04:43:56",
   "success": true,
-  "config": {
-    "articulos": 2,
-    "sitios": 1,
-    "verificar_dominios": false,
-    "usar_cache": true
-  },
+  "run_id": "20260116_044149",
+  "sitios_generados": [
+    "/home/sebastianvernis/news-prototype/Tecnología/generated_sites_test/site_1/index.html"
+  ],
   "stats": {
     "noticias_descargadas": 20,
     "noticias_parafraseadas": 2,
@@ -16,6 +13,5 @@
     "tiempo_total_segundos": 126.8250663280487,
     "tiempo_total_minutos": 2.1137511054674785
   },
-  "tiempo_total_segundos": 126.82530689239502,
   "output_dir": "/home/sebastianvernis/news-prototype/Tecnología/generated_sites_test"
 }

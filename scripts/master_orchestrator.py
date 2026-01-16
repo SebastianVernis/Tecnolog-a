@@ -37,11 +37,12 @@ try:
     )
     ArticleExpander = article_expander_module.ArticleExpander
     
-    generate_images_module = import_module_from_file(
-        'generate_images_ai',
-        current_dir / 'generate-images-ai.py'
+    # Usar generador unificado (IA + fallback Unsplash)
+    generate_images_unified_module = import_module_from_file(
+        'generate_images_unified',
+        current_dir / 'generate-images-unified.py'
     )
-    AIImageGenerator = generate_images_module.AIImageGenerator
+    UnifiedImageGenerator = generate_images_unified_module.UnifiedImageGenerator
     
     # Importar módulos con guiones bajos normalmente
     from paraphrase import NewsParaphraser
@@ -93,7 +94,8 @@ class MasterOrchestrator:
         self.name_generator = SiteNameGenerator()
         self.domain_verifier = DomainVerifier()
         self.template_combiner = TemplateCombiner()
-        self.image_generator = AIImageGenerator()
+        # Usar generador unificado (NewsAPI Original primero, luego fallbacks)
+        self.image_generator = UnifiedImageGenerator(prefer_ai=False)
         self.layout_generator = LayoutGenerator()
         self.legal_generator = LegalPagesGenerator()
         
@@ -271,22 +273,23 @@ class MasterOrchestrator:
         
         for idx, noticia in enumerate(noticias, 1):
             try:
-                # Crear prompt ultra específico
+                # Preparar datos del artículo para generación de imagen
                 title = noticia.get('title', '')
                 description = noticia.get('description', '')
                 category = noticia.get('category', 'tecnología')
                 
+                # Crear prompt (usado solo si IA está disponible)
                 prompt = f"""Professional news image for technology article: {title}. 
 {description}. 
 Style: Modern, clean, tech-focused. Category: {category}. 
 High quality, photojournalistic, relevant to the specific topic. 
 No text, no watermarks."""
                 
-                self.log(f"  [{idx}/{len(noticias)}] Generando imagen: {title[:50]}...", "PROGRESS")
+                self.log(f"  [{idx}/{len(noticias)}] Descargando imagen: {title[:50]}...", "PROGRESS")
                 
-                # Generar imagen
+                # Generar/descargar imagen (NewsAPI primero, luego fallbacks)
                 article_id = f"article_{idx}"
-                image_path = self.image_generator.generate_image(prompt, article_id, idx)
+                image_path = self.image_generator.generate_image(prompt, article_id, idx, article=noticia)
                 
                 # Mover a directorio del sitio
                 if image_path and Path(image_path).exists():

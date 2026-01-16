@@ -3,69 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InfoMéxico Tiempo - La Voz de México</title>
+    <title>InfoMéxico Express - Periodismo de Calidad</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="description" content="La Voz de México">
-    <meta name="layout" content="featured_sidebar">
+    <meta name="description" content="Periodismo de Calidad">
+    <meta name="layout" content="grid_mosaic">
 </head>
-<body class="container layout-featured_sidebar">
+<body class="container layout-grid_mosaic">
 
 
-    <header class="header header-stacked">
+    <header class="header header-centered sticky">
         <div class="container">
             
             <div class="header-branding">
                 <div class="logo-image">
-                    <img src="logo.jpg" alt="InfoMéxico Tiempo" class="logo-img">
-                    <h1 class="logo">InfoMéxico Tiempo</h1>
+                    <img src="logo.jpg" alt="InfoMéxico Express" class="logo-img">
+                    <h1 class="logo">InfoMéxico Express</h1>
                 </div>
-                <p class="tagline">La Voz de México</p>
+                <p class="tagline">Periodismo de Calidad</p>
             </div>
             
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav nav-offcanvas">
+            <nav class="nav nav-sidebar">
                 <a href="#inicio" class="nav-link">Inicio</a>
                 <a href="#general" class="nav-link">General</a>
             </nav>
             
+            <div class="header-actions">
+                
+            <div class="header-social">
+                <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            </div>
+            <div class="breaking-news-ticker">
+                <span class="ticker-label">🔴 ÚLTIMA HORA:</span>
+                <div class="ticker-content">
+                    <span>Noticia importante en desarrollo...</span>
+                </div>
+            </div>
+            </div>
         </div>
     </header>
 
-    <main class="main-content sidebar-none">
+    <main class="main-content sidebar-left">
         <div class="content-wrapper">
-    <section class="featured-section layout-grid_featured">
+    <section class="featured-section layout-video_hero">
     </section>
 
-    <section class="news-section featured_sidebar">
+    <section class="news-section grid_mosaic">
         <div class="container">
-            <div class="news-grid cols-1">
-                <article class="news-card featured_sidebar">
+            <div class="news-grid cols-4">
+                <article class="news-card grid_mosaic">
                     <div class="card-image-wrapper">
                         <img src="images/news_1.jpg" alt="" style="max-height: 240px; width: 100%; object-fit: cover;">
                         <span class="card-category-badge">General</span>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title"><a href="article_1.html">La IA en tu bolsillo: cómo la inteligencia artificial se ha vuelto indispensable en tu vida diaria</a></h3>
-                        <p class="card-text">En el mundo de la tecnología, es común escuchar a personas que afirman no tener interés en la inteligencia artificial (IA) o que n...</p>
+                        <h3 class="card-title"><a href="article_1.html">Nueva Siri con tecnología Gemini: El futuro de la inteligencia artificial en Apple</a></h3>
+                        <p class="card-text">En el mundo de la tecnología, la inteligencia artificial (IA) ha sido uno de los campos de mayor crecimiento y desarrollo en los ú...</p>
                         <div class="card-footer">
-                            <span class="author">Diego Flores</span>
-                            <span class="date">2026-01-14T11:17:13Z</span>
+                            <span class="author">Sebastián Ortiz</span>
+                            <span class="date">2026-01-15T10:35:28Z</span>
                         </div>
                     </div>
                 </article>
-                <article class="news-card featured_sidebar">
+                <article class="news-card grid_mosaic">
                     <div class="card-image-wrapper">
                         <img src="images/news_2.jpg" alt="" style="max-height: 240px; width: 100%; object-fit: cover;">
                         <span class="card-category-badge">General</span>
                     </div>
                     <div class="card-content">
-                        <h3 class="card-title"><a href="article_2.html">Satisfyer Pro 2: Tecnología de Vanguardia en Estimulación Íntima</a></h3>
-                        <p class="card-text">En el vasto y creciente mercado de dispositivos de estimulación íntima, pocos productos han logrado capturar la atención y la pref...</p>
+                        <h3 class="card-title"><a href="article_2.html">Lanzamiento de Redmi Note 15: Un Salto en Eficiencia Energética y Fotografía</a></h3>
+                        <p class="card-text">En un movimiento que refleja la constante evolución en el mercado de dispositivos móviles, Xiaomi ha presentado oficialmente la nu...</p>
                         <div class="card-footer">
-                            <span class="author">Diana Torres</span>
-                            <span class="date">2026-01-14T11:10:38Z</span>
+                            <span class="author">Laura Patricia Hernández</span>
+                            <span class="date">2026-01-15T10:35:06Z</span>
                         </div>
                     </div>
                 </article>
@@ -77,14 +88,14 @@
     </main>
 
 
-    <footer class="footer footer-mega cols-5">
+    <footer class="footer footer-social cols-3">
         <div class="container">
             <div class="footer-grid">
 
                 <div class="footer-column">
-                    <h3>InfoMéxico Tiempo</h3>
-                    <p>La Voz de México</p>
-                    <p class="footer-about">InfoMéxico Tiempo es tu fuente confiable de noticias de última hora, análisis profundo e historias de todo el mundo.</p>
+                    <h3>InfoMéxico Express</h3>
+                    <p>Periodismo de Calidad</p>
+                    <p class="footer-about">InfoMéxico Express es tu fuente confiable de noticias de última hora, análisis profundo e historias de todo el mundo.</p>
                     <div class="social-links">
                         <a href="#" class="social-link">Facebook</a>
                         <a href="#" class="social-link">Twitter</a>
@@ -116,8 +127,8 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 InfoMéxico Tiempo. Todos los derechos reservados.</p>
-                <p class="layout-info">Layout: featured_sidebar | Template: 1</p>
+                <p>&copy; 2026 InfoMéxico Express. Todos los derechos reservados.</p>
+                <p class="layout-info">Layout: grid_mosaic | Template: 1</p>
             </div>
         </div>
     </footer>

@@ -59,9 +59,18 @@ Sistema completo para **generar automáticamente múltiples sitios de noticias**
 - Paletas de colores únicas
 - Especificaciones de logo
 
+### 🖼️ Generación de Imágenes (Actualizado 2026-01-15)
+- **Sistema unificado con fallback automático**
+- Intenta primero: IA (Flux Schnell via Blackbox AI)
+- Fallback: Unsplash API (gratuito, 50 req/hora)
+- Backup final: Picsum Photos (sin límites)
+- **Resiliencia total**: Nunca falla por APIs externas
+- Imágenes 1200x600px profesionales
+- Ver: `IMAGEN-GENERATION-FIX.md` para detalles
+
 ### 🚀 Flujo Automatizado
 ```
-Configuración → Metadatos → Noticias → Layouts → Sitios HTML
+Configuración → Metadatos → Noticias → Imágenes → Layouts → Sitios HTML
 ```
 
 ---

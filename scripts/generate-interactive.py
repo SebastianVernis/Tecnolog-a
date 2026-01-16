@@ -236,17 +236,19 @@ def ejecutar_generacion_sitios(archivo_noticias, num_sitios, layouts_dinamicos, 
         return False
 
 def ejecutar_generacion_imagenes():
-    """Ejecuta la generación de imágenes"""
-    print_step(5, "Generación de imágenes con IA")
+    """Ejecuta la generación de imágenes con fallback automático"""
+    print_step(5, "Generación de imágenes (NewsAPI Original + fallbacks)")
     
-    print_info("Generando imágenes representativas...")
+    print_info("Descargando imágenes originales de NewsAPI...")
+    print_info("(Fallback: IA → Unsplash → Picsum si es necesario)")
     
-    cmd = ['python3', 'generate-images-ai.py']
+    # Usar generador unificado con NewsAPI primero
+    cmd = ['python3', 'generate-images-unified.py']
     
     resultado = subprocess.run(cmd, capture_output=True, text=True)
     
     if resultado.returncode == 0:
-        print_success("Imágenes generadas")
+        print_success("Imágenes descargadas exitosamente")
         return True
     else:
         print_error("Error en generación de imágenes")

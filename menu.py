@@ -431,7 +431,7 @@ def menu_documentacion():
             ('8', '📂 Ver estructura del proyecto')
         ])
         
-        choice = get_user_choice(['1', '2', '3', '4', '5', '6', '7', '8'])
+        choice = get_user_choice(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'])
         
         if choice == '0':
             break
@@ -440,48 +440,23 @@ def menu_documentacion():
         elif choice == '1':
             view_documentation('README.md', 'README Principal')
         elif choice == '2':
-            view_documentation('README-GENERADOR.md', 'Guía del Generador')
+            view_documentation('README-GENERADOR.md', 'Quick Start del Generador CLI')
         elif choice == '3':
-            view_documentation('RESUMEN-FLUJO.md', 'Resumen Ejecutivo del Flujo')
+            view_documentation('MENU-PRINCIPAL.md', 'Guía del Menú Interactivo')
         elif choice == '4':
-            view_documentation('DIAGRAMA-FLUJO-COMPLETO.md', 'Diagrama de Flujo Completo')
+            view_documentation('DIAGRAMA-FLUJO-COMPLETO.md', 'Arquitectura Completa del Sistema')
         elif choice == '5':
-            view_documentation('AGENTS.md', 'Guía para Agentes y Desarrolladores')
+            view_documentation('AGENTS.md', 'Guía para Desarrolladores y Agentes IA')
         elif choice == '6':
-            view_documentation('VERIFICACION-MODULOS.md', 'Verificación de Módulos')
+            view_documentation('INDEX-DOCUMENTACION.md', 'Índice Maestro de Documentación')
         elif choice == '7':
-            view_documentation('INDEX-DOCUMENTACION.md', 'Índice de Documentación')
+            view_documentation('RESUMEN-FLUJO.md', 'Resumen Ejecutivo (1 página)')
         elif choice == '8':
-            print(f"\n{Colors.GREEN}📂 Estructura del Proyecto:{Colors.ENDC}\n")
-            print("""
-Tecnología/
-├── 📄 menu.py                      ← Este menú
-├── 📄 README.md                    ← Documentación principal
-├── 📄 README-GENERADOR.md          ← Quick Start
-├── 📄 RESUMEN-FLUJO.md             ← Resumen de 1 página
-├── 📄 DIAGRAMA-FLUJO-COMPLETO.md   ← Arquitectura detallada
-├── 📄 AGENTS.md                    ← Guía de desarrollo
-├── 📄 VERIFICACION-MODULOS.md      ← Verificación de tests
-│
-├── 📁 scripts/                     ← 16 módulos Python
-│   ├── master_orchestrator.py      ← Orquestador principal ⭐
-│   ├── paraphrase.py               ← Parafraseo (8 estilos)
-│   ├── article-expander.py         ← Expansión a 800 palabras
-│   ├── generate-images-ai.py       ← Imágenes AI (Flux Schnell)
-│   ├── template_combiner.py        ← CSS modular (6,000 combos)
-│   ├── layout_generator.py         ← HTML layouts (43,200 configs)
-│   ├── api/                        ← APIs de noticias
-│   └── test/                       ← 5 tests de verificación
-│       ├── test_modulos_completo.py    ← Verificar 16 módulos ⭐
-│       ├── test_flujo_completo.py      ← Test end-to-end ⭐
-│       └── ...
-│
-├── 📁 generated_sites/             ← Sitios generados
-├── 📁 data/                        ← Noticias y metadata
-├── 📁 templates/                   ← Templates CSS
-└── 📁 docs/                        ← Documentación adicional
-            """)
-            pause()
+            view_documentation('VERIFICACION-MODULOS.md', 'Tests de Integración de Módulos')
+        elif choice == '9':
+            view_documentation('QUICK-COMMANDS.md', 'Referencia Rápida de Comandos')
+        elif choice == '10':
+            view_documentation('docs/README.md', 'Documentación Técnica Adicional')
 
 def menu_utilidades():
     """Menú de utilidades"""

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "site_20260115_144303_3325",
+    "nombre": "DiarioPerspectivaAzteca",
+    "tagline": "Tu Conexión con el Mundo",
+    "estilo": "aleatorio",
+    "dominio": "diarioperspectivaazt.press",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#1A1A1A",
+      "secundario": "#C0392B",
+      "acento": "#E67E22",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "DiarioPerspectivaAzteca",
+      "iniciales": "D",
+      "estilo": "minimal",
+      "tipo": "lettermark",
+      "colores": {
+        "primario": "#1A1A1A",
+        "secundario": "#C0392B",
+        "acento": "#E67E22",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Open Sans",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Tecnología",
+      "Entretenimiento",
+      "Ciencia"
+    ],
+    "contacto": {
+      "email_general": "contacto@diarioperspectivaazt.press",
+      "email_redaccion": "redaccion@diarioperspectivaazt.press",
+      "email_publicidad": "publicidad@diarioperspectivaazt.press",
+      "telefono": "+52 55 5238 4287",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/diarioperspectivaazt",
+      "twitter": "https://twitter.com/diarioperspectivaazt",
+      "instagram": "https://instagram.com/diarioperspectivaazt",
+      "youtube": "https://youtube.com/@diarioperspectivaazt",
+      "linkedin": "https://linkedin.com/company/diarioperspectivaazt",
+      "telegram": "https://t.me/diarioperspectivaazt"
+    },
+    "seo": {
+      "titulo": "DiarioPerspectivaAzteca - Tu Conexión con el Mundo",
+      "descripcion": "DiarioPerspectivaAzteca es tu fuente confiable de noticias e información actualizada. Tu Conexión con el Mundo. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "diarioperspectivaazteca",
+        "diarioperspectivaazt"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-15T14:43:03.891170",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

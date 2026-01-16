@@ -1,0 +1,89 @@
+[
+  {
+    "id": "site_20260116_044353_3104",
+    "nombre": "InfoMéxico Express",
+    "tagline": "Periodismo de Calidad",
+    "estilo": "aleatorio",
+    "dominio": "infoméxicoexpress.mx",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "InfoMéxico Express",
+      "iniciales": "IE",
+      "estilo": "bold",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Source Sans Pro",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Negocios",
+      "Mundo"
+    ],
+    "contacto": {
+      "email_general": "contacto@infoméxicoexpress.mx",
+      "email_redaccion": "redaccion@infoméxicoexpress.mx",
+      "email_publicidad": "publicidad@infoméxicoexpress.mx",
+      "telefono": "+52 55 3761 7078",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/infoméxicoexpress",
+      "twitter": "https://twitter.com/infoméxicoexpress",
+      "instagram": "https://instagram.com/infoméxicoexpress",
+      "youtube": "https://youtube.com/@infoméxicoexpress",
+      "linkedin": "https://linkedin.com/company/infoméxicoexpress",
+      "telegram": "https://t.me/infoméxicoexpress"
+    },
+    "seo": {
+      "titulo": "InfoMéxico Express - Periodismo de Calidad",
+      "descripcion": "InfoMéxico Express es tu fuente confiable de noticias e información actualizada. Periodismo de Calidad. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "infoméxico express",
+        "infoméxicoexpress"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-16T04:43:53.497977",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

@@ -19,9 +19,9 @@ headers = {
 }
 
 # Test 1: Modelo simple
-print("\n🧪 Test 1: blackboxai-pro")
+print("\n🧪 Test 1: blackboxai/blackbox-pro")
 payload1 = {
-    "model": "blackboxai-pro",
+    "model": "blackboxai/blackbox-pro",
     "messages": [{"role": "user", "content": "Di hola en español"}],
     "max_tokens": 50
 }
@@ -36,7 +36,7 @@ except Exception as e:
 # Test 2: Sin system message
 print("\n🧪 Test 2: Sin system message")
 payload2 = {
-    "model": "blackboxai-pro",
+    "model": "blackboxai/blackbox-pro",
     "messages": [{"role": "user", "content": "Reescribe: México es un país"}],
     "temperature": 0.7,
     "max_tokens": 100
@@ -52,7 +52,7 @@ except Exception as e:
 # Test 3: Modelo diferente
 print("\n🧪 Test 3: Modelo blackboxai")
 payload3 = {
-    "model": "blackboxai",
+    "model": "blackboxai/anthropic/claude-sonnet-4.5",
     "messages": [{"role": "user", "content": "Test"}],
     "max_tokens": 50
 }

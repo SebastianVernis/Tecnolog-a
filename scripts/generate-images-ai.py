@@ -80,8 +80,9 @@ Requirements:
         Returns:
             Ruta del archivo de imagen generado
         """
-        # Usar Flux Schnell: rápido, económico ($0.003/imagen), hasta 4 imágenes
-        # Alternativas: flux-dev ($0.025), flux-1.1-pro ($0.04), flux-pro ($0.055)
+        # Usar Flux Schnell: rápido, económico ($0.003/imagen)
+        # NOTA: fal.ai tiene balance agotado, considerar usar generate-images-unsplash.py
+        # Alternativas: flux-1.1-pro ($0.04), stable-diffusion, imagen-3-fast
         payload = {
             "model": "blackboxai/black-forest-labs/flux-schnell",
             "messages": [

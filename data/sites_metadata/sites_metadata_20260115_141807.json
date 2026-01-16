@@ -1,0 +1,91 @@
+[
+  {
+    "id": "site_20260115_141807_8803",
+    "nombre": "InfoMexicano Directo",
+    "tagline": "La Voz de México",
+    "estilo": "aleatorio",
+    "dominio": "infomexicanodirecto.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "InfoMexicano Directo",
+      "iniciales": "ID",
+      "estilo": "bold",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Playfair Display",
+      "peso_fuente": "bold",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Educación",
+      "Sociedad",
+      "Salud",
+      "Mundo",
+      "Deportes"
+    ],
+    "contacto": {
+      "email_general": "contacto@infomexicanodirecto.news",
+      "email_redaccion": "redaccion@infomexicanodirecto.news",
+      "email_publicidad": "publicidad@infomexicanodirecto.news",
+      "telefono": "+52 55 6961 9537",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/infomexicanodirecto",
+      "twitter": "https://twitter.com/infomexicanodirecto",
+      "instagram": "https://instagram.com/infomexicanodirecto",
+      "youtube": "https://youtube.com/@infomexicanodirecto",
+      "linkedin": "https://linkedin.com/company/infomexicanodirecto",
+      "telegram": "https://t.me/infomexicanodirecto"
+    },
+    "seo": {
+      "titulo": "InfoMexicano Directo - La Voz de México",
+      "descripcion": "InfoMexicano Directo es tu fuente confiable de noticias e información actualizada. La Voz de México. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "infomexicano directo",
+        "infomexicanodirecto"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-15T14:18:07.623595",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]
