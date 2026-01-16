@@ -1,0 +1,91 @@
+[
+  {
+    "id": "site_20260116_143343_8677",
+    "nombre": "LosUniversalMéxico",
+    "tagline": "México en Primera Plana",
+    "estilo": "aleatorio",
+    "dominio": "losuniversalméxico.com",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "LosUniversalMéxico",
+      "iniciales": "L",
+      "estilo": "modern",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Opinión",
+      "Salud",
+      "Mundo",
+      "Cultura",
+      "Negocios"
+    ],
+    "contacto": {
+      "email_general": "contacto@losuniversalméxico.com",
+      "email_redaccion": "redaccion@losuniversalméxico.com",
+      "email_publicidad": "publicidad@losuniversalméxico.com",
+      "telefono": "+52 55 9630 6544",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/losuniversalméxico",
+      "twitter": "https://twitter.com/losuniversalméxico",
+      "instagram": "https://instagram.com/losuniversalméxico",
+      "youtube": "https://youtube.com/@losuniversalméxico",
+      "linkedin": "https://linkedin.com/company/losuniversalméxico",
+      "telegram": "https://t.me/losuniversalméxico"
+    },
+    "seo": {
+      "titulo": "LosUniversalMéxico - México en Primera Plana",
+      "descripcion": "LosUniversalMéxico es tu fuente confiable de noticias e información actualizada. México en Primera Plana. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "losuniversalméxico",
+        "losuniversalméxico"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-16T14:33:43.466475",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]
