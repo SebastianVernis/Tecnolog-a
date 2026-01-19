@@ -17,8 +17,9 @@ export default defineConfig({
     }
   },
   root: 'frontend',
-  publicDir: '../public',
+  publicDir: false, // Disable public directory copying
   build: {
-    outDir: '../dist'
+    outDir: '../dist',
+    emptyOutDir: true
   }
 })
