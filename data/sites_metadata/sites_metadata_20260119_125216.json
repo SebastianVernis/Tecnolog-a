@@ -1,0 +1,91 @@
+[
+  {
+    "id": "site_20260119_125216_8553",
+    "nombre": "México24Wire",
+    "tagline": "Siempre Online, Siempre Actualizado",
+    "estilo": "aleatorio",
+    "dominio": "méxico24wire.com",
+    "dominio_verificado": true,
+    "dominio_disponible": false,
+    "colores": {
+      "primario": "#8E44AD",
+      "secundario": "#9B59B6",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#F8F9FA"
+    },
+    "logo": {
+      "nombre_completo": "México24Wire",
+      "iniciales": "M",
+      "estilo": "classic",
+      "tipo": "emblem",
+      "colores": {
+        "primario": "#8E44AD",
+        "secundario": "#9B59B6",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#F8F9FA"
+      },
+      "fuente_sugerida": "Merriweather",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Tecnología",
+      "Entretenimiento",
+      "Educación",
+      "Economía",
+      "Cultura"
+    ],
+    "contacto": {
+      "email_general": "contacto@méxico24wire.com",
+      "email_redaccion": "redaccion@méxico24wire.com",
+      "email_publicidad": "publicidad@méxico24wire.com",
+      "telefono": "+52 55 2895 3140",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/méxico24wire",
+      "twitter": "https://twitter.com/méxico24wire",
+      "instagram": "https://instagram.com/méxico24wire",
+      "youtube": "https://youtube.com/@méxico24wire",
+      "linkedin": "https://linkedin.com/company/méxico24wire",
+      "telegram": "https://t.me/méxico24wire"
+    },
+    "seo": {
+      "titulo": "México24Wire - Siempre Online, Siempre Actualizado",
+      "descripcion": "México24Wire es tu fuente confiable de noticias e información actualizada. Siempre Online, Siempre Actualizado. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "méxico24wire",
+        "méxico24wire"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-19T12:52:16.485235",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

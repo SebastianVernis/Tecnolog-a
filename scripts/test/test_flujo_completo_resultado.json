@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-01-16 14:33:45",
+  "timestamp": "2026-01-18 02:40:40",
   "success": true,
   "config": {
     "articulos": 2,
@@ -12,10 +12,10 @@
     "noticias_parafraseadas": 2,
     "imagenes_generadas": 2,
     "sitios_creados": 1,
-    "tiempo_inicio": 1768595525.0467203,
-    "tiempo_total_segundos": 100.8087830543518,
-    "tiempo_total_minutos": 1.6801463842391968
+    "tiempo_inicio": 1768725588.59287,
+    "tiempo_total_segundos": 51.492709159851074,
+    "tiempo_total_minutos": 0.8582118193308512
   },
-  "tiempo_total_segundos": 100.80903124809265,
-  "output_dir": "/home/sebastianvernis/news-prototype/Tecnología/generated_sites_test"
+  "tiempo_total_segundos": 51.49296855926514,
+  "output_dir": "/home/sebastianvernis/Proyectos/news-prototype/Tecnología/generated_sites_test"
 }

@@ -364,18 +364,22 @@ class FooterGenerator:
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
-/* Forzar 3 columnas en una fila horizontal siempre */
+/* Footer columns - flex distribution */
 .footer-grid.cols-2,
 .footer-grid.cols-3,
 .footer-grid.cols-4,
 .footer-grid.cols-5 {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 0;
 }
 
 /* Footer Column */
@@ -517,7 +521,7 @@ class FooterGenerator:
 
 /* Footer Style Variations */
 .footer-centered .footer-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -530,7 +534,7 @@ class FooterGenerator:
 }
 
 .footer-compact .footer-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     margin-bottom: 0;
 }
 
@@ -544,7 +548,7 @@ class FooterGenerator:
 @media (max-width: 640px) {
     /* Solo en móvil pequeño: 1 columna vertical */
     .footer-grid {
-        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
     }
     
     .footer {
@@ -559,7 +563,7 @@ class FooterGenerator:
 @media (min-width: 641px) {
     /* Tablets y desktop: siempre 3 columnas horizontales */
     .footer-grid {
-        grid-template-columns: repeat(3, 1fr);
+        flex-direction: row;
     }
 }
 """

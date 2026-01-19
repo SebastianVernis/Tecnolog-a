@@ -1,0 +1,90 @@
+[
+  {
+    "id": "site_20260119_005201_9686",
+    "nombre": "Periódico Informador",
+    "tagline": "Donde las Noticias Cobran Vida",
+    "estilo": "aleatorio",
+    "dominio": "periódicoinformador.org",
+    "dominio_verificado": true,
+    "dominio_disponible": false,
+    "colores": {
+      "primario": "#4A4A4A",
+      "secundario": "#7F8C8D",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#FFFFFF"
+    },
+    "logo": {
+      "nombre_completo": "Periódico Informador",
+      "iniciales": "PI",
+      "estilo": "modern",
+      "tipo": "wordmark",
+      "colores": {
+        "primario": "#4A4A4A",
+        "secundario": "#7F8C8D",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#FFFFFF"
+      },
+      "fuente_sugerida": "Montserrat",
+      "peso_fuente": "black",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Negocios",
+      "Mundo",
+      "Cultura",
+      "Tecnología"
+    ],
+    "contacto": {
+      "email_general": "contacto@periódicoinformador.org",
+      "email_redaccion": "redaccion@periódicoinformador.org",
+      "email_publicidad": "publicidad@periódicoinformador.org",
+      "telefono": "+52 55 5699 7375",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/periódicoinformador",
+      "twitter": "https://twitter.com/periódicoinformador",
+      "instagram": "https://instagram.com/periódicoinformador",
+      "youtube": "https://youtube.com/@periódicoinformador",
+      "linkedin": "https://linkedin.com/company/periódicoinformador",
+      "telegram": "https://t.me/periódicoinformador"
+    },
+    "seo": {
+      "titulo": "Periódico Informador - Donde las Noticias Cobran Vida",
+      "descripcion": "Periódico Informador es tu fuente confiable de noticias e información actualizada. Donde las Noticias Cobran Vida. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "periódico informador",
+        "periódicoinformador"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-19T00:52:01.293572",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]

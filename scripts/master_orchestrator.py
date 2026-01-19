@@ -66,12 +66,13 @@ load_dotenv()
 class MasterOrchestrator:
     """Orquestador principal del flujo completo de generación"""
     
-    def __init__(self, output_base_dir: str = None):
+    def __init__(self, output_base_dir: str = None, usar_api_whois: bool = False):
         """
         Inicializa el orquestador
         
         Args:
             output_base_dir: Directorio base para sitios generados
+            usar_api_whois: Si True, usa APILayer WHOIS API. Si False, usa whois local
         """
         # Usar rutas absolutas basadas en la ubicación del script
         script_dir = Path(__file__).parent
@@ -92,7 +93,7 @@ class MasterOrchestrator:
         self.paraphraser = NewsParaphraser()
         self.article_expander = ArticleExpander()
         self.name_generator = SiteNameGenerator()
-        self.domain_verifier = DomainVerifier()
+        self.domain_verifier = DomainVerifier(usar_api=usar_api_whois)
         self.template_combiner = TemplateCombiner()
         # Usar generador unificado (NewsAPI Original primero, luego fallbacks)
         self.image_generator = UnifiedImageGenerator(prefer_ai=False)
@@ -876,13 +877,17 @@ def main():
     
     parser = argparse.ArgumentParser(description="Master Orchestrator - Generación Completa de Sitio")
     parser.add_argument('--verificar-dominios', action='store_true', help='Verificar disponibilidad de dominios')
+    parser.add_argument('--api-whois', action='store_true', help='Usar APILayer WHOIS API (requiere APILAYER_API_KEY en .env)')
     parser.add_argument('--output-dir', type=str, default=None, help='Directorio de salida')
     parser.add_argument('--usar-cache', action='store_true', help='Usar noticias en cache en lugar de descargar nuevas')
     
     args = parser.parse_args()
     
     # Crear orquestador
-    orchestrator = MasterOrchestrator(output_base_dir=args.output_dir)
+    orchestrator = MasterOrchestrator(
+        output_base_dir=args.output_dir,
+        usar_api_whois=args.api_whois
+    )
     
     # Ejecutar flujo (por defecto descarga en vivo)
     resultado = orchestrator.ejecutar_flujo_completo(

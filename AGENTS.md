@@ -436,6 +436,16 @@ Las páginas legales están enlazadas automáticamente en la sección "Legal" de
 
 ## 🔄 Historial de Cambios
 
+### 2026-01-18 - 02:30 ✅ INTEGRACIÓN APILAYER WHOIS
+- **Verificación dual de dominios**: Ahora soporta whois local + APILayer WHOIS API
+- **Nuevo parámetro CLI**: `--api-whois` para usar APILayer en master_orchestrator.py
+- **4 archivos nuevos**: domain_verifier_apilayer.py, test_apilayer_whois.py, APILAYER-WHOIS.md, APILAYER-SETUP.md
+- **100% compatible**: Ambos métodos usan la misma interfaz
+- **Parsing mejorado**: Manejo correcto de respuestas 404 (dominio disponible)
+- **Tests completos**: 4/4 tests pasando con 100% de éxito
+- **Free plan**: 100 requests/mes gratuitas de APILayer
+- **Configuración**: Solo requiere `APILAYER_API_KEY` en .env
+
 ### 2026-01-15 - 16:30 ✅ VALIDADO
 - **Sistema de imágenes con fallback**: Completamente funcional y validado
 - **Todos los flujos integrados**: master_orchestrator.py, generate-interactive.py

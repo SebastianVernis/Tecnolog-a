@@ -1,0 +1,91 @@
+[
+  {
+    "id": "site_20260118_023937_2890",
+    "nombre": "InfoGlobalDigital",
+    "tagline": "Siempre Online, Siempre Actualizado",
+    "estilo": "aleatorio",
+    "dominio": "infoglobaldigital.news",
+    "dominio_verificado": false,
+    "dominio_disponible": true,
+    "colores": {
+      "primario": "#2C3E50",
+      "secundario": "#3498DB",
+      "acento": "#E74C3C",
+      "texto": "#2C3E50",
+      "fondo": "#ECF0F1"
+    },
+    "logo": {
+      "nombre_completo": "InfoGlobalDigital",
+      "iniciales": "I",
+      "estilo": "minimal",
+      "tipo": "combination",
+      "colores": {
+        "primario": "#2C3E50",
+        "secundario": "#3498DB",
+        "acento": "#E74C3C",
+        "texto": "#2C3E50",
+        "fondo": "#ECF0F1"
+      },
+      "fuente_sugerida": "Lato",
+      "peso_fuente": "regular",
+      "formato_salida": [
+        "png",
+        "svg"
+      ],
+      "dimensiones": {
+        "logo_principal": "500x200",
+        "favicon": "64x64",
+        "social": "1200x630"
+      }
+    },
+    "categorias": [
+      "Inicio",
+      "Nacional",
+      "Internacional",
+      "Política",
+      "Entretenimiento",
+      "Sociedad",
+      "Opinión",
+      "Salud",
+      "Ciencia"
+    ],
+    "contacto": {
+      "email_general": "contacto@infoglobaldigital.news",
+      "email_redaccion": "redaccion@infoglobaldigital.news",
+      "email_publicidad": "publicidad@infoglobaldigital.news",
+      "telefono": "+52 55 9651 4101",
+      "direccion": "Ciudad de México, México",
+      "horario": "Disponible 24/7"
+    },
+    "redes_sociales": {
+      "facebook": "https://facebook.com/infoglobaldigital",
+      "twitter": "https://twitter.com/infoglobaldigital",
+      "instagram": "https://instagram.com/infoglobaldigital",
+      "youtube": "https://youtube.com/@infoglobaldigital",
+      "linkedin": "https://linkedin.com/company/infoglobaldigital",
+      "telegram": "https://t.me/infoglobaldigital"
+    },
+    "seo": {
+      "titulo": "InfoGlobalDigital - Siempre Online, Siempre Actualizado",
+      "descripcion": "InfoGlobalDigital es tu fuente confiable de noticias e información actualizada. Siempre Online, Siempre Actualizado. Mantente informado con las últimas noticias de México y el mundo.",
+      "keywords": [
+        "noticias",
+        "méxico",
+        "actualidad",
+        "información",
+        "política",
+        "economía",
+        "deportes",
+        "entretenimiento",
+        "infoglobaldigital",
+        "infoglobaldigital"
+      ],
+      "og_type": "website",
+      "og_locale": "es_MX",
+      "twitter_card": "summary_large_image"
+    },
+    "fecha_creacion": "2026-01-18T02:39:37.668857",
+    "version": "1.0",
+    "estado": "pre-creado"
+  }
+]
